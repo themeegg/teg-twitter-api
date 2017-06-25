@@ -133,12 +133,12 @@ if (!class_exists('TEG_Twitter_Api')) :
         {
             $upload_dir = wp_upload_dir();
 
-            $this->define('TEG_TI_PLUGIN_FILE', __FILE__);
-            $this->define('TEG_TI_ABSPATH', dirname(__FILE__) . '/');
-            $this->define('TEG_TI_PLUGIN_BASENAME', plugin_basename(__FILE__));
-            $this->define('TEG_TI_VERSION', $this->version);
-            $this->define('TEG_TI_LOG_DIR', $upload_dir['basedir'] . '/teg-logs/');
-            $this->define('TEG_TI_TEMPLATE_DEBUG_MODE', false);
+            $this->define('TEG_TA_PLUGIN_FILE', __FILE__);
+            $this->define('TEG_TA_ABSPATH', dirname(__FILE__) . '/');
+            $this->define('TEG_TA_PLUGIN_BASENAME', plugin_basename(__FILE__));
+            $this->define('TEG_TA_VERSION', $this->version);
+            $this->define('TEG_TA_LOG_DIR', $upload_dir['basedir'] . '/teg-logs/');
+            $this->define('TEG_TA_TEMPLATE_DEBUG_MODE', false);
         }
 
         /**
@@ -194,130 +194,38 @@ if (!class_exists('TEG_Twitter_Api')) :
             /**
              * Class autoloader.
              */
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-autoloader.php');
+            include_once(TEG_TA_ABSPATH . 'includes/class-teg-ta-autoloader.php');
 
             /**
              * Interfaces.
              */
-            include_once(TEG_TI_ABSPATH . 'includes/interfaces/class-wc-abstract-order-data-store-interface.php');
-            include_once(TEG_TI_ABSPATH . 'includes/interfaces/class-wc-coupon-data-store-interface.php');
-            include_once(TEG_TI_ABSPATH . 'includes/interfaces/class-wc-customer-data-store-interface.php');
-            include_once(TEG_TI_ABSPATH . 'includes/interfaces/class-wc-customer-download-data-store-interface.php');
-            include_once(TEG_TI_ABSPATH . 'includes/interfaces/class-wc-object-data-store-interface.php');
-            include_once(TEG_TI_ABSPATH . 'includes/interfaces/class-wc-order-data-store-interface.php');
-            include_once(TEG_TI_ABSPATH . 'includes/interfaces/class-wc-order-item-data-store-interface.php');
-            include_once(TEG_TI_ABSPATH . 'includes/interfaces/class-wc-order-item-product-data-store-interface.php');
-            include_once(TEG_TI_ABSPATH . 'includes/interfaces/class-wc-order-item-type-data-store-interface.php');
-            include_once(TEG_TI_ABSPATH . 'includes/interfaces/class-wc-order-refund-data-store-interface.php');
-            include_once(TEG_TI_ABSPATH . 'includes/interfaces/class-wc-payment-token-data-store-interface.php');
-            include_once(TEG_TI_ABSPATH . 'includes/interfaces/class-wc-product-data-store-interface.php');
-            include_once(TEG_TI_ABSPATH . 'includes/interfaces/class-wc-product-variable-data-store-interface.php');
-            include_once(TEG_TI_ABSPATH . 'includes/interfaces/class-wc-shipping-zone-data-store-interface.php');
-            include_once(TEG_TI_ABSPATH . 'includes/interfaces/class-wc-logger-interface.php');
-            include_once(TEG_TI_ABSPATH . 'includes/interfaces/class-wc-log-handler-interface.php');
+            include_once(TEG_TA_ABSPATH . 'includes/interfaces/class-teg-ta-abstract-order-data-store-interface.php');
 
             /**
              * Abstract classes.
              */
-            include_once(TEG_TI_ABSPATH . 'includes/abstracts/abstract-wc-data.php'); // TEG_TI_Data for CRUD
-            include_once(TEG_TI_ABSPATH . 'includes/abstracts/abstract-wc-object-query.php'); // TEG_TI_Object_Query for CRUD
-            include_once(TEG_TI_ABSPATH . 'includes/abstracts/abstract-wc-payment-token.php'); // Payment Tokens
-            include_once(TEG_TI_ABSPATH . 'includes/abstracts/abstract-wc-product.php'); // Products
-            include_once(TEG_TI_ABSPATH . 'includes/abstracts/abstract-wc-order.php'); // Orders
-            include_once(TEG_TI_ABSPATH . 'includes/abstracts/abstract-wc-settings-api.php'); // Settings API (for gateways, shipping, and integrations)
-            include_once(TEG_TI_ABSPATH . 'includes/abstracts/abstract-wc-shipping-method.php'); // A Shipping method
-            include_once(TEG_TI_ABSPATH . 'includes/abstracts/abstract-wc-payment-gateway.php'); // A Payment gateway
-            include_once(TEG_TI_ABSPATH . 'includes/abstracts/abstract-wc-integration.php'); // An integration with a service
-            include_once(TEG_TI_ABSPATH . 'includes/abstracts/abstract-wc-log-handler.php');
-            include_once(TEG_TI_ABSPATH . 'includes/abstracts/abstract-wc-deprecated-hooks.php');
-            include_once(TEG_TI_ABSPATH . 'includes/abstracts/abstract-wc-session.php');
+            include_once(TEG_TA_ABSPATH . 'includes/abstracts/abstract-teg-ta-data.php'); // TEG_TA_Data for CRUD
 
             /**
              * Core classes.
              */
-            include_once(TEG_TI_ABSPATH . 'includes/wc-core-functions.php');
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-datetime.php');
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-post-types.php'); // Registers post types
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-install.php');
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-geolocation.php');
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-download-handler.php');
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-comments.php');
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-post-data.php');
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-ajax.php');
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-emails.php');
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-data-exception.php');
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-query.php');
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-order-factory.php'); // Order factory
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-order-query.php'); // Order query
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-product-factory.php'); // Product factory
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-payment-tokens.php'); // Payment tokens controller
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-shipping-zone.php');
-            include_once(TEG_TI_ABSPATH . 'includes/gateways/class-wc-payment-gateway-cc.php'); // CC Payment Gateway
-            include_once(TEG_TI_ABSPATH . 'includes/gateways/class-wc-payment-gateway-echeck.php'); // eCheck Payment Gateway
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-countries.php'); // Defines countries and states
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-integrations.php'); // Loads integrations
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-cache-helper.php'); // Cache Helper
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-https.php'); // https Helper
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-deprecated-action-hooks.php');
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-deprecated-filter-hooks.php');
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-background-emailer.php');
+            include_once(TEG_TA_ABSPATH . 'includes/wc-core-functions.php');
 
-            /**
-             * Data stores - used to store and retrieve CRUD object data from the database.
-             */
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-data-store.php');
-            include_once(TEG_TI_ABSPATH . 'includes/data-stores/class-wc-data-store-wp.php');
-            include_once(TEG_TI_ABSPATH . 'includes/data-stores/class-wc-coupon-data-store-cpt.php');
-            include_once(TEG_TI_ABSPATH . 'includes/data-stores/class-wc-product-data-store-cpt.php');
-            include_once(TEG_TI_ABSPATH . 'includes/data-stores/class-wc-product-grouped-data-store-cpt.php');
-            include_once(TEG_TI_ABSPATH . 'includes/data-stores/class-wc-product-variable-data-store-cpt.php');
-            include_once(TEG_TI_ABSPATH . 'includes/data-stores/class-wc-product-variation-data-store-cpt.php');
-            include_once(TEG_TI_ABSPATH . 'includes/data-stores/abstract-wc-order-item-type-data-store.php');
-            include_once(TEG_TI_ABSPATH . 'includes/data-stores/class-wc-order-item-data-store.php');
-            include_once(TEG_TI_ABSPATH . 'includes/data-stores/class-wc-order-item-coupon-data-store.php');
-            include_once(TEG_TI_ABSPATH . 'includes/data-stores/class-wc-order-item-fee-data-store.php');
-            include_once(TEG_TI_ABSPATH . 'includes/data-stores/class-wc-order-item-product-store.php');
-            include_once(TEG_TI_ABSPATH . 'includes/data-stores/class-wc-order-item-shipping-data-store.php');
-            include_once(TEG_TI_ABSPATH . 'includes/data-stores/class-wc-order-item-tax-data-store.php');
-            include_once(TEG_TI_ABSPATH . 'includes/data-stores/class-wc-payment-token-data-store.php');
-            include_once(TEG_TI_ABSPATH . 'includes/data-stores/class-wc-customer-data-store.php');
-            include_once(TEG_TI_ABSPATH . 'includes/data-stores/class-wc-customer-data-store-session.php');
-            include_once(TEG_TI_ABSPATH . 'includes/data-stores/class-wc-customer-download-data-store.php');
-            include_once(TEG_TI_ABSPATH . 'includes/data-stores/class-wc-shipping-zone-data-store.php');
-            include_once(TEG_TI_ABSPATH . 'includes/data-stores/abstract-wc-order-data-store-cpt.php');
-            include_once(TEG_TI_ABSPATH . 'includes/data-stores/class-wc-order-data-store-cpt.php');
-            include_once(TEG_TI_ABSPATH . 'includes/data-stores/class-wc-order-refund-data-store-cpt.php');
+            include_once(TEG_TA_ABSPATH . 'includes/class-teg-ta-post-types.php'); // Registers post types
+            include_once(TEG_TA_ABSPATH . 'includes/class-teg-ta-install.php');
 
-            /**
-             * REST API.
-             */
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-legacy-api.php');
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-api.php'); // API Class
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-auth.php'); // Auth Class
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-register-wp-admin-settings.php');
 
-            if (defined('WP_CLI') && WP_CLI) {
-                include_once(TEG_TI_ABSPATH . 'includes/class-wc-cli.php');
-            }
+            include_once(TEG_TA_ABSPATH . 'includes/class-teg-ta-ajax.php');
+
 
             if ($this->is_request('admin')) {
-                include_once(TEG_TI_ABSPATH . 'includes/admin/class-wc-admin.php');
+                include_once(TEG_TA_ABSPATH . 'includes/admin/class-teg-ta-admin.php');
             }
 
             if ($this->is_request('frontend')) {
                 $this->frontend_includes();
             }
 
-            if ($this->is_request('frontend') || $this->is_request('cron')) {
-                include_once(TEG_TI_ABSPATH . 'includes/class-wc-session-handler.php');
-            }
-
-            if ($this->is_request('cron') && 'yes' === get_option('teg_twitter_api_allow_tracking', 'no')) {
-                include_once(TEG_TI_ABSPATH . 'includes/class-wc-tracker.php');
-            }
-
-            $this->query = new TEG_TI_Query();
-            $this->api = new TEG_TI_API();
         }
 
         /**
@@ -325,23 +233,17 @@ if (!class_exists('TEG_Twitter_Api')) :
          */
         public function frontend_includes()
         {
-            include_once(TEG_TI_ABSPATH . 'includes/wc-cart-functions.php');
-            include_once(TEG_TI_ABSPATH . 'includes/wc-notice-functions.php');
-            include_once(TEG_TI_ABSPATH . 'includes/wc-template-hooks.php');
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-template-loader.php');                // Template Loader
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-frontend-scripts.php');               // Frontend Scripts
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-form-handler.php');                   // Form Handlers
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-cart.php');                           // The main cart class
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-tax.php');                            // Tax class
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-shipping-zones.php');                 // Shipping Zones class
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-customer.php');                       // Customer class
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-shortcodes.php');                     // Shortcodes class
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-embed.php');                          // Embeds
-            include_once(TEG_TI_ABSPATH . 'includes/class-wc-structured-data.php');                // Structured Data class
 
-            if ($this->is_active_theme('twentyseventeen')) {
-                include_once(TEG_TI_ABSPATH . 'includes/theme-support/class-wc-twenty-seventeen.php');
-            }
+            include_once(TEG_TA_ABSPATH . 'includes/wc-notice-functions.php');
+            include_once(TEG_TA_ABSPATH . 'includes/wc-template-hooks.php');
+            include_once(TEG_TA_ABSPATH . 'includes/class-teg-ta-template-loader.php');                // Template Loader
+            include_once(TEG_TA_ABSPATH . 'includes/class-teg-ta-frontend-scripts.php');               // Frontend Scripts
+
+
+            include_once(TEG_TA_ABSPATH . 'includes/class-teg-ta-shortcodes.php');                     // Shortcodes class
+            include_once(TEG_TA_ABSPATH . 'includes/class-teg-ta-embed.php');                          // Embeds
+
+
         }
 
         /**
@@ -349,7 +251,7 @@ if (!class_exists('TEG_Twitter_Api')) :
          */
         public function include_template_functions()
         {
-            include_once(TEG_TI_ABSPATH . 'includes/wc-template-functions.php');
+            include_once(TEG_TA_ABSPATH . 'includes/wc-template-functions.php');
         }
 
         /**
@@ -362,28 +264,6 @@ if (!class_exists('TEG_Twitter_Api')) :
 
             // Set up localisation.
             $this->load_plugin_textdomain();
-
-            // Load class instances.
-            $this->product_factory = new TEG_TI_Product_Factory(); // Product Factory to create new product instances
-            $this->order_factory = new TEG_TI_Order_Factory(); // Order Factory to create new order instances
-            $this->countries = new TEG_TI_Countries(); // Countries class
-            $this->integrations = new TEG_TI_Integrations(); // Integrations class
-            $this->structured_data = new TEG_TI_Structured_Data(); // Structured Data class, generates and handles structured data
-            $this->deprecated_hook_handlers['actions'] = new TEG_TI_Deprecated_Action_Hooks();
-            $this->deprecated_hook_handlers['filters'] = new TEG_TI_Deprecated_Filter_Hooks();
-
-            // Session class, handles session data for users - can be overwritten if custom handler is needed.
-            if ($this->is_request('frontend') || $this->is_request('cron')) {
-                $session_class = apply_filters('teg_twitter_api_session_handler', 'TEG_TI_Session_Handler');
-                $this->session = new $session_class();
-            }
-
-            // Classes/actions loaded for the frontend and for ajax requests.
-            if ($this->is_request('frontend')) {
-                $this->cart = new TEG_TI_Cart();                                  // Cart class, stores the cart contents
-                $this->customer = new TEG_TI_Customer(get_current_user_id(), true); // Customer class, handles data such as customer location
-                add_action('shutdown', array($this->customer, 'save'), 10);          // Customer should be saved during shutdown.
-            }
 
             $this->load_webhooks();
 
@@ -418,7 +298,7 @@ if (!class_exists('TEG_Twitter_Api')) :
             /**
              * @deprecated 2.2 Use WC()->template_path()
              */
-            $this->define('TEG_TI_TEMPLATE_PATH', $this->template_path());
+            $this->define('TEG_TA_TEMPLATE_PATH', $this->template_path());
 
             $this->add_thumbnail_support();
             $this->add_image_sizes();
@@ -537,7 +417,7 @@ if (!class_exists('TEG_Twitter_Api')) :
                 set_transient('teg_twitter_api_webhook_ids', $webhooks);
             }
             foreach ($webhooks as $webhook_id) {
-                $webhook = new TEG_TI_Webhook($webhook_id);
+                $webhook = new TEG_TA_Webhook($webhook_id);
                 $webhook->enqueue();
             }
         }
@@ -561,38 +441,38 @@ if (!class_exists('TEG_Twitter_Api')) :
 
         /**
          * Get Checkout Class.
-         * @return TEG_TI_Checkout
+         * @return TEG_TA_Checkout
          */
         public function checkout()
         {
-            return TEG_TI_Checkout::instance();
+            return TEG_TA_Checkout::instance();
         }
 
         /**
          * Get gateways class.
-         * @return TEG_TI_Payment_Gateways
+         * @return TEG_TA_Payment_Gateways
          */
         public function payment_gateways()
         {
-            return TEG_TI_Payment_Gateways::instance();
+            return TEG_TA_Payment_Gateways::instance();
         }
 
         /**
          * Get shipping class.
-         * @return TEG_TI_Shipping
+         * @return TEG_TA_Shipping
          */
         public function shipping()
         {
-            return TEG_TI_Shipping::instance();
+            return TEG_TA_Shipping::instance();
         }
 
         /**
          * Email Class.
-         * @return TEG_TI_Emails
+         * @return TEG_TA_Emails
          */
         public function mailer()
         {
-            return TEG_TI_Emails::instance();
+            return TEG_TA_Emails::instance();
         }
     }
 
