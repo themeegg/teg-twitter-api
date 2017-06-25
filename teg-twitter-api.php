@@ -199,7 +199,10 @@ if (!class_exists('TEG_Twitter_Api')) :
             /**
              * Interfaces.
              */
-            include_once(TEG_TA_ABSPATH . 'includes/interfaces/class-teg-ta-abstract-order-data-store-interface.php');
+            include_once(TEG_TA_ABSPATH . 'includes/interfaces/class-teg-ta-meta-box-interface.php');
+            include_once(TEG_TA_ABSPATH . 'includes/interfaces/class-teg-ta-option-interface.php');
+            include_once(TEG_TA_ABSPATH . 'includes/interfaces/class-teg-ta-shortcode-interface.php');
+            include_once(TEG_TA_ABSPATH . 'includes/interfaces/class-teg-ta-widget-interface.php');
 
             /**
              * Abstract classes.
