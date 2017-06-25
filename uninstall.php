@@ -6,10 +6,10 @@
  *
  * @author      ThemeEgg
  * @category    Core
- * @package     TEGTwitterAPI/Uninstaller
+ * @package     TEG_Twitter_Api/Uninstaller
  * @version     1.0.0
  */
 
-if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
-	exit;
+if (!defined('WP_UNINSTALL_PLUGIN')) {
+    exit;
 }
