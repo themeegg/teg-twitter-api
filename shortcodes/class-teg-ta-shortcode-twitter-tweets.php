@@ -26,14 +26,14 @@ class TEG_TA_Shortcode_Twitter_Tweets implements TEG_TA_Shortcode_Interface
     public static function output($atts = array())
     {
 
+        $defaultAttr = array(
+            'count' => 5,
+            'title' => 'Twitter Tweets',
+        );
 
-        // Calc totals
-        WC()->cart->calculate_totals();
+        $attributes = wp_parse_args($atts, $defaultAttr);
 
-        if (WC()->cart->is_empty()) {
-            wc_get_template('cart/cart-empty.php');
-        } else {
-            wc_get_template('cart/cart.php');
-        }
+        teg_ta_get_template('cart/cart-empty.php');
+
     }
 }
