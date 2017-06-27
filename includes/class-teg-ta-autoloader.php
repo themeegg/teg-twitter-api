@@ -84,6 +84,8 @@ class TEG_TA_Autoloader
             $path = $this->include_path . 'admin/meta-boxes/';
         } elseif (strpos($class, 'teg_ta_admin') === 0) {
             $path = $this->include_path . 'admin/';
+        } elseif (strpos($class, 'teg_ta_api_twitter') === 0) {
+            $path = $this->include_path . 'api/twitter/';
         }
 
         if (empty($path) || !$this->load_file($path . $file)) {

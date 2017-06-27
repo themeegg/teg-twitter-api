@@ -133,8 +133,9 @@ if (!class_exists('TEG_Twitter_Api')) :
         {
             $upload_dir = wp_upload_dir();
 
+            $this->define('TEG_TA_DS', DIRECTORY_SEPARATOR);
             $this->define('TEG_TA_PLUGIN_FILE', __FILE__);
-            $this->define('TEG_TA_ABSPATH', dirname(__FILE__) . '/');
+            $this->define('TEG_TA_ABSPATH', dirname(__FILE__) . DIRECTORY_SEPARATOR);
             $this->define('TEG_TA_PLUGIN_BASENAME', plugin_basename(__FILE__));
             $this->define('TEG_TA_VERSION', $this->version);
             $this->define('TEG_TA_LOG_DIR', $upload_dir['basedir'] . '/teg-logs/');
@@ -194,35 +195,34 @@ if (!class_exists('TEG_Twitter_Api')) :
             /**
              * Class autoloader.
              */
-            include_once(TEG_TA_ABSPATH . 'includes/class-teg-ta-autoloader.php');
+
+            include(TEG_TA_ABSPATH . 'includes' . TEG_TA_DS . 'teg-ta-core-functions.php');
+
+
+            teg_ta_include(TEG_TA_ABSPATH . 'includes/class-teg-ta-autoloader.php');
 
             /**
              * Interfaces.
              */
-            include_once(TEG_TA_ABSPATH . 'includes/interfaces/class-teg-ta-meta-box-interface.php');
-            include_once(TEG_TA_ABSPATH . 'includes/interfaces/class-teg-ta-option-interface.php');
-            include_once(TEG_TA_ABSPATH . 'includes/interfaces/class-teg-ta-shortcode-interface.php');
-            include_once(TEG_TA_ABSPATH . 'includes/interfaces/class-teg-ta-widget-interface.php');
-
-            /**
-             * Abstract classes.
-             */
-            include_once(TEG_TA_ABSPATH . 'includes/abstracts/abstract-teg-ta-data.php'); // TEG_TA_Data for CRUD
+            teg_ta_include(TEG_TA_ABSPATH . 'includes/interfaces/class-teg-ta-meta-box-interface.php');
+            teg_ta_include(TEG_TA_ABSPATH . 'includes/interfaces/class-teg-ta-option-interface.php');
+            teg_ta_include(TEG_TA_ABSPATH . 'includes/interfaces/class-teg-ta-shortcode-interface.php');
+            teg_ta_include(TEG_TA_ABSPATH . 'includes/interfaces/class-teg-ta-widget-interface.php');
 
             /**
              * Core classes.
              */
-            include_once(TEG_TA_ABSPATH . 'includes/wc-core-functions.php');
-
-            include_once(TEG_TA_ABSPATH . 'includes/class-teg-ta-post-types.php'); // Registers post types
-            include_once(TEG_TA_ABSPATH . 'includes/class-teg-ta-install.php');
 
 
-            include_once(TEG_TA_ABSPATH . 'includes/class-teg-ta-ajax.php');
+            teg_ta_include(TEG_TA_ABSPATH . 'includes/class-teg-ta-post-types.php'); // Registers post types
+            teg_ta_include(TEG_TA_ABSPATH . 'includes/class-teg-ta-install.php');
+
+
+            teg_ta_include(TEG_TA_ABSPATH . 'includes/class-teg-ta-ajax.php');
 
 
             if ($this->is_request('admin')) {
-                include_once(TEG_TA_ABSPATH . 'includes/admin/class-teg-ta-admin.php');
+                teg_ta_include(TEG_TA_ABSPATH . 'includes/admin/class-teg-ta-admin.php');
             }
 
             if ($this->is_request('frontend')) {
@@ -237,14 +237,14 @@ if (!class_exists('TEG_Twitter_Api')) :
         public function frontend_includes()
         {
 
-            include_once(TEG_TA_ABSPATH . 'includes/wc-notice-functions.php');
-            include_once(TEG_TA_ABSPATH . 'includes/wc-template-hooks.php');
-            include_once(TEG_TA_ABSPATH . 'includes/class-teg-ta-template-loader.php');                // Template Loader
-            include_once(TEG_TA_ABSPATH . 'includes/class-teg-ta-frontend-scripts.php');               // Frontend Scripts
 
 
-            include_once(TEG_TA_ABSPATH . 'includes/class-teg-ta-shortcodes.php');                     // Shortcodes class
-            include_once(TEG_TA_ABSPATH . 'includes/class-teg-ta-embed.php');                          // Embeds
+
+            teg_ta_include(TEG_TA_ABSPATH . 'includes/class-teg-ta-frontend-scripts.php');               // Frontend Scripts
+
+
+            teg_ta_include(TEG_TA_ABSPATH . 'includes/class-teg-ta-shortcodes.php');                     // Shortcodes class
+
 
 
         }
@@ -254,7 +254,6 @@ if (!class_exists('TEG_Twitter_Api')) :
          */
         public function include_template_functions()
         {
-            include_once(TEG_TA_ABSPATH . 'includes/wc-template-functions.php');
         }
 
         /**
@@ -303,36 +302,11 @@ if (!class_exists('TEG_Twitter_Api')) :
              */
             $this->define('TEG_TA_TEMPLATE_PATH', $this->template_path());
 
-            $this->add_thumbnail_support();
-            $this->add_image_sizes();
+
         }
 
-        /**
-         * Ensure post thumbnail support is turned on.
-         */
-        private function add_thumbnail_support()
-        {
-            if (!current_theme_supports('post-thumbnails')) {
-                add_theme_support('post-thumbnails');
-            }
-            add_post_type_support('product', 'thumbnail');
-        }
 
-        /**
-         * Add WC Image sizes to WP.
-         *
-         * @since 2.3
-         */
-        private function add_image_sizes()
-        {
-            $shop_thumbnail = wc_get_image_size('shop_thumbnail');
-            $shop_catalog = wc_get_image_size('shop_catalog');
-            $shop_single = wc_get_image_size('shop_single');
 
-            add_image_size('shop_thumbnail', $shop_thumbnail['width'], $shop_thumbnail['height'], $shop_thumbnail['crop']);
-            add_image_size('shop_catalog', $shop_catalog['width'], $shop_catalog['height'], $shop_catalog['crop']);
-            add_image_size('shop_single', $shop_single['width'], $shop_single['height'], $shop_single['crop']);
-        }
 
         /**
          * Get the plugin url.
@@ -442,41 +416,6 @@ if (!class_exists('TEG_Twitter_Api')) :
             }
         }
 
-        /**
-         * Get Checkout Class.
-         * @return TEG_TA_Checkout
-         */
-        public function checkout()
-        {
-            return TEG_TA_Checkout::instance();
-        }
-
-        /**
-         * Get gateways class.
-         * @return TEG_TA_Payment_Gateways
-         */
-        public function payment_gateways()
-        {
-            return TEG_TA_Payment_Gateways::instance();
-        }
-
-        /**
-         * Get shipping class.
-         * @return TEG_TA_Shipping
-         */
-        public function shipping()
-        {
-            return TEG_TA_Shipping::instance();
-        }
-
-        /**
-         * Email Class.
-         * @return TEG_TA_Emails
-         */
-        public function mailer()
-        {
-            return TEG_TA_Emails::instance();
-        }
     }
 
 endif;
