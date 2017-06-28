@@ -50,6 +50,13 @@ if (!class_exists('TEG_Twitter_Api')) :
          * @since 2.1
          */
         protected static $_instance = null;
+        /**
+         * Query instance.
+         *
+         * @var TEG_TA_Query
+         */
+        public $query = null;
+
 
         /**
          * Main TEG_Twitter_Api Instance.
@@ -216,9 +223,8 @@ if (!class_exists('TEG_Twitter_Api')) :
 
             teg_ta_include(TEG_TA_ABSPATH . 'includes/class-teg-ta-post-types.php'); // Registers post types
             teg_ta_include(TEG_TA_ABSPATH . 'includes/class-teg-ta-install.php');
-
-
             teg_ta_include(TEG_TA_ABSPATH . 'includes/class-teg-ta-ajax.php');
+            teg_ta_include(TEG_TA_ABSPATH . 'includes/class-teg-ta-query.php');
 
 
             if ($this->is_request('admin')) {
@@ -229,6 +235,9 @@ if (!class_exists('TEG_Twitter_Api')) :
                 $this->frontend_includes();
             }
 
+
+            $this->query = new TEG_TA_Query();
+
         }
 
         /**
@@ -238,13 +247,10 @@ if (!class_exists('TEG_Twitter_Api')) :
         {
 
 
-
-
             teg_ta_include(TEG_TA_ABSPATH . 'includes/class-teg-ta-frontend-scripts.php');               // Frontend Scripts
 
 
             teg_ta_include(TEG_TA_ABSPATH . 'includes/class-teg-ta-shortcodes.php');                     // Shortcodes class
-
 
 
         }
@@ -304,8 +310,6 @@ if (!class_exists('TEG_Twitter_Api')) :
 
 
         }
-
-
 
 
         /**

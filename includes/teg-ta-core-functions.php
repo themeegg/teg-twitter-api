@@ -14,6 +14,27 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+
+include( 'teg-ta-formatting-functions.php' );
+
+/**
+ * Display a TEG Twitter API help tip.
+ *
+ * @since  1.0.0
+ *
+ * @param  string $tip        Help tip text
+ * @param  bool   $allow_html Allow sanitized HTML if true or escape
+ * @return string
+ */
+function teg_ta_help_tip( $tip, $allow_html = false ) {
+    if ( $allow_html ) {
+        $tip = wc_sanitize_tooltip( $tip );
+    } else {
+        $tip = esc_attr( $tip );
+    }
+
+    return '<span class="woocommerce-help-tip" data-tip="' . $tip . '"></span>';
+}
 /**
  * Get template part (for templates like the shop-loop).
  *

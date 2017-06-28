@@ -29,6 +29,7 @@ if (!class_exists('TEG_TA_Admin_Menus', false)) :
             add_action('admin_menu', array($this, 'admin_menu'), 9);
 
 
+
         }
 
         /**
@@ -39,23 +40,24 @@ if (!class_exists('TEG_TA_Admin_Menus', false)) :
             global $menu;
 
 
-            $menu_array = array(
 
 
-            );
-
-
-            add_menu_page(  __('TEG Twitter', 'teg-twitter-api'),
+            add_menu_page(__('TEG Twitter', 'teg-twitter-api'),
                 __('TEG Twitter', 'teg-twitter-api'),
                 'manage_options',
-                'extra-post-info',
-                'extra_post_info_page',
-                'dashicons-media-code',
-                9);
+                'teg-twitter-api',
+                array( $this, 'settings_page' ) , null, '55.5' );
 
 
         }
 
+
+        /**
+         * Init the settings page.
+         */
+        public function settings_page() {
+            TEG_TA_Admin_Settings::output();
+        }
 
     }
 
