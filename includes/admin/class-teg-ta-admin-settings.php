@@ -615,6 +615,26 @@ class TEG_TA_Admin_Settings {
 						</td>
 					</tr><?php
 					break;
+				case 'descriptions':
+					?><tr valign="top">
+					<?php
+                     $colspan=2;
+					 if ((!isset($value['label']) || (isset($value['label']) && $value['label']===true))){ ?>
+                            <th scope="row" class="titledesc">
+                                <label for="<?php echo esc_attr( $value['id'] ); ?>"><?php echo esc_html( $value['title'] ); ?></label>
+                                <?php echo $tooltip_html; ?>
+                            </th>
+						<?php
+					    $colspan=0;
+
+					 }
+					 ?>
+						<td colspan="<?php echo $colspan; ?>" class="forminp forminp-<?php echo sanitize_title( $value['type'] ) ?>">
+						<p><?php echo $description; ?></p>
+
+						</td>
+					</tr><?php
+				    break;
 
 				// Default: run an action
 				default:
