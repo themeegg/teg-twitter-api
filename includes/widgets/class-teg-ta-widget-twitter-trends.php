@@ -23,20 +23,25 @@ class TEG_TA_Widget_Twitter_Trends extends TEG_TA_Widget
      */
     public function __construct()
     {
+
         $this->widget_cssclass = 'teg_twitter_api_widget_twitter_trends';
-        $this->widget_description = __("Display the user's TRENDS in the sidebar.", 'woocommerce');
-        $this->widget_id = 'woocommerce_widget_cart';
-        $this->widget_name = __('WooCommerce cart', 'woocommerce');
+        $this->widget_description = __("Display the user's TRENDS in the sidebar.", 'teg-twitter-api');
+        $this->widget_id = 'teg_twitter_api_widget_twitter_trends';
+        $this->widget_name = __('Twitter Trends', 'teg-twitter-api');
         $this->settings = array(
             'title' => array(
                 'type' => 'text',
-                'std' => __('Twitter Trends', 'woocommerce'),
-                'label' => __('Title', 'woocommerce'),
+                'std' => __('Twitter Trends', 'teg-twitter-api'),
+                'label' => __('Title', 'teg-twitter-api'),
             ),
-            'hide_if_empty' => array(
-                'type' => 'checkbox',
-                'std' => 0,
-                'label' => __('Hide if cart is empty', 'woocommerce'),
+            'number_of_trends' => array(
+                'type' => 'number',
+                'std' => 5,
+                'label' => __('Number of trends to show', 'teg-twitter-api'),
+            ), 'trends_WOEID' => array(
+                'type' => 'number',
+                'std' => 1,
+                'label' => __('Number of trends to show', 'teg-twitter-api'),
             ),
         );
 
@@ -53,24 +58,17 @@ class TEG_TA_Widget_Twitter_Trends extends TEG_TA_Widget
      */
     public function widget($args, $instance)
     {
-        if (apply_filters('woocommerce_widget_cart_is_hidden', is_cart() || is_checkout())) {
+        if (apply_filters('teg_twitter_api_widget_twitter_trends_is_hidden', true)) {
             return;
         }
 
-        $hide_if_empty = empty($instance['hide_if_empty']) ? 0 : 1;
 
         $this->widget_start($args, $instance);
 
-        if ($hide_if_empty) {
-            echo '<div class="hide_cart_widget_if_empty">';
-        }
 
         // Insert cart widget placeholder - code in woocommerce.js will update this on page load
-        echo '<div class="widget_shopping_cart_content"></div>';
+        echo '<div class="widget_shopping_twitter_trends_content"></div>';
 
-        if ($hide_if_empty) {
-            echo '</div>';
-        }
 
         $this->widget_end($args);
     }

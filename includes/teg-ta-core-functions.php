@@ -16,6 +16,8 @@ if (!defined('ABSPATH')) {
 
 
 include( 'teg-ta-formatting-functions.php' );
+include( 'teg-ta-widget-functions.php' );
+
 
 /**
  * Display a TEG Twitter API help tip.

@@ -25,6 +25,7 @@ include_once( dirname( __FILE__ ) . '/widgets/class-teg-ta-widget-twitter-trends
  * @since 1.0.0
  */
 function teg_ta_register_widgets() {
+
     register_widget( 'TEG_TA_Widget_Twitter_Trends' );
 
 }
