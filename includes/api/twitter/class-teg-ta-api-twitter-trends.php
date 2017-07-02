@@ -68,11 +68,12 @@ class TEG_TA_Api_Twitter_Trends
 
         $twitter = new TEG_TA_Api_Lib_Twitter_Api_Exchange($twitterSettings->getTwitterSettings());
 
+
         $trends = $twitter->setGetfield($this->getfield)->buildOauth($this->url, $this->requestMethod)->performRequest();
 
         $trends_array = json_decode($trends);
 
-        $trends_array = $trends_array[0]->trends;
+        $trends_array = isset($trends_array[0]->trends) ? $trends_array[0]->trends : '';
 
         return $trends_array;
 

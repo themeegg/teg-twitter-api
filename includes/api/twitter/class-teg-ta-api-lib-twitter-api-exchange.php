@@ -80,7 +80,7 @@ class TEG_TA_Api_Lib_Twitter_Api_Exchange
     public function __construct(array $settings)
     {
         if (!function_exists('curl_init')) {
-            throw new RuntimeException('TwitterAPIExchange requires cURL extension to be loaded, see: http://curl.haxx.se/docs/install.html');
+            throw new RuntimeException('TEG_TA_Api_Lib_Twitter_Api_Exchange requires cURL extension to be loaded, see: http://curl.haxx.se/docs/install.html');
         }
 
         if (!isset($settings['oauth_access_token'])
@@ -88,7 +88,7 @@ class TEG_TA_Api_Lib_Twitter_Api_Exchange
             || !isset($settings['consumer_key'])
             || !isset($settings['consumer_secret'])
         ) {
-            throw new InvalidArgumentException('Incomplete settings passed to TwitterAPIExchange');
+            throw new InvalidArgumentException('Incomplete settings passed to TEG_TA_Api_Lib_Twitter_Api_Exchange');
         }
 
         $this->oauth_access_token = $settings['oauth_access_token'];
@@ -104,7 +104,7 @@ class TEG_TA_Api_Lib_Twitter_Api_Exchange
      *
      * @throws \Exception When you are trying to set both get and post fields
      *
-     * @return TwitterAPIExchange Instance of self for method chaining
+     * @return TEG_TA_Api_Lib_Twitter_Api_Exchange Instance of self for method chaining
      */
     public function setPostfields(array $array)
     {
@@ -139,7 +139,7 @@ class TEG_TA_Api_Lib_Twitter_Api_Exchange
      *
      * @throws \Exception
      *
-     * @return \TwitterAPIExchange Instance of self for method chaining
+     * @return \TEG_TA_Api_Lib_Twitter_Api_Exchange Instance of self for method chaining
      */
     public function setGetfield($string)
     {
@@ -192,7 +192,7 @@ class TEG_TA_Api_Lib_Twitter_Api_Exchange
      *
      * @throws \Exception
      *
-     * @return \TwitterAPIExchange Instance of self for method chaining
+     * @return \TEG_TA_Api_Lib_Twitter_Api_Exchange Instance of self for method chaining
      */
     public function buildOauth($url, $requestMethod)
     {
@@ -212,7 +212,10 @@ class TEG_TA_Api_Lib_Twitter_Api_Exchange
             'oauth_token' => $oauth_access_token,
             'oauth_timestamp' => time(),
             'oauth_version' => '1.0'
+
+
         );
+
 
         $getfield = $this->getGetfield();
 
@@ -261,6 +264,8 @@ class TEG_TA_Api_Lib_Twitter_Api_Exchange
      */
     public function performRequest($return = true, $curlOptions = array())
     {
+
+
         if (!is_bool($return)) {
             throw new \Exception('performRequest parameter must be true or false');
         }
@@ -268,6 +273,7 @@ class TEG_TA_Api_Lib_Twitter_Api_Exchange
         $header = array($this->buildAuthorizationHeader($this->oauth), 'Expect:');
 
         $getfield = $this->getGetfield();
+
         $postfields = $this->getPostfields();
 
         $options = array(
@@ -287,13 +293,16 @@ class TEG_TA_Api_Lib_Twitter_Api_Exchange
         }
 
         $feed = curl_init();
+
         curl_setopt_array($feed, $options);
+
         $json = curl_exec($feed);
 
         $this->httpStatusCode = curl_getinfo($feed, CURLINFO_HTTP_CODE);
 
         if (($error = curl_error($feed)) !== '') {
             curl_close($feed);
+
             throw new \Exception($error);
         }
 

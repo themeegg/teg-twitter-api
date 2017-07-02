@@ -23,7 +23,7 @@ class TEG_TA_Api_Twitter_Tweets
 
         $twitterSettings = new TEG_TA_Api_Lib_Settings();
 
-        if (!($count >= 1 && $count <= $this->count)) {
+        if ((int)$count < 0) {
 
             $count = $this->count;
 
@@ -37,6 +37,7 @@ class TEG_TA_Api_Twitter_Tweets
 
     public function getTweets($count = null)
     {
+
 
         $twitterSettings = new TEG_TA_Api_Lib_Settings();
 

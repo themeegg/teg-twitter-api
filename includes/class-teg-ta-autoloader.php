@@ -67,13 +67,17 @@ class TEG_TA_Autoloader
      *
      * @param string $class
      */
+
+    //TEG_TA_Api_Twitter_Trends
     public function autoload($class)
     {
         $class = strtolower($class);
 
+
         if (0 !== strpos($class, 'teg_ta_')) {
             return;
         }
+
 
         $file = $this->get_file_name_from_class($class);
         $path = '';
@@ -84,9 +88,12 @@ class TEG_TA_Autoloader
             $path = $this->include_path . 'admin/meta-boxes/';
         } elseif (strpos($class, 'teg_ta_admin') === 0) {
             $path = $this->include_path . 'admin/';
-        } elseif (strpos($class, 'teg_ta_api_twitter') === 0) {
+        } elseif (strpos($class, 'teg_ta_api_') === 0) {
+
             $path = $this->include_path . 'api/twitter/';
+
         }
+
 
         if (empty($path) || !$this->load_file($path . $file)) {
             $this->load_file($this->include_path . $file);

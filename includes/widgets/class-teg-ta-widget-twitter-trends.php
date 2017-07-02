@@ -41,7 +41,7 @@ class TEG_TA_Widget_Twitter_Trends extends TEG_TA_Widget
             ), 'trends_WOEID' => array(
                 'type' => 'number',
                 'std' => 1,
-                'label' => __('Number of trends to show', 'teg-twitter-api'),
+                'label' => __('Trends WOEID', 'teg-twitter-api'),
             ),
         );
 
@@ -58,16 +58,31 @@ class TEG_TA_Widget_Twitter_Trends extends TEG_TA_Widget
      */
     public function widget($args, $instance)
     {
-        if (apply_filters('teg_twitter_api_widget_twitter_trends_is_hidden', true)) {
+
+        if (apply_filters('teg_twitter_api_widget_twitter_trends_is_hidden', false)) {
             return;
         }
 
 
         $this->widget_start($args, $instance);
 
+        $twitterObj = new TEG_TA_Api_Twitter_Trends();
 
-        // Insert cart widget placeholder - code in woocommerce.js will update this on page load
-        echo '<div class="widget_shopping_twitter_trends_content"></div>';
+        if (is_numeric($instance['trends_WOEID'])) {
+
+            $twitterObj->setGetField($instance['trends_WOEID']);
+        }
+        $twitterTrends = $twitterObj->getTrends();
+
+
+        $data = array(
+
+            'trends' => $twitterTrends,
+            
+            'number_of_trends' => $instance['number_of_trends']
+        );
+
+        teg_ta_get_template('widgets/content-widget-twitter-trends.php', $data);
 
 
         $this->widget_end($args);

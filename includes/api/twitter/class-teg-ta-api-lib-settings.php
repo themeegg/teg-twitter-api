@@ -44,7 +44,7 @@ class TEG_TA_Api_Lib_Settings
     public function setOauthAccessTtoken()
     {
 
-        $oauth_access_token = get_option('social_settings_options_group_oauth_access_token');
+        $oauth_access_token = get_option('teg_twitter_api_twitter_oauth_access_token');
 
         $this->oauth_access_token = $oauth_access_token;
 
@@ -53,7 +53,7 @@ class TEG_TA_Api_Lib_Settings
     public function setOauthAccessTtokenSecret()
     {
 
-        $oauth_access_token_secret = get_option('social_settings_options_group_oauth_access_token_secret');
+        $oauth_access_token_secret = get_option('teg_twitter_api_twitter_oauth_token_secret');
 
         $this->oauth_access_token_secret = $oauth_access_token_secret;
 
@@ -62,7 +62,7 @@ class TEG_TA_Api_Lib_Settings
     public function setConsumerKey()
     {
 
-        $consumer_key = get_option('social_settings_options_group_consumer_key');
+        $consumer_key = get_option('teg_twitter_api_twitter_consumer_key');
 
         $this->consumer_key = $consumer_key;
 
@@ -70,8 +70,8 @@ class TEG_TA_Api_Lib_Settings
 
     public function setConsumerSecret()
     {
+        $consumer_secret = get_option('teg_twitter_api_twitter_consumer_secret');
 
-        $consumer_secret = get_option('social_settings_options_group_consumer_secret');
 
         $this->consumer_secret = $consumer_secret;
 
@@ -80,7 +80,7 @@ class TEG_TA_Api_Lib_Settings
     public function setTwitterUser()
     {
 
-        $twitter_user = get_option('social_settings_options_group_user');
+        $twitter_user = get_option('teg_twitter_api_twitter_username');
 
         $this->twitter_user = $twitter_user;
 

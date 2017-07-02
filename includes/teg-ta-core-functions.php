@@ -30,7 +30,7 @@ include( 'teg-ta-widget-functions.php' );
  */
 function teg_ta_help_tip( $tip, $allow_html = false ) {
     if ( $allow_html ) {
-        $tip = wc_sanitize_tooltip( $tip );
+        $tip = teg_ta_sanitize_tooltip( $tip );
     } else {
         $tip = esc_attr( $tip );
     }
@@ -88,10 +88,10 @@ function teg_ta_get_template($template_name, $args = array(), $template_path = '
         extract($args);
     }
 
-    $located = wc_locate_template($template_name, $template_path, $default_path);
+    $located = teg_ta_locate_template($template_name, $template_path, $default_path);
 
     if (!file_exists($located)) {
-        wc_doing_it_wrong(__FUNCTION__, sprintf(__('%s does not exist.', 'teg-twitter-api'), '<code>' . $located . '</code>'), '1.0');
+        teg_ta_doing_it_wrong(__FUNCTION__, sprintf(__('%s does not exist.', 'teg-twitter-api'), '<code>' . $located . '</code>'), '1.0');
         return;
     }
 
@@ -99,6 +99,7 @@ function teg_ta_get_template($template_name, $args = array(), $template_path = '
     $located = apply_filters('teg_ta_get_template', $located, $template_name, $args, $template_path, $default_path);
 
     do_action('teg_twitter_api_before_template_part', $template_name, $template_path, $located, $args);
+
 
     include($located);
 
