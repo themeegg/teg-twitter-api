@@ -31,6 +31,9 @@ class TEG_TA_Admin
 
     public function includes()
     {
+        teg_ta_include(dirname(__FILE__) . '/class-teg-ta-admin-post-types.php');
+
+        teg_ta_include(dirname(__FILE__) . '/class-teg-ta-admin-meta-boxes.php');
 
         teg_ta_include(dirname(__FILE__) . '/class-teg-ta-admin-menus.php');
 

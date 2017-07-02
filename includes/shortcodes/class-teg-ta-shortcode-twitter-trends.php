@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
  * @package    TEG_TA_Twitter_API/Shortcodes/Twitter
  * @version     1.0.0
  */
-class TEG_TA_Shortcode_Twitter_Tweets implements TEG_TA_Shortcode_Interface
+class TEG_TA_Shortcodes_Twitter_Trends implements TEG_TA_Shortcode_Interface
 {
 
 
@@ -28,7 +28,7 @@ class TEG_TA_Shortcode_Twitter_Tweets implements TEG_TA_Shortcode_Interface
 
         $defaultAttr = array(
             'count' => 5,
-            'title' => 'Twitter Tweets',
+            'title' => 'Twitter Trends',
         );
 
         $attributes = wp_parse_args($atts, $defaultAttr);

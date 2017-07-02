@@ -48,7 +48,7 @@ class TEG_TA_Shortcodes
         $function,
         $atts = array(),
         $wrapper = array(
-            'class' => 'woocommerce',
+            'class' => 'teg-twitter-api',
             'before' => null,
             'after' => null,
         )
@@ -71,7 +71,7 @@ class TEG_TA_Shortcodes
      */
     public static function twitter_tweets($atts)
     {
-        return self::shortcode_wrapper(array('TEG_TA_Shortcode_Twitter_Tweets', 'output'), $atts);
+        return self::shortcode_wrapper(array('TEG_TA_Shortcodes_Twitter_Tweets', 'output'), $atts);
     }
 
     /**
@@ -82,6 +82,6 @@ class TEG_TA_Shortcodes
      */
     public static function twitter_trends($atts)
     {
-        return self::shortcode_wrapper(array('TEG_TA_Shortcode_Twitter_Trends', 'output'), $atts);
+        return self::shortcode_wrapper(array('TEG_TA_Shortcodes_Twitter_Trends', 'output'), $atts);
     }
 }
