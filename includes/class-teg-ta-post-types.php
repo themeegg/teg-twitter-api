@@ -4,11 +4,11 @@
  *
  * Registers post types and taxonomies.
  *
- * @class     WC_Post_types
+ * @class     TEG_TA_Post_types
  * @version   2.5.0
- * @package   WooCommerce/Classes/Products
+ * @package   TEGTwitterAPI/Classes/Products
  * @category  Class
- * @author    WooThemes
+ * @author    ThemeEgg
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

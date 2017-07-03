@@ -17,7 +17,7 @@ if (!class_exists('TEG_TA_Admin_Post_Types', false)) :
     /**
      * TEG_TA_Admin_Post_Types Class.
      *
-     * Handles the edit posts views and some functionality on the edit post screen for WC post types.
+     * Handles the edit posts views and some functionality on the edit post screen for TEGTApi() post types.
      */
     class TEG_TA_Admin_Post_Types
     {

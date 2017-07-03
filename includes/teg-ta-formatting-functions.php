@@ -1,12 +1,12 @@
 <?php
 /**
- * WooCommerce Formatting
+ * TEGTwitterAPI Formatting
  *
  * Functions for formatting data.
  *
- * @author        WooThemes
+ * @author        ThemeEgg
  * @category    Core
- * @package    WooCommerce/Functions
+ * @package    TEGTwitterAPI/Functions
  * @version     2.1.0
  */
 

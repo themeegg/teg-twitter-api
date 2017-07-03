@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * WC_Admin class.
+ * TEG_TA_Admin class.
  */
 class TEG_TA_Admin
 {

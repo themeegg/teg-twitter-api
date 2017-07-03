@@ -23,7 +23,8 @@ if (!defined('ABSPATH')) {
 
 
 ?>
-<div class="teg-ta-twitter-feed-widget">
+<div class="teg-ta-twitter-feeds-shortcode">
+    <h2><?php echo $title; ?></h2>
     <ul>
         <?php
 

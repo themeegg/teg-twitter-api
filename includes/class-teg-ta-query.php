@@ -1,6 +1,6 @@
 <?php
 /**
- * Contains the query functions for WooCommerce which alter the front-end post queries and loops
+ * Contains the query functions for TEGTwitterAPI which alter the front-end post queries and loops
  *
  * @class        TEG_TA_Query
  * @version        1.0.0
@@ -52,8 +52,8 @@ class TEG_TA_Query
      */
     public function get_errors()
     {
-        if (!empty($_GET['wc_error']) && ($error = sanitize_text_field($_GET['wc_error'])) && !wc_has_notice($error, 'error')) {
-            wc_add_notice($error, 'error');
+        if (!empty($_GET['teg_ta_error']) && ($error = sanitize_text_field($_GET['teg_ta_error'])) && !teg_ta_has_notice($error, 'error')) {
+            teg_ta_add_notice($error, 'error');
         }
     }
 
@@ -82,7 +82,7 @@ class TEG_TA_Query
 
         switch ($endpoint) {
             case 'test_index' :
-                $title = __('Pay for order', 'woocommerce');
+                $title = __('Pay for order', 'teg-twitter-api');
                 break;
             default :
                 $title = '';
@@ -234,7 +234,7 @@ class TEG_TA_Query
         }
 
         // When orderby is set, WordPress shows posts. Get around that here.
-        if ($this->is_showing_page_on_front($q) && $this->page_on_front_is(wc_get_page_id('shop'))) {
+        if ($this->is_showing_page_on_front($q) && $this->page_on_front_is(teg_ta_get_page_id('shop'))) {
             $_query = wp_parse_args($q->query);
             if (empty($_query) || !array_diff(array_keys($_query), array('preview', 'page', 'paged', 'cpage', 'orderby'))) {
                 $q->is_page = true;
@@ -250,7 +250,7 @@ class TEG_TA_Query
         }
 
         // Special check for shops with the product archive on front
-        if ($q->is_page() && 'page' === get_option('show_on_front') && absint($q->get('page_id')) === wc_get_page_id('shop')) {
+        if ($q->is_page() && 'page' === get_option('show_on_front') && absint($q->get('page_id')) === teg_ta_get_page_id('shop')) {
             // This is a front-page shop
             $q->set('post_type', 'product');
             $q->set('page_id', '');
@@ -268,7 +268,7 @@ class TEG_TA_Query
             // This is hacky but works. Awaiting https://core.trac.wordpress.org/ticket/21096
             global $wp_post_types;
 
-            $shop_page = get_post(wc_get_page_id('shop'));
+            $shop_page = get_post(teg_ta_get_page_id('shop'));
 
             $wp_post_types['product']->ID = $shop_page->ID;
             $wp_post_types['product']->post_title = $shop_page->post_title;
@@ -318,8 +318,8 @@ class TEG_TA_Query
     {
         global $wp_the_query;
 
-        // If this is not a WC Query, do not modify the query
-        if (empty($wp_the_query->query_vars['wc_query']) || empty($wp_the_query->query_vars['s'])) {
+        // If this is not a TEGTApi() Query, do not modify the query
+        if (empty($wp_the_query->query_vars['teg_ta_query']) || empty($wp_the_query->query_vars['s'])) {
             return $where;
         }
 
@@ -340,7 +340,7 @@ class TEG_TA_Query
      */
     public function wpseo_metadesc()
     {
-        return WPSEO_Meta::get_value('metadesc', wc_get_page_id('shop'));
+        return WPSEO_Meta::get_value('metadesc', teg_ta_get_page_id('shop'));
     }
 
     /**
@@ -353,7 +353,7 @@ class TEG_TA_Query
      */
     public function wpseo_metakey()
     {
-        return WPSEO_Meta::get_value('metakey', wc_get_page_id('shop'));
+        return WPSEO_Meta::get_value('metakey', teg_ta_get_page_id('shop'));
     }
 
     /**
@@ -379,7 +379,7 @@ class TEG_TA_Query
         $q->set('meta_query', $this->get_meta_query($q->get('meta_query'), true));
         $q->set('tax_query', $this->get_tax_query($q->get('tax_query'), true));
         $q->set('posts_per_page', $q->get('posts_per_page') ? $q->get('posts_per_page') : apply_filters('loop_shop_per_page', get_option('posts_per_page')));
-        $q->set('wc_query', 'product_query');
+        $q->set('teg_ta_query', 'product_query');
         $q->set('post__in', array_unique((array)apply_filters('loop_shop_post_in', array())));
 
         do_action('teg_twitter_api_product_query', $q, $this);
@@ -427,7 +427,7 @@ class TEG_TA_Query
     {
         // Get ordering from query string unless defined
         if (!$orderby) {
-            $orderby_value = isset($_GET['orderby']) ? wc_clean($_GET['orderby']) : apply_filters('teg_twitter_api_default_catalog_orderby', get_option('teg_twitter_api_default_catalog_orderby'));
+            $orderby_value = isset($_GET['orderby']) ? teg_ta_clean($_GET['orderby']) : apply_filters('teg_twitter_api_default_catalog_orderby', get_option('teg_twitter_api_default_catalog_orderby'));
 
             // Get order + orderby args from string
             $orderby_value = explode('-', $orderby_value);
@@ -466,7 +466,7 @@ class TEG_TA_Query
                 add_filter('posts_clauses', array($this, 'order_by_popularity_post_clauses'));
                 break;
             case 'rating' :
-                $args['meta_key'] = '_wc_average_rating';
+                $args['meta_key'] = '_teg_ta_average_rating';
                 $args['orderby'] = array(
                     'meta_value_num' => 'DESC',
                     'ID' => 'ASC',
@@ -538,7 +538,7 @@ class TEG_TA_Query
     {
         global $wpdb;
 
-        wc_deprecated_function('order_by_rating_post_clauses', '3.0');
+        teg_ta_deprecated_function('order_by_rating_post_clauses', '3.0');
 
         $args['fields'] .= ", AVG( $wpdb->commentmeta.meta_value ) as average_rating ";
         $args['where'] .= " AND ( $wpdb->commentmeta.meta_key = 'rating' OR $wpdb->commentmeta.meta_key IS null ) ";
@@ -593,7 +593,7 @@ class TEG_TA_Query
             }
         }
 
-        $product_visibility_terms = wc_get_product_visibility_term_ids();
+        $product_visibility_terms = teg_ta_get_product_visibility_term_ids();
         $product_visibility_not_in = array(is_search() && $main_query ? $product_visibility_terms['exclude-from-search'] : $product_visibility_terms['exclude-from-catalog']);
 
         // Hide out of stock products.
@@ -640,7 +640,7 @@ class TEG_TA_Query
     private function price_filter_meta_query()
     {
         if (isset($_GET['max_price']) || isset($_GET['min_price'])) {
-            $meta_query = wc_get_min_max_price_meta_query($_GET);
+            $meta_query = teg_ta_get_min_max_price_meta_query($_GET);
             $meta_query['price_filter'] = true;
 
             return $meta_query;
@@ -754,17 +754,17 @@ class TEG_TA_Query
         if (!is_array(self::$_chosen_attributes)) {
             self::$_chosen_attributes = array();
 
-            if ($attribute_taxonomies = wc_get_attribute_taxonomies()) {
+            if ($attribute_taxonomies = teg_ta_get_attribute_taxonomies()) {
                 foreach ($attribute_taxonomies as $tax) {
-                    $attribute = wc_sanitize_taxonomy_name($tax->attribute_name);
-                    $taxonomy = wc_attribute_taxonomy_name($attribute);
-                    $filter_terms = !empty($_GET['filter_' . $attribute]) ? explode(',', wc_clean($_GET['filter_' . $attribute])) : array();
+                    $attribute = teg_ta_sanitize_taxonomy_name($tax->attribute_name);
+                    $taxonomy = teg_ta_attribute_taxonomy_name($attribute);
+                    $filter_terms = !empty($_GET['filter_' . $attribute]) ? explode(',', teg_ta_clean($_GET['filter_' . $attribute])) : array();
 
                     if (empty($filter_terms) || !taxonomy_exists($taxonomy)) {
                         continue;
                     }
 
-                    $query_type = !empty($_GET['query_type_' . $attribute]) && in_array($_GET['query_type_' . $attribute], array('and', 'or')) ? wc_clean($_GET['query_type_' . $attribute]) : '';
+                    $query_type = !empty($_GET['query_type_' . $attribute]) && in_array($_GET['query_type_' . $attribute], array('and', 'or')) ? teg_ta_clean($_GET['query_type_' . $attribute]) : '';
                     self::$_chosen_attributes[$taxonomy]['terms'] = array_map('sanitize_title', $filter_terms); // Ensures correct encoding
                     self::$_chosen_attributes[$taxonomy]['query_type'] = $query_type ? $query_type : apply_filters('teg_twitter_api_layered_nav_default_query_type', 'and');
                 }
@@ -778,7 +778,7 @@ class TEG_TA_Query
      */
     public function layered_nav_init()
     {
-        wc_deprecated_function('layered_nav_init', '2.6');
+        teg_ta_deprecated_function('layered_nav_init', '2.6');
     }
 
     /**
@@ -787,7 +787,7 @@ class TEG_TA_Query
      */
     public function get_products_in_view()
     {
-        wc_deprecated_function('get_products_in_view', '2.6');
+        teg_ta_deprecated_function('get_products_in_view', '2.6');
     }
 
     /**
@@ -798,6 +798,6 @@ class TEG_TA_Query
      */
     public function layered_nav_query($filtered_posts)
     {
-        wc_deprecated_function('layered_nav_query', '2.6');
+        teg_ta_deprecated_function('layered_nav_query', '2.6');
     }
 }

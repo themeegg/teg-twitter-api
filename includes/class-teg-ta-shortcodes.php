@@ -23,7 +23,7 @@ class TEG_TA_Shortcodes
     {
         $shortcodes = array(
 
-            'twitter_tweets' => __CLASS__ . '::twitter_tweets',
+            'twitter_feeds' => __CLASS__ . '::twitter_feeds',
             'twitter_trends' => __CLASS__ . '::twitter_trends',
 
         );
@@ -69,9 +69,9 @@ class TEG_TA_Shortcodes
      * @param mixed $atts
      * @return string
      */
-    public static function twitter_tweets($atts)
+    public static function twitter_feeds($atts)
     {
-        return self::shortcode_wrapper(array('TEG_TA_Shortcodes_Twitter_Tweets', 'output'), $atts);
+        return self::shortcode_wrapper(array('TEG_TA_Shortcode_Twitter_Feeds', 'output'), $atts);
     }
 
     /**
@@ -82,6 +82,6 @@ class TEG_TA_Shortcodes
      */
     public static function twitter_trends($atts)
     {
-        return self::shortcode_wrapper(array('TEG_TA_Shortcodes_Twitter_Trends', 'output'), $atts);
+        return self::shortcode_wrapper(array('TEG_TA_Shortcode_Twitter_Trends', 'output'), $atts);
     }
 }

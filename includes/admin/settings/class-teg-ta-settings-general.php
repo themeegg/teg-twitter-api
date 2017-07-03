@@ -1,23 +1,23 @@
 <?php
 /**
- * WooCommerce General Settings
+ * TEGTwitterAPI General Settings
  *
- * @author      WooThemes
+ * @author      ThemeEgg
  * @category    Admin
- * @package     WooCommerce/Admin
- * @version     2.1.0
+ * @package     TEGTwitterAPI/Admin
+ * @version     1.0.0
  */
 
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 
-if (!class_exists('WC_Settings_General', false)) :
+if (!class_exists('TEG_TA_Settings_General', false)) :
 
     /**
-     * WC_Admin_Settings_General.
+     * TEG_TA_Admin_Settings_General.
      */
-    class WC_Settings_General extends TEG_TA_Settings_Page
+    class TEG_TA_Settings_General extends TEG_TA_Settings_Page
     {
 
         /**
@@ -78,7 +78,7 @@ if (!class_exists('WC_Settings_General', false)) :
          */
         public function color_picker($name, $id, $value, $desc = '')
         {
-            echo '<div class="color_box">' . wc_help_tip($desc) . '
+            echo '<div class="color_box">' . teg_ta_help_tip($desc) . '
 			<input name="' . esc_attr($id) . '" id="' . esc_attr($id) . '" type="text" value="' . esc_attr($value) . '" class="colorpick" /> <div id="colorPickerDiv_' . esc_attr($id) . '" class="colorpickdiv"></div>
 		</div>';
         }
@@ -97,4 +97,4 @@ if (!class_exists('WC_Settings_General', false)) :
 
 endif;
 
-return new WC_Settings_General();
+return new TEG_TA_Settings_General();

@@ -73,7 +73,7 @@ abstract class TEG_TA_Widget extends WP_Widget {
      * @return bool true if the widget is cached otherwise false
      */
     public function get_cached_widget( $args ) {
-        $cache = wp_cache_get( apply_filters( 'woocommerce_cached_widget_id', $this->widget_id ), 'widget' );
+        $cache = wp_cache_get( apply_filters( 'teg_twitter_api_cached_widget_id', $this->widget_id ), 'widget' );
 
         if ( ! is_array( $cache ) ) {
             $cache = array();
@@ -95,7 +95,7 @@ abstract class TEG_TA_Widget extends WP_Widget {
      * @return string the content that was cached
      */
     public function cache_widget( $args, $content ) {
-        $cache = wp_cache_get( apply_filters( 'woocommerce_cached_widget_id', $this->widget_id ), 'widget' );
+        $cache = wp_cache_get( apply_filters( 'teg_twitter_api_cached_widget_id', $this->widget_id ), 'widget' );
 
         if ( ! is_array( $cache ) ) {
             $cache = array();
@@ -103,7 +103,7 @@ abstract class TEG_TA_Widget extends WP_Widget {
 
         $cache[ $args['widget_id'] ] = $content;
 
-        wp_cache_set( apply_filters( 'woocommerce_cached_widget_id', $this->widget_id ), $cache, 'widget' );
+        wp_cache_set( apply_filters( 'teg_twitter_api_cached_widget_id', $this->widget_id ), $cache, 'widget' );
 
         return $content;
     }
@@ -112,7 +112,7 @@ abstract class TEG_TA_Widget extends WP_Widget {
      * Flush the cache.
      */
     public function flush_widget_cache() {
-        wp_cache_delete( apply_filters( 'woocommerce_cached_widget_id', $this->widget_id ), 'widget' );
+        wp_cache_delete( apply_filters( 'teg_twitter_api_cached_widget_id', $this->widget_id ), 'widget' );
     }
 
     /**
@@ -190,7 +190,7 @@ abstract class TEG_TA_Widget extends WP_Widget {
             /**
              * Sanitize the value of a setting.
              */
-            $instance[ $key ] = apply_filters( 'woocommerce_widget_settings_sanitize_option', $instance[ $key ], $new_instance, $key, $setting );
+            $instance[ $key ] = apply_filters( 'teg_twitter_api_widget_settings_sanitize_option', $instance[ $key ], $new_instance, $key, $setting );
         }
 
         $this->flush_widget_cache();
@@ -272,7 +272,7 @@ abstract class TEG_TA_Widget extends WP_Widget {
 
                 // Default: run an action
                 default :
-                    do_action( 'woocommerce_widget_field_' . $setting['type'], $key, $value, $setting, $instance );
+                    do_action( 'teg_twitter_api_widget_field_' . $setting['type'], $key, $value, $setting, $instance );
                     break;
             }
         }

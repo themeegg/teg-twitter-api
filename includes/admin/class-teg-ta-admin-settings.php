@@ -66,7 +66,7 @@ class TEG_TA_Admin_Settings {
 		global $current_tab;
 
 		if ( empty( $_REQUEST['_wpnonce'] ) || ! wp_verify_nonce( $_REQUEST['_wpnonce'], 'teg-twitter-api-settings' ) ) {
-			die( __( 'Action failed. Please refresh the page and retry.', 'woocommerce' ) );
+			die( __( 'Action failed. Please refresh the page and retry.', 'teg-twitter-api' ) );
 		}
 
 		// Trigger actions
@@ -133,7 +133,7 @@ class TEG_TA_Admin_Settings {
 		wp_enqueue_script( 'teg_twitter_api_settings', TEGTApi()->plugin_url() . '/assets/js/admin/settings' . $suffix . '.js', array( 'jquery', 'jquery-ui-datepicker', 'jquery-ui-sortable', 'iris', 'select2' ), TEGTApi()->version, true );
 
 		wp_localize_script( 'teg_twitter_api_settings', 'teg_twitter_api_settings_params', array(
-			'i18n_nav_warning' => __( 'The changes you made will be lost if you navigate away from this page.', 'woocommerce' ),
+			'i18n_nav_warning' => __( 'The changes you made will be lost if you navigate away from this page.', 'teg-twitter-api' ),
 		) );
 
 		// Include settings pages
@@ -520,7 +520,7 @@ class TEG_TA_Admin_Settings {
 
 					if ( has_filter( 'teg_twitter_api_get_image_size_' . $image_size ) ) {
 						$disabled_attr = 'disabled="disabled"';
-						$disabled_message = "<p><small>" . __( 'The settings of this image size have been disabled because its values are being overwritten by a filter.', 'woocommerce' ) . "</small></p>";
+						$disabled_message = "<p><small>" . __( 'The settings of this image size have been disabled because its values are being overwritten by a filter.', 'teg-twitter-api' ) . "</small></p>";
 					}
 
 					?><tr valign="top">
@@ -529,7 +529,7 @@ class TEG_TA_Admin_Settings {
 
 							<input name="<?php echo esc_attr( $value['id'] ); ?>[width]" <?php echo $disabled_attr; ?> id="<?php echo esc_attr( $value['id'] ); ?>-width" type="text" size="3" value="<?php echo $width; ?>" /> &times; <input name="<?php echo esc_attr( $value['id'] ); ?>[height]" <?php echo $disabled_attr; ?> id="<?php echo esc_attr( $value['id'] ); ?>-height" type="text" size="3" value="<?php echo $height; ?>" />px
 
-							<label><input name="<?php echo esc_attr( $value['id'] ); ?>[crop]" <?php echo $disabled_attr; ?> id="<?php echo esc_attr( $value['id'] ); ?>-crop" type="checkbox" value="1" <?php checked( 1, $crop ); ?> /> <?php _e( 'Hard crop?', 'woocommerce' ); ?></label>
+							<label><input name="<?php echo esc_attr( $value['id'] ); ?>[crop]" <?php echo $disabled_attr; ?> id="<?php echo esc_attr( $value['id'] ); ?>-crop" type="checkbox" value="1" <?php checked( 1, $crop ); ?> /> <?php _e( 'Hard crop?', 'teg-twitter-api' ); ?></label>
 
 							</td>
 					</tr><?php
@@ -556,7 +556,7 @@ class TEG_TA_Admin_Settings {
 					?><tr valign="top" class="single_select_page">
 						<th scope="row" class="titledesc"><?php echo esc_html( $value['title'] ) ?> <?php echo $tooltip_html; ?></th>
 						<td class="forminp">
-							<?php echo str_replace( ' id=', " data-placeholder='" . esc_attr__( 'Select a page&hellip;', 'woocommerce' ) . "' style='" . $value['css'] . "' class='" . $value['class'] . "' id=", wp_dropdown_pages( $args ) ); ?> <?php echo $description; ?>
+							<?php echo str_replace( ' id=', " data-placeholder='" . esc_attr__( 'Select a page&hellip;', 'teg-twitter-api' ) . "' style='" . $value['css'] . "' class='" . $value['class'] . "' id=", wp_dropdown_pages( $args ) ); ?> <?php echo $description; ?>
 						</td>
 					</tr><?php
 					break;
@@ -578,7 +578,7 @@ class TEG_TA_Admin_Settings {
 							<label for="<?php echo esc_attr( $value['id'] ); ?>"><?php echo esc_html( $value['title'] ); ?></label>
 							<?php echo $tooltip_html; ?>
 						</th>
-						<td class="forminp"><select name="<?php echo esc_attr( $value['id'] ); ?>" style="<?php echo esc_attr( $value['css'] ); ?>" data-placeholder="<?php esc_attr_e( 'Choose a country&hellip;', 'woocommerce' ); ?>" aria-label="<?php esc_attr_e( 'Country', 'woocommerce' ) ?>" class="wc-enhanced-select">
+						<td class="forminp"><select name="<?php echo esc_attr( $value['id'] ); ?>" style="<?php echo esc_attr( $value['css'] ); ?>" data-placeholder="<?php esc_attr_e( 'Choose a country&hellip;', 'teg-twitter-api' ); ?>" aria-label="<?php esc_attr_e( 'Country', 'teg-twitter-api' ) ?>" class="wc-enhanced-select">
 							<?php TEGTApi()->countries->country_dropdown_options( $country, $state ); ?>
 						</select> <?php echo $description; ?>
 						</td>
@@ -603,7 +603,7 @@ class TEG_TA_Admin_Settings {
 							<?php echo $tooltip_html; ?>
 						</th>
 						<td class="forminp">
-							<select multiple="multiple" name="<?php echo esc_attr( $value['id'] ); ?>[]" style="width:350px" data-placeholder="<?php esc_attr_e( 'Choose countries&hellip;', 'woocommerce' ); ?>" aria-label="<?php esc_attr_e( 'Country', 'woocommerce' ) ?>" class="wc-enhanced-select">
+							<select multiple="multiple" name="<?php echo esc_attr( $value['id'] ); ?>[]" style="width:350px" data-placeholder="<?php esc_attr_e( 'Choose countries&hellip;', 'teg-twitter-api' ); ?>" aria-label="<?php esc_attr_e( 'Country', 'teg-twitter-api' ) ?>" class="wc-enhanced-select">
 								<?php
 									if ( ! empty( $countries ) ) {
 										foreach ( $countries as $key => $val ) {
@@ -611,7 +611,7 @@ class TEG_TA_Admin_Settings {
 										}
 									}
 								?>
-							</select> <?php echo ( $description ) ? $description : ''; ?> <br /><a class="select_all button" href="#"><?php _e( 'Select all', 'woocommerce' ); ?></a> <a class="select_none button" href="#"><?php _e( 'Select none', 'woocommerce' ); ?></a>
+							</select> <?php echo ( $description ) ? $description : ''; ?> <br /><a class="select_all button" href="#"><?php _e( 'Select all', 'teg-twitter-api' ); ?></a> <a class="select_none button" href="#"><?php _e( 'Select none', 'teg-twitter-api' ); ?></a>
 						</td>
 					</tr><?php
 					break;

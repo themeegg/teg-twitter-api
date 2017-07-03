@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
  * @package    TEG_TA_Twitter_API/Shortcodes/Twitter
  * @version     1.0.0
  */
-class TEG_TA_Shortcode_Twitter_Trends implements TEG_TA_Shortcode_Interface
+class TEG_TA_Shortcode_Twitter_Feeds implements TEG_TA_Shortcode_Interface
 {
 
 
@@ -28,31 +28,32 @@ class TEG_TA_Shortcode_Twitter_Trends implements TEG_TA_Shortcode_Interface
 
         $defaultAttr = array(
             'count' => 5,
-            'title' => __('Twitter Trends', 'teg-twitter-api'),
-            'trends_WOEID' => 1
+            'title' => __('Twitter Tweets', 'teg-twitter-api'),
         );
 
         $attributes = wp_parse_args($atts, $defaultAttr);
 
+        $twitterObj = new TEG_TA_Api_Twitter_Tweets();
 
-        $twitterObj = new TEG_TA_Api_Twitter_Trends();
 
-        if (is_numeric($attributes['trends_WOEID'])) {
+        $twitter_feed_array = $twitterObj->getTweets($attributes['count']);
 
-            $twitterObj->setGetField($attributes['trends_WOEID']);
+        if (gettype($twitter_feed_array) !== 'array') {
+
+            $twitter_feed_array = array();
         }
-        $twitterTrends = $twitterObj->getTrends();
-
 
         $data = array(
 
-            'trends' => $twitterTrends,
+            'twitter_feeds_array' => $twitter_feed_array,
 
-            'number_of_trends' => $attributes['count'],
+            'twitter_username' => get_option('teg_twitter_api_twitter_username'),
 
             'title' => $attributes['title']
         );
 
-        teg_ta_get_template('shortcodes/content-shortcode-twitter-trends.php', $data);
+        teg_ta_get_template('shortcodes/content-shortcode-twitter-feeds.php', $data);
+
+
     }
 }

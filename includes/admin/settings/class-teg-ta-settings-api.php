@@ -44,7 +44,7 @@ if (!class_exists('TET_TA_Settings_API', false)) :
         {
 
             $sections = array(
-                '' => __('General', 'teg-twitter-api'),
+                '' => __('Basic', 'teg-twitter-api'),
 
                 'other' => __('Other', 'teg-twitter-api'),
 
@@ -140,9 +140,7 @@ if (!class_exists('TET_TA_Settings_API', false)) :
                         'title' => '',
                         'type' => 'descriptions',
                         'label' => false,
-                        'desc' => 'For Tweet shortcode please type [twitter_tweets count="show no of tweets"] and default shortcode is [twitter_tweets count="5"]
-                                    <br/>
-                                    For Trends shortcode please type [twitter_Trends count="show no of Trends" WOEID="WOEID"] and default shortcode is [twitter_trends count="5" WOEID="1"]',
+                        'desc' => 'For Tweet shortcode please type [twitter_feeds count="4"]<br/>For Trends shortcode please type [twitter_trends count="6"]',
                         'id' => 'teg_twitter_twitter_tweets_count_info',
 
                     ),

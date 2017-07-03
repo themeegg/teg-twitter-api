@@ -20,23 +20,28 @@
 if (!defined('ABSPATH')) {
     exit;
 }
-
-
 ?>
-<div class="teg-ta-twitter-feed-widget">
+
+<div class="teg-ta-twitter-trends-shortcode">
+    <h2><?php echo $title; ?></h2>
     <ul>
         <?php
 
-        foreach ($twitter_feeds_array as $feed_index => $feed) {
+        foreach ($trends as $trend_index => $trend) {
+
+            if ($trend_index >= $number_of_trends) {
+                break;
+            }
 
             ?>
 
             <li>
-                <p>
-                    <a target="_blank"
-                       href="https://twitter.com/<?php echo $twitter_username ?>/status/<?php echo $feed['id_str'] ?>"><?php echo $feed['text']; ?></a>
-                </p>
-
+                <a target="_blank" href="<?php echo $trend->url; ?>">
+                    <b><?php echo $trend->name; ?></b>
+                </a>
+                <?php if ($trend->tweet_volume): ?>
+                    <span>(<?php echo $trend->tweet_volume; ?>)</span>
+                <?php endif; ?>
             </li>
 
             <?php

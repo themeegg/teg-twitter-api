@@ -17,11 +17,11 @@ This plugin help you to show twitter tweets, Trends, Post to twitter and many mo
 
 Some demo shortcode of this plugin
 
-For Tweet shortcode please type [twitter_tweets count="show no of tweets"] and default shortcode is [twitter_tweets count="5"]
-For Trends shortcode please type [twitter_Trends count="show no of Trends" WOEID="WOEID"] and default shortcode is [twitter_trends count="5" WOEID="1"]
+For Tweet shortcode please type [twitter_feeds count="5"]
+For Trends shortcode please type [twitter_trends count="3"]
 
-*   [twitter_tweets count="show no of tweets"] for showing twitter tweets and it's default shortcode is [twitter_tweets count="5"].
-*   [twitter_Trends count="show no of Trends" WOEID="WOEID"] for showing Twitter treands and it's default shortcode is [twitter_trends count="5" WOEID="1"].
+*   [twitter_feeds count="5"]
+*   [twitter_trends count="3" ]
 
 You can change shortcode attribute as per requirement please visit our official page http://doc.themeegg.com/
 

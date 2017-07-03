@@ -1,9 +1,4 @@
 <?php
-//require_once 'config.php';
-//
-//new Core\TEG_Core();
-
-
 /**
  * Plugin Name: TEG Twitter API
  * Plugin URI: https://themeegg.com/plugins/teg-twitter-api
@@ -47,7 +42,7 @@ if (!class_exists('TEG_Twitter_Api')) :
          * The single instance of the class.
          *
          * @var TEG_Twitter_Api
-         * @since 2.1
+         * @since 1.0
          */
         protected static $_instance = null;
         /**
@@ -63,9 +58,9 @@ if (!class_exists('TEG_Twitter_Api')) :
          *
          * Ensures only one instance of TEG_Twitter_Api is loaded or can be loaded.
          *
-         * @since 2.1
+         * @since 1.0
          * @static
-         * @see WC()
+         * @see TEGTApi()
          * @return TEG_Twitter_Api - Main instance.
          */
         public static function instance()
@@ -78,20 +73,20 @@ if (!class_exists('TEG_Twitter_Api')) :
 
         /**
          * Cloning is forbidden.
-         * @since 2.1
+         * @since 1.0
          */
         public function __clone()
         {
-            wc_doing_it_wrong(__FUNCTION__, __('Cheatin&#8217; huh?', 'teg-twitter-api'), '2.1');
+            _doing_it_wrong(__FUNCTION__, __('Cheatin&#8217; huh?', 'teg-twitter-api'), '1.0');
         }
 
         /**
          * Unserializing instances of this class is forbidden.
-         * @since 2.1
+         * @since 1.0
          */
         public function __wakeup()
         {
-            wc_doing_it_wrong(__FUNCTION__, __('Cheatin&#8217; huh?', 'teg-twitter-api'), '2.1');
+            _doing_it_wrong(__FUNCTION__, __('Cheatin&#8217; huh?', 'teg-twitter-api'), '1.0');
         }
 
         /**
@@ -285,17 +280,17 @@ if (!class_exists('TEG_Twitter_Api')) :
          * Note: the first-loaded translation file overrides any following ones if the same translation is present.
          *
          * Locales found in:
-         *      - WP_LANG_DIR/woocommerce/woocommerce-LOCALE.mo
-         *      - WP_LANG_DIR/plugins/woocommerce-LOCALE.mo
+         *      - WP_LANG_DIR/teg-twitter-api/teg-twitter-api-LOCALE.mo
+         *      - WP_LANG_DIR/plugins/teg-twitter-api-LOCALE.mo
          */
         public function load_plugin_textdomain()
         {
             $locale = is_admin() && function_exists('get_user_locale') ? get_user_locale() : get_locale();
-            $locale = apply_filters('plugin_locale', $locale, 'woocommerce');
+            $locale = apply_filters('plugin_locale', $locale, 'teg-twitter-api');
 
-            unload_textdomain('woocommerce');
-            load_textdomain('woocommerce', WP_LANG_DIR . '/woocommerce/woocommerce-' . $locale . '.mo');
-            load_plugin_textdomain('woocommerce', false, plugin_basename(dirname(__FILE__)) . '/i18n/languages');
+            unload_textdomain('teg-twitter-api');
+            load_textdomain('teg-twitter-api', WP_LANG_DIR . '/teg-twitter-api/teg-twitter-api-' . $locale . '.mo');
+            load_plugin_textdomain('teg-twitter-api', false, plugin_basename(dirname(__FILE__)) . '/i18n/languages');
         }
 
         /**
@@ -304,7 +299,7 @@ if (!class_exists('TEG_Twitter_Api')) :
         public function setup_environment()
         {
             /**
-             * @deprecated 2.2 Use WC()->template_path()
+             * @deprecated 2.2 Use TEGTApi()->template_path()
              */
             $this->define('TEG_TA_TEMPLATE_PATH', $this->template_path());
 
@@ -336,7 +331,7 @@ if (!class_exists('TEG_Twitter_Api')) :
          */
         public function template_path()
         {
-            return apply_filters('teg_twitter_api_template_path', 'woocommerce/');
+            return apply_filters('teg_twitter_api_template_path', 'teg-twitter-api/');
         }
 
         /**
@@ -349,7 +344,7 @@ if (!class_exists('TEG_Twitter_Api')) :
         }
 
         /**
-         * Return the WC API URL for a given request.
+         * Return the TEGTApi() API URL for a given request.
          *
          * @param string $request
          * @param mixed $ssl (default: null)
@@ -427,9 +422,9 @@ endif;
 /**
  * Main instance of TEG_Twitter_Api.
  *
- * Returns the main instance of WC to prevent the need to use globals.
+ * Returns the main instance of TEGTApi() to prevent the need to use globals.
  *
- * @since  2.1
+ * @since  1.0
  * @return TEG_Twitter_Api
  */
 function TEGTApi()

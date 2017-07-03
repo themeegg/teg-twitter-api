@@ -22,7 +22,7 @@ if (!defined('ABSPATH')) {
 }
 ?>
 
-<div class="teg-ta-twitter-trends">
+<div class="teg-ta-twitter-trends-widget">
     <ul>
         <?php
 

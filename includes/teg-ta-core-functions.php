@@ -35,7 +35,7 @@ function teg_ta_help_tip( $tip, $allow_html = false ) {
         $tip = esc_attr( $tip );
     }
 
-    return '<span class="woocommerce-help-tip" data-tip="' . $tip . '"></span>';
+    return '<span class="teg-twitter-api-help-tip" data-tip="' . $tip . '"></span>';
 }
 /**
  * Get template part (for templates like the shop-loop).
