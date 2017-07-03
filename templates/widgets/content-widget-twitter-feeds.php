@@ -34,7 +34,7 @@ if (!defined('ABSPATH')) {
             <li>
                 <p>
                     <a target="_blank"
-                       href="https://twitter.com/<?php echo $twitter_username ?>/status/<?php echo $feed['id_str'] ?>"><?php echo $feed['text']; ?></a>
+                       href="https://twitter.com/<?php echo esc_attr($twitter_username) ?>/status/<?php echo esc_attr($feed['id_str']) ?>"><?php echo esc_attr($feed['text']); ?></a>
                 </p>
 
             </li>

@@ -24,7 +24,7 @@ if (!defined('ABSPATH')) {
 
 ?>
 <div class="teg-ta-twitter-feeds-shortcode">
-    <h2><?php echo $title; ?></h2>
+    <h2><?php echo esc_attr($title); ?></h2>
     <ul>
         <?php
 
@@ -35,7 +35,7 @@ if (!defined('ABSPATH')) {
             <li>
                 <p>
                     <a target="_blank"
-                       href="https://twitter.com/<?php echo $twitter_username ?>/status/<?php echo $feed['id_str'] ?>"><?php echo $feed['text']; ?></a>
+                       href="https://twitter.com/<?php echo esc_attr($twitter_username) ?>/status/<?php echo esc_attr($feed['id_str']) ?>"><?php echo esc_attr($feed['text']); ?></a>
                 </p>
 
             </li>

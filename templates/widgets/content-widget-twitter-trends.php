@@ -36,10 +36,10 @@ if (!defined('ABSPATH')) {
 
             <li>
                 <a target="_blank" href="<?php echo $trend->url; ?>">
-                    <b><?php echo $trend->name; ?></b>
+                    <b><?php echo esc_attr($trend->name); ?></b>
                 </a>
                 <?php if ($trend->tweet_volume): ?>
-                    <span>(<?php echo $trend->tweet_volume; ?>)</span>
+                    <span>(<?php echo esc_attr($trend->tweet_volume); ?>)</span>
                 <?php endif; ?>
             </li>
 

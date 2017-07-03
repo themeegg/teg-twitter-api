@@ -688,7 +688,7 @@ class TEG_TA_Admin_Settings {
 	/**
 	 * Save admin fields.
 	 *
-	 * Loops though the woocommerce options array and outputs each field.
+	 * Loops though the teg-twitter api options array and outputs each field.
 	 *
 	 * @param array $options Options array to output
 	 * @param array $data Optional. Data to use for saving. Defaults to $_POST.
@@ -696,7 +696,8 @@ class TEG_TA_Admin_Settings {
 	 */
 	public static function save_fields( $options, $data = null ) {
 		if ( is_null( $data ) ) {
-			$data = $_POST;
+
+		    $data = $_POST;
 		}
 		if ( empty( $data ) ) {
 			return false;

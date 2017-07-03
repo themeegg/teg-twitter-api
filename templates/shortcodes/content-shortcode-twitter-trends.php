@@ -23,7 +23,7 @@ if (!defined('ABSPATH')) {
 ?>
 
 <div class="teg-ta-twitter-trends-shortcode">
-    <h2><?php echo $title; ?></h2>
+    <h2><?php echo esc_attr($title); ?></h2>
     <ul>
         <?php
 
@@ -37,10 +37,10 @@ if (!defined('ABSPATH')) {
 
             <li>
                 <a target="_blank" href="<?php echo $trend->url; ?>">
-                    <b><?php echo $trend->name; ?></b>
+                    <b><?php echo esc_attr($trend->name); ?></b>
                 </a>
                 <?php if ($trend->tweet_volume): ?>
-                    <span>(<?php echo $trend->tweet_volume; ?>)</span>
+                    <span>(<?php echo esc_attr($trend->tweet_volume); ?>)</span>
                 <?php endif; ?>
             </li>
 

@@ -126,7 +126,7 @@ class TEG_TA_Admin_Meta_Boxes implements TEG_TA_Meta_Box_Interface
         $nonce_action = 'twitter_nonce_action';
 
         // Check if nonce is set.
-        if (!isset($nonce_name)) {
+        if (empty($nonce_name)) {
             return;
         }
 
@@ -149,8 +149,6 @@ class TEG_TA_Admin_Meta_Boxes implements TEG_TA_Meta_Box_Interface
         if (wp_is_post_revision($post_id)) {
             return;
         }
-
-        $post_title = $_POST['post_title'];
 
         $post_content = wp_html_excerpt($_POST['content'], 100);
 
@@ -186,15 +184,26 @@ class TEG_TA_Admin_Meta_Boxes implements TEG_TA_Meta_Box_Interface
 
         $getallapi_post_twitter_message = array(
 
-            'post_id' => $_POST['post_ID'],
+            'post_id' => (isset($_POST['post_ID'])  && is_numeric($_POST['post_ID'])) ? intval($_POST['post_ID']): -1,
+
             'twitter_update_message' => $post_result,
         );
+
         if (isset($post_result['id_str'])) {
+
             $_POST['post_twitter_settings_metabox']['tweets_id'] = $post_result['id_str'];
         }
+        $post_data=array(
+
+                'post_tweet_checkbox'=>sanitize_text_field($_POST['post_twitter_settings_metabox']['post_tweet_checkbox']),
+
+                'tweets_id'=>sanitize_text_field($_POST['post_twitter_settings_metabox']['tweets_id']),
+        );
+
         set_transient('getallapi_post_twitter_message', $getallapi_post_twitter_message);
+
         if (isset($_POST['post_twitter_settings_metabox'])) {
-            $post_twitter_settings_metabox_value = $_POST['post_twitter_settings_metabox'];
+            $post_twitter_settings_metabox_value = $post_data;
             update_post_meta($post_id, 'post_twitter_settings_metabox', $post_twitter_settings_metabox_value);
         }
 
