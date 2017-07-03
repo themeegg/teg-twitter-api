@@ -1,10 +1,10 @@
 # Copyright (C) 2017 ThemeEgg
-# This file is distributed under the same license as the TEG Twitter API package.
+# This file is distributed under the same license as the Twitter API Master package.
 msgid ""
 msgstr ""
-"Project-Id-Version: TEG Twitter API 1.0.0\n"
+"Project-Id-Version: Twitter API Master 1.0.0\n"
 "Report-Msgid-Bugs-To: themeeggofficial@gmail.com\n"
-"POT-Creation-Date: 2017-07-03 02:43:03+00:00\n"
+"POT-Creation-Date: 2017-07-03 02:59:27+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -150,10 +150,6 @@ msgstr ""
 msgid "Save changes"
 msgstr ""
 
-#: includes/class-teg-ta-query.php:85
-msgid "Pay for order"
-msgstr ""
-
 #: includes/shortcodes/class-teg-ta-shortcode-twitter-feeds.php:31
 msgid "Twitter Tweets"
 msgstr ""
@@ -198,12 +194,12 @@ msgstr ""
 msgid "Trends WOEID"
 msgstr ""
 
-#: teg-twitter-api.php:80 teg-twitter-api.php:89
+#: teg-twitter-api.php:74 teg-twitter-api.php:83
 msgid "Cheatin&#8217; huh?"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid "TEG Twitter API"
+msgid "Twitter API Master"
 msgstr ""
 
 #. Plugin URI of the plugin/theme

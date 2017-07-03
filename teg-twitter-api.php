@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: TEG Twitter API
+ * Plugin Name: Twitter API Master
  * Plugin URI: https://themeegg.com/plugins/teg-twitter-api
  * Description: This plugin for Twitter Widgets Shortcodes and Many more.
  * Version: 1.0.0
@@ -45,12 +45,6 @@ if (!class_exists('TEG_Twitter_Api')) :
          * @since 1.0
          */
         protected static $_instance = null;
-        /**
-         * Query instance.
-         *
-         * @var TEG_TA_Query
-         */
-        public $query = null;
 
 
         /**
@@ -219,7 +213,6 @@ if (!class_exists('TEG_Twitter_Api')) :
             teg_ta_include(TEG_TA_ABSPATH . 'includes/class-teg-ta-post-types.php'); // Registers post types
             teg_ta_include(TEG_TA_ABSPATH . 'includes/class-teg-ta-install.php');
             teg_ta_include(TEG_TA_ABSPATH . 'includes/class-teg-ta-ajax.php');
-            teg_ta_include(TEG_TA_ABSPATH . 'includes/class-teg-ta-query.php');
 
 
             if ($this->is_request('admin')) {
@@ -231,7 +224,6 @@ if (!class_exists('TEG_Twitter_Api')) :
             }
 
 
-            $this->query = new TEG_TA_Query();
 
         }
 
