@@ -58,7 +58,7 @@ class TEG_TA_Admin_Meta_Boxes implements TEG_TA_Meta_Box_Interface
     {
         add_meta_box(
             'teg-twitter-api-settings-metabox',
-            __('Twitter Settings', 'getALLAPI'),
+            __('Twitter Settings', 'teg-twitter-api'),
             array($this, 'render_metabox'),
             'post',
             'advanced',
@@ -237,9 +237,9 @@ class TEG_TA_Admin_Meta_Boxes implements TEG_TA_Meta_Box_Interface
 
         ?>
 
-        <div id="messagetiwitter" class="<?php echo $messageType ?> notice notice-success is-dismissible">
+        <div id="messagetiwitter" class="<?php echo esc_attr($messageType) ?> notice notice-success is-dismissible">
 
-            <p><?php echo $message; ?></p>
+            <p><?php echo esc_attr($message); ?></p>
 
             <button type="button" class="notice-dismiss">
 
