@@ -1,19 +1,18 @@
 === Plugin Name ===
 Contributors: ThemeEgg
 Donate link: http://themeegg.com
-Tags: Twitter, API, Shortcode, Widgets, Settings, Post to twitter
+Tags: Twitter, API, Shortcode, Widgets, Settings, Post to twitter, Twitter Plugin
 Requires at least: 3.0.1
 Tested up to: 4.8.0
-
 Stable tag: 1.0.0
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: GPLv3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 This is Twitter shortcode, widget plugin. 
 
 == Description ==
 
-This plugin help you to show twitter tweets, Trends, Post to twitter and many more.
+This plugin help you to show twitter tweets, trends, post to twitter feature.
 
 Some demo shortcode of this plugin
 
@@ -23,7 +22,20 @@ For Trends shortcode please type [twitter_trends count="3"]
 *   [twitter_feeds count="5"]
 *   [twitter_trends count="3" ]
 
-You can change shortcode attribute as per requirement please visit our official page http://doc.themeegg.com/
+You can dragged and dropped teg feed and trends widget from widget panel also.
+
+You can change shortcode attribute as per requirement, please visit our official page <a href="http://doc.themeegg.com/plugins/teg-twitter-api">http://doc.themeegg.com/plugins/teg-twitter-api</a> for more information.
+
+Get free support at https://themeegg.com/support-forum/
+
+= Requirements =
+
+* WordPress 4.5 or later.
+
+
+= Contribute =
+
+You can contribute to the source code in our [GitHub](https://github.com/themeegg/teg-twitter-api/) page.
 
 == Installation ==
 
@@ -34,19 +46,25 @@ content/plugins/directory
 4. Put shortcode to anywhere.
 5. Also you can change attribute of shortcode as you needed. 
 
+== Screenshots ==
+
+1. Twitter username
+2. Twitter credentials
+3. Widgets
+4. Frontend view
+
+
 == Frequently Asked Questions ==
 
 = How many argument accepts by this shortcode plugin? =
 
-Please visit our official twitter api master page for more details. You can find there more details about this plugin.
+Please visit our official twitter api master page(http://doc.themeegg.com/plugins/teg-twitter-api) for more details. You can find there more details about this plugin.
 
 == Changelog ==
 = 1.0 =
 * Initial Release
 
-== A brief Markdown Example ==
-
-Ordered list:
-1. Twitter Tweets
-2. Twitter Trends
-3. Also tweet your post to twitter feeds
+== Features ==
+1. Twitter Tweets shortcode and widget
+2. Twitter Trends shortcode and widget
+3. Also tweet your wordpress post to twitter
