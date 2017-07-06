@@ -8,7 +8,7 @@ Stable tag: 1.0.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-This is Twitter shortcode, widget plugin. 
+Post to twitter, twitter feeds, twitter trends shortcode and widget wordpres plugin.
 
 == Description ==
 
@@ -24,7 +24,7 @@ For Trends shortcode please type [twitter_trends count="3"]
 
 You can dragged and dropped teg feed and trends widget from widget panel also.
 
-You can change shortcode attribute as per requirement, please visit our official page <a href="http://doc.themeegg.com/plugins/teg-twitter-api">http://doc.themeegg.com/plugins/teg-twitter-api</a> for more information.
+You can change shortcode attribute as per requirement, please visit our official page <a href="http://docs.themeegg.com/docs/teg-twitter-api/" target="_blank">http://docs.themeegg.com/docs/teg-twitter-api/</a> for more information.
 
 Get free support at https://themeegg.com/support-forum/
 
