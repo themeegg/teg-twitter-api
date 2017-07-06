@@ -39,6 +39,13 @@ if (!class_exists('TEG_Twitter_Api')) :
         public $version = '1.0.0';
 
         /**
+         * Query instance.
+         *
+         *
+         */
+        public $query = null;
+
+        /**
          * The single instance of the class.
          *
          * @var TEG_Twitter_Api
@@ -223,6 +230,8 @@ if (!class_exists('TEG_Twitter_Api')) :
                 $this->frontend_includes();
             }
 
+
+            $this->query = new TEG_TA_Query();
 
 
         }
