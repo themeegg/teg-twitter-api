@@ -51,7 +51,11 @@ class TEG_TA_Admin_Settings {
 
 			$settings[] = include( 'settings/class-teg-ta-settings-general.php' );
 
+			$settings[] = include( 'settings/class-teg-ta-settings-general.php' );
+
 			$settings[] = include( 'settings/class-teg-ta-settings-api.php' );
+
+			$settings[] = include( 'settings/class-teg-ta-settings-layouts.php' );
 
 			self::$settings = apply_filters( 'teg_twitter_api_get_settings_pages', $settings );
 		}
