@@ -15,8 +15,8 @@ if (!defined('ABSPATH')) {
 }
 
 
-include( 'teg-ta-formatting-functions.php' );
-include( 'teg-ta-widget-functions.php' );
+include('teg-ta-formatting-functions.php');
+include('teg-ta-widget-functions.php');
 
 
 /**
@@ -24,19 +24,21 @@ include( 'teg-ta-widget-functions.php' );
  *
  * @since  1.0.0
  *
- * @param  string $tip        Help tip text
- * @param  bool   $allow_html Allow sanitized HTML if true or escape
+ * @param  string $tip Help tip text
+ * @param  bool $allow_html Allow sanitized HTML if true or escape
  * @return string
  */
-function teg_ta_help_tip( $tip, $allow_html = false ) {
-    if ( $allow_html ) {
-        $tip = teg_ta_sanitize_tooltip( $tip );
+function teg_ta_help_tip($tip, $allow_html = false)
+{
+    if ($allow_html) {
+        $tip = teg_ta_sanitize_tooltip($tip);
     } else {
-        $tip = esc_attr( $tip );
+        $tip = esc_attr($tip);
     }
 
     return '<span class="teg-twitter-api-help-tip" data-tip="' . $tip . '"></span>';
 }
+
 /**
  * Get template part (for templates like the shop-loop).
  *
@@ -177,5 +179,35 @@ function teg_ta_include($path)
         die('File not exists: ' . $path);
     }
     include_once($path);
+
+}
+
+function teg_ta_twitter_feed_templates()
+{
+
+    $templates = array(
+
+        'twitter-feed-template-1' => __('Twitter feed template 1', 'teg-twitter-api'),
+        'twitter-feed-template-2' => __('Twitter feed template 2', 'teg-twitter-api'),
+        'twitter-feed-template-3' => __('Twitter feed template 3', 'teg-twitter-api'),
+
+    );
+
+    return apply_filters('teg_ta_twitter_feed_templates', $templates);
+
+}
+
+function teg_ta_twitter_trend_templates()
+{
+
+    $templates = array(
+
+        'twitter-trend-template-1' => __('Twitter trend template 1', 'teg-twitter-api'),
+        'twitter-trend-template-2' => __('Twitter trend template 2', 'teg-twitter-api'),
+        'twitter-trend-template-3' => __('Twitter trend template 3', 'teg-twitter-api'),
+
+    );
+
+    return apply_filters('teg_ta_twitter_trend_templates', $templates);
 
 }

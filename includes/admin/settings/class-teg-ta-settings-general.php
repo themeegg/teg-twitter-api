@@ -42,9 +42,8 @@ if (!class_exists('TEG_TA_Settings_General', false)) :
         public function get_settings()
         {
 
-            $currency_code_options = array();
 
-            $settings = apply_filters('teg_twitter_api_general_settings', array(
+            $settings =array(
 
                 array('title' => __('General options', 'teg-twitter-api'), 'type' => 'title', 'desc' => '', 'id' => 'general_options'),
 
@@ -61,7 +60,7 @@ if (!class_exists('TEG_TA_Settings_General', false)) :
 
                 array('type' => 'sectionend', 'id' => 'general_options'),
 
-            ));
+            );
 
 
             return apply_filters('teg_twitter_api_get_settings_' . $this->id, $settings);
@@ -88,10 +87,11 @@ if (!class_exists('TEG_TA_Settings_General', false)) :
          */
         public function save()
         {
-            $settings = $this->get_settings();
+
+           // $settings = $this->get_settings();
 
 
-            TEG_TA_Admin_Settings::save_fields($settings);
+            //TEG_TA_Admin_Settings::save_fields($settings);
         }
     }
 

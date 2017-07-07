@@ -99,12 +99,13 @@ if (!class_exists('TET_TA_Settings_Layouts', false)) :
                         'title' => __('Templates', 'teg-twitter-api'),
                         'desc' => __('Layout tempaltes .', 'teg-twitter-api'),
                         'id' => 'teg_twitter_api_trends_layout',
-                        'type' => 'text',
-                        'default' => '',
-                        'css' => 'width: 250px;',
-                        'autoload' => false,
+                        'default' => 'twitter-trend-template-1',
+                        'type' => 'select',
+                        'class' => 'teg-select',
+                        'css' => 'min-width: 350px;',
                         'desc_tip' => true,
-                        'class' => '',
+                        'autoload' => false,
+                        'options' => teg_ta_twitter_trend_templates(),
                     ), array(
                         'type' => 'sectionend',
                         'id' => 'teg_twitter_layout_settings',
@@ -121,17 +122,16 @@ if (!class_exists('TET_TA_Settings_Layouts', false)) :
                         'id' => 'teg_twitter_feeds_layout_settings_options',
                     ),
 
-
                     array(
                         'title' => __('Templates ', 'teg-twitter-api'),
                         'desc' => __('Twiter feed layout s', 'teg-twitter-api'),
                         'id' => 'teg_twitter_api_twitter_feed_layout',
-                        'type' => 'text',
-                        'default' => '',
-                        'css' => 'width: 250px;',
-                        'autoload' => false,
+                        'default' => 'twitter-feed-template-1',
+                        'type' => 'select',
+                        'class' => 'teg-select',
+                        'css' => 'min-width: 350px;',
                         'desc_tip' => true,
-                        'class' => '',
+                        'options' => teg_ta_twitter_feed_templates(),
                     ),
 
                     array(
