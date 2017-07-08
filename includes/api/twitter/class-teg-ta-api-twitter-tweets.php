@@ -63,6 +63,8 @@ class TEG_TA_Api_Twitter_Tweets
             return array();
 
         }
+//        echo '<pre>';
+//        print_r($tweets);exit;
 
         return $tweets;
 
