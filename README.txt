@@ -4,7 +4,7 @@ Donate link: http://themeegg.com
 Tags: Twitter, API, Shortcode, Widgets, Settings, Post to twitter, Twitter Plugin
 Requires at least: 3.0.1
 Tested up to: 4.8.0
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
