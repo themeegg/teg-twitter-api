@@ -46,6 +46,7 @@ class TEG_TA_Widget_Twitter_Trends extends TEG_TA_Widget
             'teg_ta_twitter_trend_widget_layout' => array(
                 'label' => __('Templates', 'teg-twitter-api'),
                 'type' => 'select',
+                'std' => 'teg-trend-tmpl1',
                 'class' => 'teg-select',
                 'options' => teg_ta_twitter_trend_templates(),
             )

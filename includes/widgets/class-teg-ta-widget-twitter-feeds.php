@@ -41,6 +41,7 @@ class TEG_TA_Widget_Twitter_Feeds extends TEG_TA_Widget
             ),
             'teg_ta_twitter_feed_widget_layout' => array(
                 'label' => __('Templates', 'teg-twitter-api'),
+                'std' => 'teg-feed-tmpl1',
                 'type' => 'select',
                 'class' => 'teg-select',
                 'options' => teg_ta_twitter_feed_templates(),
