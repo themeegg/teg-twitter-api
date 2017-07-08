@@ -21,28 +21,29 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-
 ?>
-<div class="teg-ta-twitter-feed-widget">
-    <ul>
-        <?php
+<div class="teg-ta-feeds-widget">
+    <div class="teg-ta-template <?php echo $instance['teg_ta_twitter_feed_widget_layout'] ?>">
 
-        foreach ($twitter_feeds_array as $feed_index => $feed) {
-
-            ?>
-
-            <li>
-                <p>
-                    <a target="_blank"
-                       href="https://twitter.com/<?php echo esc_attr($twitter_username) ?>/status/<?php echo esc_attr($feed['id_str']) ?>"><?php echo esc_attr($feed['text']); ?></a>
-                </p>
-
-            </li>
-
+        <ul>
             <?php
 
-        }
-        ?>
-    </ul>
-</div>
+            foreach ($twitter_feeds_array as $feed_index => $feed) {
 
+                ?>
+
+                <li>
+                    <p>
+                        <a target="_blank"
+                           href="https://twitter.com/<?php echo esc_attr($twitter_username) ?>/status/<?php echo esc_attr($feed['id_str']) ?>"><?php echo esc_attr($feed['text']); ?></a>
+                    </p>
+
+                </li>
+
+                <?php
+
+            }
+            ?>
+        </ul>
+    </div>
+</div>

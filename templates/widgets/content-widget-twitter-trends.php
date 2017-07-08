@@ -22,31 +22,33 @@ if (!defined('ABSPATH')) {
 }
 ?>
 
-<div class="teg-ta-twitter-trends-widget">
-    <ul>
-        <?php
+<div class="teg-ta-trends-widget">
+    <div class="teg-ta-template <?php echo $instance['teg_ta_twitter_trend_widget_layout'] ?>">
 
-        foreach ($trends as $trend_index => $trend) {
-
-            if ($trend_index >= $number_of_trends) {
-                break;
-            }
-
-            ?>
-
-            <li>
-                <a target="_blank" href="<?php echo $trend->url; ?>">
-                    <b><?php echo esc_attr($trend->name); ?></b>
-                </a>
-                <?php if ($trend->tweet_volume): ?>
-                    <span>(<?php echo esc_attr($trend->tweet_volume); ?>)</span>
-                <?php endif; ?>
-            </li>
-
+        <ul>
             <?php
 
-        }
-        ?>
-    </ul>
-</div>
+            foreach ($trends as $trend_index => $trend) {
 
+                if ($trend_index >= $number_of_trends) {
+                    break;
+                }
+
+                ?>
+
+                <li>
+                    <a target="_blank" href="<?php echo $trend->url; ?>">
+                        <b><?php echo esc_attr($trend->name); ?></b>
+                    </a>
+                    <?php if ($trend->tweet_volume): ?>
+                        <span>(<?php echo esc_attr($trend->tweet_volume); ?>)</span>
+                    <?php endif; ?>
+                </li>
+
+                <?php
+
+            }
+            ?>
+        </ul>
+    </div>
+</div>

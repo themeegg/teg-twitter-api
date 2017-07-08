@@ -39,11 +39,8 @@ class TEG_TA_Widget_Twitter_Feeds extends TEG_TA_Widget
                 'std' => 5,
                 'label' => __('Number of tweets to show', 'teg-twitter-api'),
             ),
-            array(
+            'teg_ta_twitter_feed_widget_layout' => array(
                 'label' => __('Templates', 'teg-twitter-api'),
-                'desc' => __('Layout tempaltes .', 'teg-twitter-api'),
-                'id' => 'teg_twitter_api_feeds_widget_layout',
-                'default' => 'teg-feed-tmpl2',
                 'type' => 'select',
                 'class' => 'teg-select',
                 'options' => teg_ta_twitter_feed_templates(),
@@ -68,11 +65,9 @@ class TEG_TA_Widget_Twitter_Feeds extends TEG_TA_Widget
             return;
         }
 
-
         $this->widget_start($args, $instance);
 
         $twitterObj = new TEG_TA_Api_Twitter_Tweets();
-
 
         $twitter_feed_array = $twitterObj->getTweets($instance['number_of_tweets']);
 
@@ -85,7 +80,9 @@ class TEG_TA_Widget_Twitter_Feeds extends TEG_TA_Widget
 
             'twitter_feeds_array' => $twitter_feed_array,
 
-            'twitter_username' => get_option('teg_twitter_api_twitter_username')
+            'twitter_username' => get_option('teg_twitter_api_twitter_username'),
+
+            'instance' => $instance
         );
 
         teg_ta_get_template('widgets/content-widget-twitter-feeds.php', $data);

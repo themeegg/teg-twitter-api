@@ -20,34 +20,37 @@
 if (!defined('ABSPATH')) {
     exit;
 }
+
 ?>
 
-<div class="teg-ta-twitter-trends-shortcode">
-    <h2><?php echo esc_attr($title); ?></h2>
-    <ul>
-        <?php
+<div class="teg-ta-trends-shortcode">
+    <div class="teg-ta-template <?php echo get_option('teg_ta_twitter_trend_shortcode_layout', '') ?>">
 
-        foreach ($trends as $trend_index => $trend) {
-
-            if ($trend_index >= $number_of_trends) {
-                break;
-            }
-
-            ?>
-
-            <li>
-                <a target="_blank" href="<?php echo $trend->url; ?>">
-                    <b><?php echo esc_attr($trend->name); ?></b>
-                </a>
-                <?php if ($trend->tweet_volume): ?>
-                    <span>(<?php echo esc_attr($trend->tweet_volume); ?>)</span>
-                <?php endif; ?>
-            </li>
-
+        <h2><?php echo esc_attr($title); ?></h2>
+        <ul>
             <?php
 
-        }
-        ?>
-    </ul>
-</div>
+            foreach ($trends as $trend_index => $trend) {
 
+                if ($trend_index >= $number_of_trends) {
+                    break;
+                }
+
+                ?>
+
+                <li>
+                    <a target="_blank" href="<?php echo $trend->url; ?>">
+                        <b><?php echo esc_attr($trend->name); ?></b>
+                    </a>
+                    <?php if ($trend->tweet_volume): ?>
+                        <span>(<?php echo esc_attr($trend->tweet_volume); ?>)</span>
+                    <?php endif; ?>
+                </li>
+
+                <?php
+
+            }
+            ?>
+        </ul>
+    </div>
+</div>
