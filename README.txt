@@ -66,7 +66,7 @@ Please visit our official twitter api master page(http://doc.themeegg.com/plugin
 
 = 1.1.0 =
 * Twiter feed and trend templates option
-* Template select option for trend and feed from widget.
+* Template selection option for trend and feed from widget and template section of Twitter setting panel.
 
 == Features ==
 1. Twitter Tweets shortcode and widget
