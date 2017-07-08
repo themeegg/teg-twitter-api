@@ -17,7 +17,6 @@
  * @author ThemeEgg
  */
 if (!defined('ABSPATH')) {
-  
     exit; // Exit if accessed directly.
 }
 
@@ -230,7 +229,7 @@ if (!class_exists('TEG_Twitter_Api')) :
             if ($this->is_request('frontend')) {
                 $this->frontend_includes();
             }
-         $this->query = new TEG_TA_Query();
+            $this->query = new TEG_TA_Query();
 
 
         }

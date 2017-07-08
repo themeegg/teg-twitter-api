@@ -13,3 +13,5 @@
 if (!defined('WP_UNINSTALL_PLUGIN')) {
     exit;
 }
+
+// Uninstall function goes here :) 
