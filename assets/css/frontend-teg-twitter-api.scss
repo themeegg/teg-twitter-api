@@ -34,7 +34,18 @@ body{
 		.teg-ta-single-feeds{
 			padding-left:50px;
 			color:#000;
+			a{
+				text-decoration: none;
+				border:none;
+				&:hover{
+					text-decoration:none;
+				}
+				&:focus{
+					text-decoration:none;
+				}
+			}
 			h5{
+				margin:0;
 				font-size:14px;
 				a{
 					&:hover{
