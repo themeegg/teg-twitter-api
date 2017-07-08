@@ -43,6 +43,15 @@ class TEG_TA_Widget_Twitter_Trends extends TEG_TA_Widget
                 'std' => 1,
                 'label' => __('Trends WOEID', 'teg-twitter-api'),
             ),
+            array(
+                'label' => __('Templates', 'teg-twitter-api'),
+                'desc' => __('Layout templates .', 'teg-twitter-api'),
+                'id' => 'teg_twitter_api_trends_widget_layout',
+                'default' => 'teg-trend-tmpl2',
+                'type' => 'select',
+                'class' => 'teg-select',
+                'options' => teg_ta_twitter_trend_templates(),
+            )
         );
 
         parent::__construct();
@@ -78,7 +87,7 @@ class TEG_TA_Widget_Twitter_Trends extends TEG_TA_Widget
         $data = array(
 
             'trends' => $twitterTrends,
-            
+
             'number_of_trends' => $instance['number_of_trends']
         );
 

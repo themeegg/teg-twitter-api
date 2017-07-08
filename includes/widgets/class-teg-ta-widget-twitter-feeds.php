@@ -38,6 +38,15 @@ class TEG_TA_Widget_Twitter_Feeds extends TEG_TA_Widget
                 'type' => 'number',
                 'std' => 5,
                 'label' => __('Number of tweets to show', 'teg-twitter-api'),
+            ),
+            array(
+                'label' => __('Templates', 'teg-twitter-api'),
+                'desc' => __('Layout tempaltes .', 'teg-twitter-api'),
+                'id' => 'teg_twitter_api_feeds_widget_layout',
+                'default' => 'teg-feed-tmpl2',
+                'type' => 'select',
+                'class' => 'teg-select',
+                'options' => teg_ta_twitter_feed_templates(),
             )
         );
 
