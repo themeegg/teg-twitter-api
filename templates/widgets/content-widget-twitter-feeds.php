@@ -34,9 +34,14 @@ if (!defined('ABSPATH')) {
                 ?>
 
                 <li>
-                    <div class="teg-ta-user-logo"></div>
+                    <div class="teg-ta-user-logo">
+                        <a href="https://twitter.com/<?php echo esc_attr($twitter_username); ?>" target="_blank">
+                            <img src="<?php
+                            echo esc_attr($feed['user']['profile_image_url_https']);
+                            ?>"/></a></div>
                     <div class="teg-ta-single-feeds">
-                        <h5><a href="https://twitter.com/<?php echo esc_attr($twitter_username); ?>" target="_blank"><span
+                        <h5><a href="https://twitter.com/<?php echo esc_attr($twitter_username); ?>"
+                               target="_blank"><span
                                         class="teg-ta-account-name"><?php echo esc_attr($feed['user']['name']) ?></span>
                                 <span class="teg-ta-user-name">@<?php echo esc_attr($twitter_username) ?></span></a>
                         </h5>
@@ -45,7 +50,7 @@ if (!defined('ABSPATH')) {
                             <span class="teg-ta-feed-like"><a target="_blank"
                                                               href="https://twitter.com/intent/like?tweet_id=<?php echo esc_attr($feed['id_str']) ?>">Like</a></span>
                             <span class="teg-ta-feed-share"><a target="_blank"
-                                        href="https://twitter.com/intent/retweet?tweet_id=<?php echo esc_attr($feed['id_str']) ?>">Share</a></span>
+                                                               href="https://twitter.com/intent/retweet?tweet_id=<?php echo esc_attr($feed['id_str']) ?>">Share</a></span>
                             <span class="teg-ta-feed-post-time"><?php echo date('M-d, Y H:i:s', strtotime(esc_attr($feed['created_at']))) ?></span>
                         </div>
                     </div>
