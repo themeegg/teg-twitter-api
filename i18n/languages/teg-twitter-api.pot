@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Twitter API Master package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Twitter API Master 1.0.0\n"
+"Project-Id-Version: Twitter API Master 1.1.0\n"
 "Report-Msgid-Bugs-To: themeeggofficial@gmail.com\n"
-"POT-Creation-Date: 2017-07-08 11:56:08+00:00\n"
+"POT-Creation-Date: 2017-07-08 19:12:59+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,7 +14,6 @@ msgstr ""
 "X-Generator: grunt-wp-i18n1.0.0\n"
 
 #: includes/admin/class-teg-ta-admin-menus.php:45
-#: includes/admin/class-teg-ta-admin-menus.php:46
 #: svn-production/tags/1.0.0/includes/admin/class-teg-ta-admin-menus.php:45
 #: svn-production/tags/1.0.0/includes/admin/class-teg-ta-admin-menus.php:46
 #: svn-production/trunk/includes/admin/class-teg-ta-admin-menus.php:45
@@ -22,6 +21,7 @@ msgstr ""
 msgid "TEG Twitter"
 msgstr ""
 
+#: includes/admin/class-teg-ta-admin-menus.php:46
 #: includes/admin/class-teg-ta-admin-meta-boxes.php:61
 #: svn-production/tags/1.0.0/includes/admin/class-teg-ta-admin-meta-boxes.php:61
 #: svn-production/trunk/includes/admin/class-teg-ta-admin-meta-boxes.php:61
@@ -279,7 +279,7 @@ msgstr ""
 msgid "Save changes"
 msgstr ""
 
-#: includes/api/twitter/class-teg-ta-api-twitter-trends.php:81
+#: includes/api/twitter/class-teg-ta-api-twitter-trends.php:82
 #: includes/api/twitter/class-teg-ta-api-twitter-tweets.php:51
 msgid "Please check your necessary twitter auth keys."
 msgstr ""
@@ -303,27 +303,21 @@ msgid "%s does not exist."
 msgstr ""
 
 #: includes/teg-ta-core-functions.php:190
-msgid "Twitter feed template 1"
+#: includes/teg-ta-core-functions.php:205
+msgid "Theme Default"
 msgstr ""
 
 #: includes/teg-ta-core-functions.php:191
-msgid "Twitter feed template 2"
+#: includes/teg-ta-core-functions.php:206
+msgid "Twitter Default"
 msgstr ""
 
 #: includes/teg-ta-core-functions.php:192
-msgid "Twitter feed template 3"
-msgstr ""
-
-#: includes/teg-ta-core-functions.php:205
-msgid "Twitter trend template 1"
-msgstr ""
-
-#: includes/teg-ta-core-functions.php:206
-msgid "Twitter trend template 2"
+msgid "Twitter Feeds Theme"
 msgstr ""
 
 #: includes/teg-ta-core-functions.php:207
-msgid "Twitter trend template 3"
+msgid "Twitter Trends Theme"
 msgstr ""
 
 #: includes/widgets/class-teg-ta-widget-twitter-feeds.php:28
@@ -371,6 +365,16 @@ msgstr ""
 #: svn-production/trunk/teg-twitter-api.php:90 teg-twitter-api.php:81
 #: teg-twitter-api.php:90
 msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: templates/shortcodes/content-shortcode-twitter-feeds.php:56
+#: templates/widgets/content-widget-twitter-feeds.php:53
+msgid "Like"
+msgstr ""
+
+#: templates/shortcodes/content-shortcode-twitter-feeds.php:59
+#: templates/widgets/content-widget-twitter-feeds.php:56
+msgid "Share"
 msgstr ""
 
 #. Plugin Name of the plugin/theme

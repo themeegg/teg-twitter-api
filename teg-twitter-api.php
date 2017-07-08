@@ -6,8 +6,8 @@
  * Version: 1.1.0
  * Author: ThemeEgg
  * Author URI: https://themeegg.com
- * Requires at least: 4.4
- * Tested up to: 4.7
+ * Requires at least: 3.0.1
+ * Tested up to: 4.8
  *
  * Text Domain: teg-twitter-api
  * Domain Path: /i18n/languages/
