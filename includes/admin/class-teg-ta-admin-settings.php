@@ -49,11 +49,11 @@ class TEG_TA_Admin_Settings {
 
 			teg_ta_include( dirname( __FILE__ ) . '/settings/class-teg-ta-settings-page.php' );
 
-			$settings[]= teg_ta_include( dirname( __FILE__ ) . '/settings/class-teg-ta-settings-general.php' );
+			$settings[]= include_once( dirname( __FILE__ ) . '/settings/class-teg-ta-settings-general.php' );
 
-			$settings[] = teg_ta_include( dirname( __FILE__ ) . '/settings/class-teg-ta-settings-api.php' );
+			$settings[] = include_once( dirname( __FILE__ ) . '/settings/class-teg-ta-settings-api.php' );
 
-			$settings[] = teg_ta_include( dirname( __FILE__ ) . '/settings/class-teg-ta-settings-layouts.php' );
+			$settings[] = include_once( dirname( __FILE__ ) . '/settings/class-teg-ta-settings-layouts.php' );
 
 			self::$settings = apply_filters( 'teg_twitter_api_get_settings_pages', $settings );
 		}
