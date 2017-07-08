@@ -57,13 +57,13 @@ class TEG_TA_Frontend_Scripts
     public static function get_styles()
     {
         return apply_filters('teg_twitter_api_enqueue_styles', array(
-//            'teg-twitter-api-layout' => array(
-//                'src' => self::get_asset_url('assets/css/teg-twitter-api-layout.css'),
-//                'deps' => '',
-//                'version' => TEG_TA_VERSION,
-//                'media' => 'all',
-//                'has_rtl' => true,
-//            ),
+            'teg-twitter-api-frontend-style' => array(
+                'src' => self::get_asset_url('assets/css/frontend-teg-twitter-api.css'),
+                'deps' => '',
+                'version' => TEG_TA_VERSION,
+                'media' => 'all',
+                'has_rtl' => true,
+            ),
 
         ));
     }
@@ -165,10 +165,10 @@ class TEG_TA_Frontend_Scripts
     {
         $suffix = defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ? '' : '.min';
         $register_scripts = array(
-            'flexslider' => array(
-                'src' => self::get_asset_url('assets/js/flexslider/jquery.flexslider' . $suffix . '.js'),
+            'teg-twitter-api-frontend-script' => array(
+                'src' => self::get_asset_url('assets/js/frontend/teg-twitter-api-frontend' . $suffix . '.js'),
                 'deps' => array('jquery'),
-                'version' => '2.6.1',
+                'version' => TEG_TA_VERSION,
             )
 
         );
@@ -183,12 +183,12 @@ class TEG_TA_Frontend_Scripts
     private static function register_styles()
     {
         $register_styles = array(
-//            'photoswipe' => array(
-//                'src' => self::get_asset_url('assets/css/photoswipe/photoswipe.css'),
-//                'deps' => array(),
-//                'version' => TEG_TA_VERSION,
-//                'has_rtl' => false,
-//        ),
+            'teg-twitter-api-frontend-style' => array(
+                'src' => self::get_asset_url('assets/css/frontend-teg-twitter-api.css'),
+                'deps' => array(),
+                'version' => TEG_TA_VERSION,
+                'has_rtl' => false,
+            ),
 
         );
         foreach ($register_styles as $name => $props) {
@@ -211,7 +211,7 @@ class TEG_TA_Frontend_Scripts
         self::register_styles();
 
         // Global frontend scripts
-        self::enqueue_script('teg-twitter-api');
+        self::enqueue_script('teg-twitter-api-frontend-script');
 
         // CSS Styles
         if ($enqueue_styles = self::get_styles()) {
@@ -251,7 +251,7 @@ class TEG_TA_Frontend_Scripts
         global $wp;
 
         switch ($handle) {
-            case 'teg-twitter-api' :
+            case 'teg-twitter-api-frontend-script' :
                 return array(
                     'ajax_url' => TEGTApi()->ajax_url(),
                 );
