@@ -25,6 +25,7 @@ if (!defined('ABSPATH')) {
 <div class="teg-ta-feeds-widget">
     <div class="teg-ta-template <?php echo $instance['teg_ta_twitter_feed_widget_layout'] ?>">
 
+        <?php do_action('teg_ta_twitter_feed_widget_layout_before', 10, 0) ?>
         <ul>
             <?php
 
@@ -45,5 +46,7 @@ if (!defined('ABSPATH')) {
             }
             ?>
         </ul>
+        <?php do_action('teg_ta_twitter_feed_widget_layout_after', 10, 0) ?>
+
     </div>
 </div>

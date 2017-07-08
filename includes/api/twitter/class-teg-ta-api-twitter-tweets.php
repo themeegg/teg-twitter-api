@@ -9,6 +9,8 @@ class TEG_TA_Api_Twitter_Tweets
 
     public $url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
 
+    public $error_message = '';
+
     function __construct()
     {
 
@@ -37,25 +39,41 @@ class TEG_TA_Api_Twitter_Tweets
 
     public function getTweets($count = null)
     {
-
-
         $twitterSettings = new TEG_TA_Api_Lib_Settings();
 
         $twitter = new TEG_TA_Api_Lib_Twitter_Api_Exchange($twitterSettings->getTwitterSettings());
 
-        $string = json_decode($twitter->setGetfield($this->getField($count))->buildOauth($this->url, $this->requestMethod)->performRequest(), $assoc = TRUE);
+        $tweets = json_decode($twitter->setGetfield($this->getField($count))->buildOauth($this->url, $this->requestMethod)->performRequest(), true);
 
-        if (isset($string["errors"][0]["message"])) {
 
-            echo "<h3>Sorry, there was a problem.</h3><p>Twitter returned the following error message:</p><p><em>" . $string[errors][0]["message"] . "</em></p>";
-            exit();
+        if (isset($tweets['errors'])) {
 
-        } else {
+            $this->error_message = __('Please check your necessary twitter auth keys.', 'teg-twitter-api');
 
-            return $string;
+            if (isset($tweets['errors'][0]['message'])) {
+
+                $this->error_message .= '<br/>' . $tweets['errors'][0]['message'];
+            }
+
+            add_action('teg_ta_twitter_feed_shortcode_layout_after', array($this, 'error_message'), 10, 0);
+
+            add_action('teg_ta_twitter_feed_widget_layout_after', array($this, 'error_message'), 10, 0);
+
+
+            return array();
 
         }
 
+        return $tweets;
+
+    }
+
+    function error_message()
+    {
+
+        echo $this->error_message;
+
+        $this->error_message = '';
     }
 
     function __destruct()

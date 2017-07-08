@@ -19,12 +19,16 @@
 // Exit if accessed directly
 if (!defined('ABSPATH')) {
     exit;
+
 }
+
 
 ?>
 
 <div class="teg-ta-trends-shortcode">
     <div class="teg-ta-template <?php echo get_option('teg_ta_twitter_trend_shortcode_layout', '') ?>">
+
+        <?php do_action('teg_ta_twitter_trend_shortcode_layout_before', 10, 0) ?>
 
         <h2><?php echo esc_attr($title); ?></h2>
         <ul>
@@ -52,5 +56,8 @@ if (!defined('ABSPATH')) {
             }
             ?>
         </ul>
+
+        <?php do_action('teg_ta_twitter_trend_shortcode_layout_after', 10, 0) ?>
+
     </div>
 </div>

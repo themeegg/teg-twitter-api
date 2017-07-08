@@ -11,6 +11,9 @@ class TEG_TA_Api_Twitter_Trends
 
     public $requestMethod = 'GET';
 
+    public $error_message = '';
+
+
     function __construct()
     {
 
@@ -71,12 +74,38 @@ class TEG_TA_Api_Twitter_Trends
 
         $trends = $twitter->setGetfield($this->getfield)->buildOauth($this->url, $this->requestMethod)->performRequest();
 
-        $trends_array = json_decode($trends);
+        $trends_array = json_decode($trends, true);
 
-        $trends_array = isset($trends_array[0]->trends) ? $trends_array[0]->trends : '';
+        if (isset($trends_array['errors'])) {
+
+            $this->error_message = __('Please check your necessary twitter auth keys.', 'teg-twitter-api');
+
+            if (isset($trends_array['errors'][0]['message'])) {
+
+                $this->error_message .= '<br/>' . $trends_array['errors'][0]['message'];
+            }
+
+            add_action('teg_ta_twitter_trend_shortcode_layout_after', array($this, 'error_message'), 10, 0);
+
+            add_action('teg_ta_twitter_trend_widget_layout_after', array($this, 'error_message'), 10, 0);
+
+            return array();
+
+        }
+
+        $trends_array = isset($trends_array[0]) && isset($trends_array[0]->trends) ? $trends_array[0]->trends : '';
+
 
         return $trends_array;
 
+    }
+
+    function error_message()
+    {
+
+        echo $this->error_message;
+
+        $this->error_message = '';
     }
 
     function __destruct()
