@@ -124,8 +124,7 @@ module.exports = function( grunt ){
         concat: {
             admin: {
                 files: {
-                    '<%= dirs.css %>/admin.css' : ['<%= dirs.css %>/select2.css', '<%= dirs.css %>/admin.css'],
-                    '<%= dirs.css %>/admin-rtl.css' : ['<%= dirs.css %>/select2.css', '<%= dirs.css %>/admin-rtl.css']
+
                 }
             }
         },
