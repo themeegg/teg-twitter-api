@@ -46,7 +46,7 @@ if (!class_exists('TEG_TA_Admin_Menus', false)) :
                 __('TEG Twitter', 'teg-twitter-api'),
                 'manage_options',
                 'teg-twitter-api',
-                array( $this, 'settings_page' ) , null, '55.5' );
+                array( $this, 'settings_page' ) , 'dashicons-twitter', '55.5' );
 
 
         }
