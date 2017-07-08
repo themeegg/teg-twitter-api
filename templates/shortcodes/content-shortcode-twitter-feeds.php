@@ -50,11 +50,12 @@ if (!defined('ABSPATH')) {
                         </h5>
                         <p><?php echo (teg_ta_twitter_feed_text_render($feed)); ?></p>
                         <div class="teg-ta-feeds-actions">
+                            <span class="teg-ta-feed-post-time" title="<?php echo esc_attr($feed['created_at']); ?>"><?php echo date('M-d', strtotime(esc_attr($feed['created_at']))) ?></span>
                             <span class="teg-ta-feed-like"><a target="_blank"
-                                                              href="https://twitter.com/intent/like?tweet_id=<?php echo esc_attr($feed['id_str']) ?>">Like</a></span>
+                                                              href="https://twitter.com/intent/like?tweet_id=<?php echo esc_attr($feed['id_str']) ?>" title="<?php __('Like' ,'teg-twitter-api' ) ?>"><?php __('Like' ,'teg-twitter-api' ) ?></a></span>
                             <span class="teg-ta-feed-share"><a target="_blank"
-                                                               href="https://twitter.com/intent/retweet?tweet_id=<?php echo esc_attr($feed['id_str']) ?>">Share</a></span>
-                            <span class="teg-ta-feed-post-time"><?php echo date('M-d, Y H:i:s', strtotime(esc_attr($feed['created_at']))) ?></span>
+                                                               href="https://twitter.com/intent/retweet?tweet_id=<?php echo esc_attr($feed['id_str']) ?>" title="<?php __('Share' ,'teg-twitter-api' ) ?>"><?php __('Share' ,'teg-twitter-api' ) ?></a></span>
+
                         </div>
                     </div>
 
