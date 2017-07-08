@@ -7,7 +7,7 @@
  * @author        ThemeEgg
  * @category    Core
  * @package    TEGTwitterAPI/Functions
- * @version     2.1.0
+ * @version     1.0.0
  */
 
 if (!defined('ABSPATH')) {
