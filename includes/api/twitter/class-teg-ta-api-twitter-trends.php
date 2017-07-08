@@ -76,6 +76,7 @@ class TEG_TA_Api_Twitter_Trends
 
         $trends_array = json_decode($trends, true);
 
+
         if (isset($trends_array['errors'])) {
 
             $this->error_message = __('Please check your necessary twitter auth keys.', 'teg-twitter-api');
@@ -93,8 +94,7 @@ class TEG_TA_Api_Twitter_Trends
 
         }
 
-        $trends_array = isset($trends_array[0]) && isset($trends_array[0]->trends) ? $trends_array[0]->trends : '';
-
+        $trends_array = isset($trends_array[0]) && isset($trends_array[0]['trends']) ? $trends_array[0]['trends'] : array();
 
         return $trends_array;
 

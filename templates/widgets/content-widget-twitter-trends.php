@@ -20,6 +20,7 @@
 if (!defined('ABSPATH')) {
     exit;
 }
+
 ?>
 
 <div class="teg-ta-trends-widget">
@@ -39,11 +40,11 @@ if (!defined('ABSPATH')) {
                 ?>
 
                 <li>
-                    <a target="_blank" href="<?php echo $trend->url; ?>">
-                        <b><?php echo esc_attr($trend->name); ?></b>
+                    <a target="_blank" href="<?php echo $trend['url']; ?>">
+                        <b><?php echo esc_attr($trend['name']); ?></b>
                     </a>
-                    <?php if ($trend->tweet_volume): ?>
-                        <span>(<?php echo esc_attr($trend->tweet_volume); ?>)</span>
+                    <?php if ($trend['tweet_volume']): ?>
+                        <span>(<?php echo esc_attr($trend['tweet_volume']); ?>)</span>
                     <?php endif; ?>
                 </li>
 

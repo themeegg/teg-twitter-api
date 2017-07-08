@@ -78,7 +78,7 @@ class TEG_TA_Widget_Twitter_Trends extends TEG_TA_Widget
 
             $twitterObj->setGetField($instance['trends_WOEID']);
         }
-        $twitterTrends = $twitterObj->getTrends();
+        $twitterTrends = (array)$twitterObj->getTrends();
 
 
         $data = array(
