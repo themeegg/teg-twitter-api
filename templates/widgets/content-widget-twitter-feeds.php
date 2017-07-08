@@ -45,7 +45,7 @@ if (!defined('ABSPATH')) {
                                         class="teg-ta-account-name"><?php echo esc_attr($feed['user']['name']) ?></span>
                                 <span class="teg-ta-user-name">@<?php echo esc_attr($twitter_username) ?></span></a>
                         </h5>
-                        <p><?php echo esc_attr($feed['text']); ?></p>
+                        <p><?php echo (teg_ta_twitter_feed_text_render($feed)); ?></p>
                         <div class="teg-ta-feeds-actions">
                             <span class="teg-ta-feed-like"><a target="_blank"
                                                               href="https://twitter.com/intent/like?tweet_id=<?php echo esc_attr($feed['id_str']) ?>">Like</a></span>
