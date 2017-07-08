@@ -187,9 +187,9 @@ function teg_ta_twitter_feed_templates()
 
     $templates = array(
 
-        'teg-feed-tmpl1' => __('Twitter feed template 1', 'teg-twitter-api'),
-        'teg-feed-tmpl2' => __('Twitter feed template 2', 'teg-twitter-api'),
-        'teg-feed-tmpl3' => __('Twitter feed template 3', 'teg-twitter-api'),
+        'teg-feed-tmpl1' => __('Theme Default', 'teg-twitter-api'),
+        'teg-feed-tmpl2' => __('Twitter Default', 'teg-twitter-api'),
+        'teg-feed-tmpl3' => __('Twitter Feeds Theme', 'teg-twitter-api'),
 
     );
 
@@ -202,9 +202,9 @@ function teg_ta_twitter_trend_templates()
 
     $templates = array(
 
-        'teg-trend-tmpl1' => __('Twitter trend template 1', 'teg-twitter-api'),
-        'teg-trend-tmpl2' => __('Twitter trend template 2', 'teg-twitter-api'),
-        'teg-trend-tmpl3' => __('Twitter trend template 3', 'teg-twitter-api'),
+        'teg-trend-tmpl1' => __('Theme Default', 'teg-twitter-api'),
+        'teg-trend-tmpl2' => __('Twitter Default', 'teg-twitter-api'),
+        'teg-trend-tmpl3' => __('Twitter Trends Theme', 'teg-twitter-api'),
 
     );
 

@@ -43,7 +43,7 @@ if (!class_exists('TEG_TA_Admin_Menus', false)) :
 
 
             add_menu_page(__('TEG Twitter', 'teg-twitter-api'),
-                __('TEG Twitter', 'teg-twitter-api'),
+                __('Twitter Settings', 'teg-twitter-api'),
                 'manage_options',
                 'teg-twitter-api',
                 array( $this, 'settings_page' ) , 'dashicons-twitter', '55.5' );
