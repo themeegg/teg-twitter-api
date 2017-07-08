@@ -211,3 +211,46 @@ function teg_ta_twitter_trend_templates()
     return apply_filters('teg_ta_twitter_trend_templates', $templates);
 
 }
+
+
+function teg_ta_twitter_feed_text_render($feed)
+{
+    $text = isset($feed['text']) ? esc_attr($feed['text']) : '';
+
+    $hash_tags = isset($feed['entities']['hashtags']) ? $feed['entities']['hashtags'] : array();
+
+    $urls = isset($feed['entities']['urls']) ? $feed['entities']['urls'] : array();
+
+
+    foreach ($hash_tags as $hash_key => $hash_text) {
+
+
+        if (isset($hash_text['text'])) {
+
+
+            $replace_text = '<a target="_blank" href="https://twitter.com/hashtag/' . esc_attr($hash_text['text']) . '?src=hash">#' . esc_attr($hash_text['text']) . '</a>';
+
+
+            $text = str_replace('#' . esc_attr($hash_text['text']), $replace_text, $text);
+
+        }
+
+    }
+    foreach ($urls as $url_index => $url) {
+
+
+        if (isset($url['url'])) {
+
+
+            $replace_text = '<a target="_blank" href="' . esc_attr($url['expanded_url']) . '">' . esc_attr($url['url']) . '</a>';
+
+
+            $text = str_replace(esc_attr($url['url']), $replace_text, $text);
+
+        }
+
+    }
+
+
+    return $text;
+}
