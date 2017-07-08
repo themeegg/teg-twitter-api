@@ -1,0 +1,26 @@
+.teg-feed-tmpl1{
+	ul{
+		list-style: none;
+	}
+	li{
+		width:100%;
+		padding-left:50px;
+		position:relative;
+		&:before{
+			top: 0;
+			left: 0;
+			height: 40px;
+			width: 40px;
+			content: " ";
+			display: block;
+			position: absolute;
+			background-image: url(../img/twitter-logo-100x100.png);
+			background-repeat: no-repeat;
+			background-size: 40px 40px;
+		}
+		p{
+			min-height:50px;
+		}
+
+	}
+}
