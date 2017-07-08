@@ -7,7 +7,7 @@ if (!defined('ABSPATH')) {
  * TEG_TA Autoloader.
  *
  * @class        TEG_TA_Autoloader
- * @version        2.3.0
+ * @version        1.0.0
  * @package        TEG_TA/Classes
  * @category    Class
  * @author        ThemeEgg

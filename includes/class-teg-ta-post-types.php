@@ -5,7 +5,7 @@
  * Registers post types and taxonomies.
  *
  * @class     TEG_TA_Post_types
- * @version   2.5.0
+ * @version   1.0.0
  * @package   TEGTwitterAPI/Classes/Products
  * @category  Class
  * @author    ThemeEgg

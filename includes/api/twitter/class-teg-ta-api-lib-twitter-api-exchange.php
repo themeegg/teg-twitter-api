@@ -9,7 +9,7 @@
  * @package  Twitter-API-PHP
  * @author   James Mallison <me@j7mbo.co.uk>
  * @license  MIT License
- * @version  1.0.4
+ * @version  1.0.0
  * @link     http://github.com/j7mbo/twitter-api-php
  */
 class TEG_TA_Api_Lib_Twitter_Api_Exchange
