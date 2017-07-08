@@ -34,10 +34,16 @@ if (!defined('ABSPATH')) {
                 ?>
 
                 <li>
-                    <p>
-                        <a target="_blank"
-                           href="https://twitter.com/<?php echo esc_attr($twitter_username) ?>/status/<?php echo esc_attr($feed['id_str']) ?>"><?php echo esc_attr($feed['text']); ?></a>
-                    </p>
+                    <div class="teg-ta-user-logo"></div>
+                    <div class="teg-ta-single-feeds">
+                        <h5><a href="#user-link"><span class="teg-ta-account-name">Theme Egg</span><span class="teg-ta-user-name">@<?php echo esc_attr($twitter_username) ?></span></a></h5>
+                        <p><?php echo esc_attr($feed['text']); ?></p>
+                        <div class="teg-ta-feeds-actions">
+                            <span class="teg-ta-feed-like">Like</span>
+                            <span class="teg-ta-feed-share">Share</span>
+                            <span class="teg-ta-feed-post-time">1h</span>
+                        </div>
+                    </div>
 
                 </li>
 
