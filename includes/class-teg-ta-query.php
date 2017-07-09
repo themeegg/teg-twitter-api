@@ -221,10 +221,7 @@ class TEG_TA_Query {
 
 
 
-        if ( is_search() ) {
-            add_filter( 'posts_where', array( $this, 'search_post_excerpt' ) );
-            add_filter( 'wp', array( $this, 'remove_posts_where' ) );
-        }
+        
 
         // And remove the pre_get_posts hook
      }
