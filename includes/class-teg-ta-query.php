@@ -221,7 +221,7 @@ class TEG_TA_Query {
 
 
 
-        
+
 
         // And remove the pre_get_posts hook
      }
