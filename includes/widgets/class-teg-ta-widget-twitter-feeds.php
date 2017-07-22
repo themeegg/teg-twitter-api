@@ -38,6 +38,9 @@ class TEG_TA_Widget_Twitter_Feeds extends TEG_TA_Widget
                 'type' => 'number',
                 'std' => 5,
                 'label' => __('Number of tweets to show', 'teg-twitter-api'),
+                'min'   => 0,
+                'max'   => 1000000,
+	            'step' => 1
             ),
             'teg_ta_twitter_feed_widget_layout' => array(
                 'label' => __('Templates', 'teg-twitter-api'),
