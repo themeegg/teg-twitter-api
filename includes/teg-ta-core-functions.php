@@ -189,7 +189,7 @@ function teg_ta_twitter_feed_templates()
 
         'teg-feed-tmpl1' => __('Theme Default', 'teg-twitter-api'),
         'teg-feed-tmpl2' => __('Twitter Default', 'teg-twitter-api'),
-        'teg-feed-tmpl3' => __('Twitter Feeds Theme', 'teg-twitter-api'),
+        'teg-feed-tmpl3' => __('Theme One', 'teg-twitter-api'),
 
     );
 
@@ -204,7 +204,7 @@ function teg_ta_twitter_trend_templates()
 
         'teg-trend-tmpl1' => __('Theme Default', 'teg-twitter-api'),
         'teg-trend-tmpl2' => __('Twitter Default', 'teg-twitter-api'),
-        'teg-trend-tmpl3' => __('Twitter Trends Theme', 'teg-twitter-api'),
+        'teg-trend-tmpl3' => __('Theme One', 'teg-twitter-api'),
 
     );
 
