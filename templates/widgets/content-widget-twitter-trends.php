@@ -44,7 +44,7 @@ if (!defined('ABSPATH')) {
                         <b><?php echo esc_attr($trend['name']); ?></b>
                     </a>
                     <?php if ($trend['tweet_volume']): ?>
-                        <span><?php echo esc_attr($trend['tweet_volume']); ?> Tweets</span>
+                        <span><?php echo esc_attr($trend['tweet_volume']); echo __('Tweets', 'teg-twitter-api'); ?></span>
                     <?php endif; ?>
                 </li>
 
