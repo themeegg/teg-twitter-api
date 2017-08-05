@@ -4,7 +4,7 @@ Donate link: http://themeegg.com
 Tags: Twitter, API, Shortcode, Widgets, Settings, Post to twitter, Twitter Plugin
 Requires at least: 3.0.1
 Tested up to: 4.8.0
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -46,13 +46,17 @@ content/plugins/directory
 4. Put shortcode to anywhere.
 5. Also you can change attribute of shortcode as you needed. 
 
+== Features ==
+1. Twitter Tweets shortcode and widget
+2. Twitter Trends shortcode and widget
+3. Also tweet your wordpress post to twitter
+
 == Screenshots ==
 
 1. Twitter username
 2. Twitter credentials
 3. Widgets
 4. Frontend view
-
 
 == Frequently Asked Questions ==
 
@@ -61,16 +65,16 @@ content/plugins/directory
 Please visit our official twitter api master page(http://doc.themeegg.com/plugins/teg-twitter-api) for more details. You can find there more details about this plugin.
 
 == Changelog ==
-= 1.0 =
-* Initial Release
+
+= 1.1.2 - 05/08/2017 -
+* New template added
+
+= 1.1.1 =
+* mysql query issue fixed
 
 = 1.1.0 =
 * Twiter feed and trend templates option
 * Template selection option for trend and feed from widget and template section of Twitter setting panel.
-== 1.1.1 =
-* mysql query issue fixed
 
-== Features ==
-1. Twitter Tweets shortcode and widget
-2. Twitter Trends shortcode and widget
-3. Also tweet your wordpress post to twitter
+= 1.0 =
+* Initial Release
