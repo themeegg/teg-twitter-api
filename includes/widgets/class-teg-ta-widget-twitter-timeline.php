@@ -23,9 +23,9 @@ class TEG_TA_Widget_Twitter_Timeline extends TEG_TA_Widget {
 	public function __construct() {
 
 		$this->widget_cssclass    = 'teg_twitter_api_widget_twitter_timeline';
-		$this->widget_description = __( "Display twitter timeline.", 'teg-twitter-api' );
+		$this->widget_description = __( "Display an official Twitter Embedded Timeline widget.", 'teg-twitter-api' );
 		$this->widget_id          = 'teg_twitter_api_widget_twitter_timeline';
-		$this->widget_name        = __( 'Twitter timeline', 'teg-twitter-api' );
+		$this->widget_name        = __( 'Twitter Timeline', 'teg-twitter-api' );
 		$this->settings           = array(
 			'title'  => array(
 				'type'  => 'text',

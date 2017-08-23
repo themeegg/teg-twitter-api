@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Twitter API Master 1.1.2\n"
 "Report-Msgid-Bugs-To: themeeggofficial@gmail.com\n"
-"POT-Creation-Date: 2017-08-05 08:08:46+00:00\n"
+"POT-Creation-Date: 2017-08-23 18:41:03+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,6 +18,7 @@ msgstr ""
 #: svn-production/tags/1.0.0/includes/admin/class-teg-ta-admin-menus.php:46
 #: svn-production/tags/1.1.0/includes/admin/class-teg-ta-admin-menus.php:45
 #: svn-production/tags/1.1.1/includes/admin/class-teg-ta-admin-menus.php:45
+#: svn-production/tags/1.1.2/includes/admin/class-teg-ta-admin-menus.php:45
 #: svn-production/trunk/includes/admin/class-teg-ta-admin-menus.php:45
 msgid "TEG Twitter"
 msgstr ""
@@ -29,6 +30,8 @@ msgstr ""
 #: svn-production/tags/1.1.0/includes/admin/class-teg-ta-admin-meta-boxes.php:61
 #: svn-production/tags/1.1.1/includes/admin/class-teg-ta-admin-menus.php:46
 #: svn-production/tags/1.1.1/includes/admin/class-teg-ta-admin-meta-boxes.php:61
+#: svn-production/tags/1.1.2/includes/admin/class-teg-ta-admin-menus.php:46
+#: svn-production/tags/1.1.2/includes/admin/class-teg-ta-admin-meta-boxes.php:61
 #: svn-production/trunk/includes/admin/class-teg-ta-admin-menus.php:46
 #: svn-production/trunk/includes/admin/class-teg-ta-admin-meta-boxes.php:61
 msgid "Twitter Settings"
@@ -38,6 +41,7 @@ msgstr ""
 #: svn-production/tags/1.0.0/includes/admin/class-teg-ta-admin-meta-boxes.php:246
 #: svn-production/tags/1.1.0/includes/admin/class-teg-ta-admin-meta-boxes.php:246
 #: svn-production/tags/1.1.1/includes/admin/class-teg-ta-admin-meta-boxes.php:246
+#: svn-production/tags/1.1.2/includes/admin/class-teg-ta-admin-meta-boxes.php:246
 #: svn-production/trunk/includes/admin/class-teg-ta-admin-meta-boxes.php:246
 msgid "Dismiss this notice."
 msgstr ""
@@ -46,6 +50,7 @@ msgstr ""
 #: svn-production/tags/1.0.0/includes/admin/class-teg-ta-admin-settings.php:69
 #: svn-production/tags/1.1.0/includes/admin/class-teg-ta-admin-settings.php:71
 #: svn-production/tags/1.1.1/includes/admin/class-teg-ta-admin-settings.php:71
+#: svn-production/tags/1.1.2/includes/admin/class-teg-ta-admin-settings.php:71
 #: svn-production/trunk/includes/admin/class-teg-ta-admin-settings.php:71
 msgid "Action failed. Please refresh the page and retry."
 msgstr ""
@@ -54,6 +59,7 @@ msgstr ""
 #: svn-production/tags/1.0.0/includes/admin/class-teg-ta-admin-settings.php:77
 #: svn-production/tags/1.1.0/includes/admin/class-teg-ta-admin-settings.php:79
 #: svn-production/tags/1.1.1/includes/admin/class-teg-ta-admin-settings.php:79
+#: svn-production/tags/1.1.2/includes/admin/class-teg-ta-admin-settings.php:79
 #: svn-production/trunk/includes/admin/class-teg-ta-admin-settings.php:79
 msgid "Your settings have been saved."
 msgstr ""
@@ -62,6 +68,7 @@ msgstr ""
 #: svn-production/tags/1.0.0/includes/admin/class-teg-ta-admin-settings.php:136
 #: svn-production/tags/1.1.0/includes/admin/class-teg-ta-admin-settings.php:138
 #: svn-production/tags/1.1.1/includes/admin/class-teg-ta-admin-settings.php:138
+#: svn-production/tags/1.1.2/includes/admin/class-teg-ta-admin-settings.php:138
 #: svn-production/trunk/includes/admin/class-teg-ta-admin-settings.php:138
 msgid "The changes you made will be lost if you navigate away from this page."
 msgstr ""
@@ -70,6 +77,7 @@ msgstr ""
 #: svn-production/tags/1.0.0/includes/admin/class-teg-ta-admin-settings.php:523
 #: svn-production/tags/1.1.0/includes/admin/class-teg-ta-admin-settings.php:525
 #: svn-production/tags/1.1.1/includes/admin/class-teg-ta-admin-settings.php:525
+#: svn-production/tags/1.1.2/includes/admin/class-teg-ta-admin-settings.php:525
 #: svn-production/trunk/includes/admin/class-teg-ta-admin-settings.php:525
 msgid ""
 "The settings of this image size have been disabled because its values are "
@@ -80,6 +88,7 @@ msgstr ""
 #: svn-production/tags/1.0.0/includes/admin/class-teg-ta-admin-settings.php:532
 #: svn-production/tags/1.1.0/includes/admin/class-teg-ta-admin-settings.php:534
 #: svn-production/tags/1.1.1/includes/admin/class-teg-ta-admin-settings.php:534
+#: svn-production/tags/1.1.2/includes/admin/class-teg-ta-admin-settings.php:534
 #: svn-production/trunk/includes/admin/class-teg-ta-admin-settings.php:534
 msgid "Hard crop?"
 msgstr ""
@@ -88,6 +97,7 @@ msgstr ""
 #: svn-production/tags/1.0.0/includes/admin/class-teg-ta-admin-settings.php:559
 #: svn-production/tags/1.1.0/includes/admin/class-teg-ta-admin-settings.php:561
 #: svn-production/tags/1.1.1/includes/admin/class-teg-ta-admin-settings.php:561
+#: svn-production/tags/1.1.2/includes/admin/class-teg-ta-admin-settings.php:561
 #: svn-production/trunk/includes/admin/class-teg-ta-admin-settings.php:561
 msgid "Select a page&hellip;"
 msgstr ""
@@ -96,6 +106,7 @@ msgstr ""
 #: svn-production/tags/1.0.0/includes/admin/class-teg-ta-admin-settings.php:581
 #: svn-production/tags/1.1.0/includes/admin/class-teg-ta-admin-settings.php:583
 #: svn-production/tags/1.1.1/includes/admin/class-teg-ta-admin-settings.php:583
+#: svn-production/tags/1.1.2/includes/admin/class-teg-ta-admin-settings.php:583
 #: svn-production/trunk/includes/admin/class-teg-ta-admin-settings.php:583
 msgid "Choose a country&hellip;"
 msgstr ""
@@ -108,6 +119,8 @@ msgstr ""
 #: svn-production/tags/1.1.0/includes/admin/class-teg-ta-admin-settings.php:608
 #: svn-production/tags/1.1.1/includes/admin/class-teg-ta-admin-settings.php:583
 #: svn-production/tags/1.1.1/includes/admin/class-teg-ta-admin-settings.php:608
+#: svn-production/tags/1.1.2/includes/admin/class-teg-ta-admin-settings.php:583
+#: svn-production/tags/1.1.2/includes/admin/class-teg-ta-admin-settings.php:608
 #: svn-production/trunk/includes/admin/class-teg-ta-admin-settings.php:583
 #: svn-production/trunk/includes/admin/class-teg-ta-admin-settings.php:608
 msgid "Country"
@@ -117,6 +130,7 @@ msgstr ""
 #: svn-production/tags/1.0.0/includes/admin/class-teg-ta-admin-settings.php:606
 #: svn-production/tags/1.1.0/includes/admin/class-teg-ta-admin-settings.php:608
 #: svn-production/tags/1.1.1/includes/admin/class-teg-ta-admin-settings.php:608
+#: svn-production/tags/1.1.2/includes/admin/class-teg-ta-admin-settings.php:608
 #: svn-production/trunk/includes/admin/class-teg-ta-admin-settings.php:608
 msgid "Choose countries&hellip;"
 msgstr ""
@@ -125,6 +139,7 @@ msgstr ""
 #: svn-production/tags/1.0.0/includes/admin/class-teg-ta-admin-settings.php:614
 #: svn-production/tags/1.1.0/includes/admin/class-teg-ta-admin-settings.php:616
 #: svn-production/tags/1.1.1/includes/admin/class-teg-ta-admin-settings.php:616
+#: svn-production/tags/1.1.2/includes/admin/class-teg-ta-admin-settings.php:616
 #: svn-production/trunk/includes/admin/class-teg-ta-admin-settings.php:616
 msgid "Select all"
 msgstr ""
@@ -133,6 +148,7 @@ msgstr ""
 #: svn-production/tags/1.0.0/includes/admin/class-teg-ta-admin-settings.php:614
 #: svn-production/tags/1.1.0/includes/admin/class-teg-ta-admin-settings.php:616
 #: svn-production/tags/1.1.1/includes/admin/class-teg-ta-admin-settings.php:616
+#: svn-production/tags/1.1.2/includes/admin/class-teg-ta-admin-settings.php:616
 #: svn-production/trunk/includes/admin/class-teg-ta-admin-settings.php:616
 msgid "Select none"
 msgstr ""
@@ -141,6 +157,7 @@ msgstr ""
 #: svn-production/tags/1.0.0/includes/admin/settings/class-teg-ta-settings-api.php:30
 #: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-api.php:30
 #: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-api.php:30
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-api.php:30
 #: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-api.php:30
 msgid "API"
 msgstr ""
@@ -149,6 +166,7 @@ msgstr ""
 #: svn-production/tags/1.0.0/includes/admin/settings/class-teg-ta-settings-api.php:47
 #: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-api.php:47
 #: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-api.php:47
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-api.php:47
 #: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-api.php:47
 msgid "Basic"
 msgstr ""
@@ -157,6 +175,7 @@ msgstr ""
 #: svn-production/tags/1.0.0/includes/admin/settings/class-teg-ta-settings-api.php:49
 #: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-api.php:49
 #: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-api.php:49
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-api.php:49
 #: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-api.php:49
 msgid "Other"
 msgstr ""
@@ -165,70 +184,87 @@ msgstr ""
 #: svn-production/tags/1.0.0/includes/admin/settings/class-teg-ta-settings-api.php:93
 #: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-api.php:93
 #: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-api.php:93
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-api.php:93
 #: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-api.php:93
 msgid "Key Settings"
 msgstr ""
 
 #: includes/admin/settings/class-teg-ta-settings-api.php:99
+#: includes/admin/settings/class-teg-ta-settings-general.php:83
 #: svn-production/tags/1.0.0/includes/admin/settings/class-teg-ta-settings-api.php:99
 #: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-api.php:99
 #: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-api.php:99
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-api.php:99
 #: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-api.php:99
 msgid "Twitter Oauth Access Token\t"
 msgstr ""
 
 #: includes/admin/settings/class-teg-ta-settings-api.php:100
+#: includes/admin/settings/class-teg-ta-settings-general.php:84
 #: svn-production/tags/1.0.0/includes/admin/settings/class-teg-ta-settings-api.php:100
 #: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-api.php:100
 #: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-api.php:100
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-api.php:100
 #: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-api.php:100
 msgid "Please enter Oauth access Token."
 msgstr ""
 
 #: includes/admin/settings/class-teg-ta-settings-api.php:109
+#: includes/admin/settings/class-teg-ta-settings-general.php:93
 #: svn-production/tags/1.0.0/includes/admin/settings/class-teg-ta-settings-api.php:109
 #: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-api.php:109
 #: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-api.php:109
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-api.php:109
 #: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-api.php:109
 msgid "Twitter Oauth Access Token Secret."
 msgstr ""
 
 #: includes/admin/settings/class-teg-ta-settings-api.php:110
+#: includes/admin/settings/class-teg-ta-settings-general.php:94
 #: svn-production/tags/1.0.0/includes/admin/settings/class-teg-ta-settings-api.php:110
 #: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-api.php:110
 #: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-api.php:110
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-api.php:110
 #: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-api.php:110
 msgid "Please Oauth Access Token Secret."
 msgstr ""
 
 #: includes/admin/settings/class-teg-ta-settings-api.php:119
+#: includes/admin/settings/class-teg-ta-settings-general.php:103
 #: svn-production/tags/1.0.0/includes/admin/settings/class-teg-ta-settings-api.php:119
 #: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-api.php:119
 #: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-api.php:119
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-api.php:119
 #: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-api.php:119
 msgid "Twitter Consumer Key"
 msgstr ""
 
 #: includes/admin/settings/class-teg-ta-settings-api.php:120
+#: includes/admin/settings/class-teg-ta-settings-general.php:104
 #: svn-production/tags/1.0.0/includes/admin/settings/class-teg-ta-settings-api.php:120
 #: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-api.php:120
 #: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-api.php:120
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-api.php:120
 #: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-api.php:120
 msgid "Please enter twitter consumer key."
 msgstr ""
 
 #: includes/admin/settings/class-teg-ta-settings-api.php:129
+#: includes/admin/settings/class-teg-ta-settings-general.php:113
 #: svn-production/tags/1.0.0/includes/admin/settings/class-teg-ta-settings-api.php:129
 #: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-api.php:129
 #: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-api.php:129
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-api.php:129
 #: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-api.php:129
 msgid "Twitter Consumer Secret"
 msgstr ""
 
 #: includes/admin/settings/class-teg-ta-settings-api.php:130
+#: includes/admin/settings/class-teg-ta-settings-general.php:114
 #: svn-production/tags/1.0.0/includes/admin/settings/class-teg-ta-settings-api.php:130
 #: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-api.php:130
 #: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-api.php:130
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-api.php:130
 #: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-api.php:130
 msgid "Please enter Twitter Consumer Secret."
 msgstr ""
@@ -237,80 +273,188 @@ msgstr ""
 #: svn-production/tags/1.0.0/includes/admin/settings/class-teg-ta-settings-api.php:158
 #: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-api.php:158
 #: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-api.php:158
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-api.php:158
 #: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-api.php:158
 msgid "Basic Settings"
 msgstr ""
 
 #: includes/admin/settings/class-teg-ta-settings-api.php:165
+#: includes/admin/settings/class-teg-ta-settings-general.php:62
 #: svn-production/tags/1.0.0/includes/admin/settings/class-teg-ta-settings-api.php:165
 #: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-api.php:165
 #: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-api.php:165
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-api.php:165
 #: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-api.php:165
 msgid "Twitter Username"
 msgstr ""
 
 #: includes/admin/settings/class-teg-ta-settings-api.php:166
+#: includes/admin/settings/class-teg-ta-settings-general.php:63
 #: svn-production/tags/1.0.0/includes/admin/settings/class-teg-ta-settings-api.php:166
 #: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-api.php:166
 #: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-api.php:166
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-api.php:166
 #: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-api.php:166
 msgid "Twitter username"
 msgstr ""
 
-#: includes/admin/settings/class-teg-ta-settings-general.php:30
+#: includes/admin/settings/class-teg-ta-settings-general.php:28
 #: svn-production/tags/1.0.0/includes/admin/settings/class-teg-ta-settings-general.php:30
 #: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-general.php:30
 #: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-general.php:30
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-general.php:30
 #: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-general.php:30
 msgid "General"
 msgstr ""
 
-#: includes/admin/settings/class-teg-ta-settings-general.php:48
+#: includes/admin/settings/class-teg-ta-settings-general.php:46
 #: svn-production/tags/1.0.0/includes/admin/settings/class-teg-ta-settings-general.php:49
 #: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-general.php:48
 #: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-general.php:48
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-general.php:48
 #: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-general.php:48
 msgid "General options"
 msgstr ""
 
-#: includes/admin/settings/class-teg-ta-settings-general.php:51
-#: includes/admin/settings/class-teg-ta-settings-general.php:52
+#: includes/admin/settings/class-teg-ta-settings-general.php:53
+#: includes/admin/settings/class-teg-ta-settings-general.php:54
 #: svn-production/tags/1.0.0/includes/admin/settings/class-teg-ta-settings-general.php:52
 #: svn-production/tags/1.0.0/includes/admin/settings/class-teg-ta-settings-general.php:53
 #: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-general.php:51
 #: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-general.php:52
 #: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-general.php:51
 #: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-general.php:52
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-general.php:51
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-general.php:52
 #: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-general.php:51
 #: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-general.php:52
 msgid "Post on twitter"
 msgstr ""
 
+#: includes/admin/settings/class-teg-ta-settings-general.php:75
+msgid "API options"
+msgstr ""
+
 #: includes/admin/settings/class-teg-ta-settings-layouts.php:30
 #: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-layouts.php:30
 #: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-layouts.php:30
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-layouts.php:30
 #: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-layouts.php:30
 msgid "Layouts"
 msgstr ""
 
-#: includes/admin/settings/class-teg-ta-settings-layouts.php:47
-#: includes/widgets/class-teg-ta-widget-twitter-feeds.php:30
-#: includes/widgets/class-teg-ta-widget-twitter-feeds.php:34
-#: svn-production/tags/1.0.0/includes/widgets/class-teg-ta-widget-twitter-feeds.php:30
-#: svn-production/tags/1.0.0/includes/widgets/class-teg-ta-widget-twitter-feeds.php:34
-#: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-layouts.php:47
-#: svn-production/tags/1.1.0/includes/widgets/class-teg-ta-widget-twitter-feeds.php:30
-#: svn-production/tags/1.1.0/includes/widgets/class-teg-ta-widget-twitter-feeds.php:34
-#: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-layouts.php:47
-#: svn-production/tags/1.1.1/includes/widgets/class-teg-ta-widget-twitter-feeds.php:30
-#: svn-production/tags/1.1.1/includes/widgets/class-teg-ta-widget-twitter-feeds.php:34
-#: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-layouts.php:47
-#: svn-production/trunk/includes/widgets/class-teg-ta-widget-twitter-feeds.php:30
-#: svn-production/trunk/includes/widgets/class-teg-ta-widget-twitter-feeds.php:34
-msgid "Twitter Feeds"
+#: includes/admin/settings/class-teg-ta-settings-layouts.php:90
+#: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-layouts.php:120
+#: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-layouts.php:120
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-layouts.php:120
+#: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-layouts.php:120
+msgid "Twitter Timeline Layout"
 msgstr ""
 
-#: includes/admin/settings/class-teg-ta-settings-layouts.php:49
+#: includes/admin/settings/class-teg-ta-settings-layouts.php:96
+#: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-layouts.php:126
+#: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-layouts.php:126
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-layouts.php:126
+#: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-layouts.php:126
+msgid "Templates "
+msgstr ""
+
+#: includes/admin/settings/class-teg-ta-settings-layouts.php:97
+#: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-layouts.php:127
+#: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-layouts.php:127
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-layouts.php:127
+#: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-layouts.php:127
+msgid "Twiter feed layout s"
+msgstr ""
+
+#: includes/admin/settings/class-teg-ta-settings-layouts.php:112
+#: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-layouts.php:93
+#: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-layouts.php:93
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-layouts.php:93
+#: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-layouts.php:93
+msgid "Trends Layout"
+msgstr ""
+
+#: includes/admin/settings/class-teg-ta-settings-layouts.php:118
+#: includes/widgets/class-teg-ta-widget-twitter-feeds.php:46
+#: includes/widgets/class-teg-ta-widget-twitter-trends.php:53
+#: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-layouts.php:99
+#: svn-production/tags/1.1.0/includes/widgets/class-teg-ta-widget-twitter-feeds.php:43
+#: svn-production/tags/1.1.0/includes/widgets/class-teg-ta-widget-twitter-trends.php:47
+#: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-layouts.php:99
+#: svn-production/tags/1.1.1/includes/widgets/class-teg-ta-widget-twitter-feeds.php:43
+#: svn-production/tags/1.1.1/includes/widgets/class-teg-ta-widget-twitter-trends.php:47
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-layouts.php:99
+#: svn-production/tags/1.1.2/includes/widgets/class-teg-ta-widget-twitter-feeds.php:46
+#: svn-production/tags/1.1.2/includes/widgets/class-teg-ta-widget-twitter-trends.php:53
+#: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-layouts.php:99
+#: svn-production/trunk/includes/widgets/class-teg-ta-widget-twitter-feeds.php:46
+#: svn-production/trunk/includes/widgets/class-teg-ta-widget-twitter-trends.php:53
+msgid "Templates"
+msgstr ""
+
+#: includes/admin/settings/class-teg-ta-settings-layouts.php:119
+#: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-layouts.php:100
+#: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-layouts.php:100
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-layouts.php:100
+#: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-layouts.php:100
+msgid "Layout tempaltes ."
+msgstr ""
+
+#: includes/admin/teg-ta-admin-functions.php:23
+#: svn-production/tags/1.1.0/includes/admin/teg-ta-admin-functions.php:23
+#: svn-production/tags/1.1.1/includes/admin/teg-ta-admin-functions.php:23
+#: svn-production/tags/1.1.2/includes/admin/teg-ta-admin-functions.php:23
+#: svn-production/trunk/includes/admin/teg-ta-admin-functions.php:23
+msgid "TEG Twitter API"
+msgstr ""
+
+#: includes/admin/views/html-admin-settings.php:33
+#: svn-production/tags/1.0.0/includes/admin/views/html-admin-settings.php:33
+#: svn-production/tags/1.1.0/includes/admin/views/html-admin-settings.php:33
+#: svn-production/tags/1.1.1/includes/admin/views/html-admin-settings.php:33
+#: svn-production/tags/1.1.2/includes/admin/views/html-admin-settings.php:33
+#: svn-production/trunk/includes/admin/views/html-admin-settings.php:33
+msgid "Save changes"
+msgstr ""
+
+#: includes/api/twitter/class-teg-ta-api-twitter-trends.php:82
+#: includes/api/twitter/class-teg-ta-api-twitter-tweets.php:51
+#: svn-production/tags/1.1.0/includes/api/twitter/class-teg-ta-api-twitter-trends.php:82
+#: svn-production/tags/1.1.0/includes/api/twitter/class-teg-ta-api-twitter-tweets.php:51
+#: svn-production/tags/1.1.1/includes/api/twitter/class-teg-ta-api-twitter-trends.php:82
+#: svn-production/tags/1.1.1/includes/api/twitter/class-teg-ta-api-twitter-tweets.php:51
+#: svn-production/tags/1.1.2/includes/api/twitter/class-teg-ta-api-twitter-trends.php:82
+#: svn-production/tags/1.1.2/includes/api/twitter/class-teg-ta-api-twitter-tweets.php:51
+#: svn-production/trunk/includes/api/twitter/class-teg-ta-api-twitter-trends.php:82
+#: svn-production/trunk/includes/api/twitter/class-teg-ta-api-twitter-tweets.php:51
+msgid "Please check your necessary twitter auth keys."
+msgstr ""
+
+#: includes/class-teg-ta-query.php:75
+#: svn-production/tags/1.0.0/includes/class-teg-ta-query.php:75
+#: svn-production/tags/1.1.0/includes/class-teg-ta-query.php:75
+#: svn-production/tags/1.1.1/includes/class-teg-ta-query.php:75
+#: svn-production/tags/1.1.2/includes/class-teg-ta-query.php:75
+#: svn-production/trunk/includes/class-teg-ta-query.php:75
+msgid "Pay for order"
+msgstr ""
+
+#: includes/shortcodes/class-teg-ta-shortcode-twitter-feeds.php:31
+#: svn-production/tags/1.0.0/includes/shortcodes/class-teg-ta-shortcode-twitter-feeds.php:31
+#: svn-production/tags/1.1.0/includes/shortcodes/class-teg-ta-shortcode-twitter-feeds.php:31
+#: svn-production/tags/1.1.1/includes/shortcodes/class-teg-ta-shortcode-twitter-feeds.php:31
+#: svn-production/tags/1.1.2/includes/shortcodes/class-teg-ta-shortcode-twitter-feeds.php:31
+#: svn-production/trunk/includes/shortcodes/class-teg-ta-shortcode-twitter-feeds.php:31
+msgid "Twitter Tweets"
+msgstr ""
+
+#: includes/shortcodes/class-teg-ta-shortcode-twitter-timeline.php:29
+#: includes/widgets/class-teg-ta-widget-twitter-timeline.php:28
+#: includes/widgets/class-teg-ta-widget-twitter-timeline.php:32
+msgid "Twitter Timeline"
+msgstr ""
+
 #: includes/shortcodes/class-teg-ta-shortcode-twitter-trends.php:31
 #: includes/widgets/class-teg-ta-widget-twitter-trends.php:28
 #: includes/widgets/class-teg-ta-widget-twitter-trends.php:32
@@ -325,109 +469,22 @@ msgstr ""
 #: svn-production/tags/1.1.1/includes/shortcodes/class-teg-ta-shortcode-twitter-trends.php:31
 #: svn-production/tags/1.1.1/includes/widgets/class-teg-ta-widget-twitter-trends.php:30
 #: svn-production/tags/1.1.1/includes/widgets/class-teg-ta-widget-twitter-trends.php:34
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-layouts.php:49
+#: svn-production/tags/1.1.2/includes/shortcodes/class-teg-ta-shortcode-twitter-trends.php:31
+#: svn-production/tags/1.1.2/includes/widgets/class-teg-ta-widget-twitter-trends.php:28
+#: svn-production/tags/1.1.2/includes/widgets/class-teg-ta-widget-twitter-trends.php:32
 #: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-layouts.php:49
 #: svn-production/trunk/includes/shortcodes/class-teg-ta-shortcode-twitter-trends.php:31
-#: svn-production/trunk/includes/widgets/class-teg-ta-widget-twitter-trends.php:30
-#: svn-production/trunk/includes/widgets/class-teg-ta-widget-twitter-trends.php:34
+#: svn-production/trunk/includes/widgets/class-teg-ta-widget-twitter-trends.php:28
+#: svn-production/trunk/includes/widgets/class-teg-ta-widget-twitter-trends.php:32
 msgid "Twitter Trends"
-msgstr ""
-
-#: includes/admin/settings/class-teg-ta-settings-layouts.php:93
-#: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-layouts.php:93
-#: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-layouts.php:93
-#: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-layouts.php:93
-msgid "Trends Layout"
-msgstr ""
-
-#: includes/admin/settings/class-teg-ta-settings-layouts.php:99
-#: includes/widgets/class-teg-ta-widget-twitter-feeds.php:46
-#: includes/widgets/class-teg-ta-widget-twitter-trends.php:53
-#: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-layouts.php:99
-#: svn-production/tags/1.1.0/includes/widgets/class-teg-ta-widget-twitter-feeds.php:43
-#: svn-production/tags/1.1.0/includes/widgets/class-teg-ta-widget-twitter-trends.php:47
-#: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-layouts.php:99
-#: svn-production/tags/1.1.1/includes/widgets/class-teg-ta-widget-twitter-feeds.php:43
-#: svn-production/tags/1.1.1/includes/widgets/class-teg-ta-widget-twitter-trends.php:47
-#: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-layouts.php:99
-#: svn-production/trunk/includes/widgets/class-teg-ta-widget-twitter-feeds.php:43
-#: svn-production/trunk/includes/widgets/class-teg-ta-widget-twitter-trends.php:47
-msgid "Templates"
-msgstr ""
-
-#: includes/admin/settings/class-teg-ta-settings-layouts.php:100
-#: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-layouts.php:100
-#: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-layouts.php:100
-#: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-layouts.php:100
-msgid "Layout tempaltes ."
-msgstr ""
-
-#: includes/admin/settings/class-teg-ta-settings-layouts.php:120
-#: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-layouts.php:120
-#: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-layouts.php:120
-#: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-layouts.php:120
-msgid "Twitter Timeline Layout"
-msgstr ""
-
-#: includes/admin/settings/class-teg-ta-settings-layouts.php:126
-#: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-layouts.php:126
-#: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-layouts.php:126
-#: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-layouts.php:126
-msgid "Templates "
-msgstr ""
-
-#: includes/admin/settings/class-teg-ta-settings-layouts.php:127
-#: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-layouts.php:127
-#: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-layouts.php:127
-#: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-layouts.php:127
-msgid "Twiter feed layout s"
-msgstr ""
-
-#: includes/admin/teg-ta-admin-functions.php:23
-#: svn-production/tags/1.1.0/includes/admin/teg-ta-admin-functions.php:23
-#: svn-production/tags/1.1.1/includes/admin/teg-ta-admin-functions.php:23
-#: svn-production/trunk/includes/admin/teg-ta-admin-functions.php:23
-msgid "TEG Twitter API"
-msgstr ""
-
-#: includes/admin/views/html-admin-settings.php:33
-#: svn-production/tags/1.0.0/includes/admin/views/html-admin-settings.php:33
-#: svn-production/tags/1.1.0/includes/admin/views/html-admin-settings.php:33
-#: svn-production/tags/1.1.1/includes/admin/views/html-admin-settings.php:33
-#: svn-production/trunk/includes/admin/views/html-admin-settings.php:33
-msgid "Save changes"
-msgstr ""
-
-#: includes/api/twitter/class-teg-ta-api-twitter-trends.php:82
-#: includes/api/twitter/class-teg-ta-api-twitter-tweets.php:51
-#: svn-production/tags/1.1.0/includes/api/twitter/class-teg-ta-api-twitter-trends.php:82
-#: svn-production/tags/1.1.0/includes/api/twitter/class-teg-ta-api-twitter-tweets.php:51
-#: svn-production/tags/1.1.1/includes/api/twitter/class-teg-ta-api-twitter-trends.php:82
-#: svn-production/tags/1.1.1/includes/api/twitter/class-teg-ta-api-twitter-tweets.php:51
-#: svn-production/trunk/includes/api/twitter/class-teg-ta-api-twitter-trends.php:82
-#: svn-production/trunk/includes/api/twitter/class-teg-ta-api-twitter-tweets.php:51
-msgid "Please check your necessary twitter auth keys."
-msgstr ""
-
-#: includes/class-teg-ta-query.php:75
-#: svn-production/tags/1.0.0/includes/class-teg-ta-query.php:75
-#: svn-production/tags/1.1.0/includes/class-teg-ta-query.php:75
-#: svn-production/tags/1.1.1/includes/class-teg-ta-query.php:75
-#: svn-production/trunk/includes/class-teg-ta-query.php:75
-msgid "Pay for order"
-msgstr ""
-
-#: includes/shortcodes/class-teg-ta-shortcode-twitter-feeds.php:31
-#: svn-production/tags/1.0.0/includes/shortcodes/class-teg-ta-shortcode-twitter-feeds.php:31
-#: svn-production/tags/1.1.0/includes/shortcodes/class-teg-ta-shortcode-twitter-feeds.php:31
-#: svn-production/tags/1.1.1/includes/shortcodes/class-teg-ta-shortcode-twitter-feeds.php:31
-#: svn-production/trunk/includes/shortcodes/class-teg-ta-shortcode-twitter-feeds.php:31
-msgid "Twitter Tweets"
 msgstr ""
 
 #: includes/teg-ta-core-functions.php:96
 #: svn-production/tags/1.0.0/includes/teg-ta-core-functions.php:94
 #: svn-production/tags/1.1.0/includes/teg-ta-core-functions.php:96
 #: svn-production/tags/1.1.1/includes/teg-ta-core-functions.php:96
+#: svn-production/tags/1.1.2/includes/teg-ta-core-functions.php:96
 #: svn-production/trunk/includes/teg-ta-core-functions.php:96
 msgid "%s does not exist."
 msgstr ""
@@ -438,6 +495,8 @@ msgstr ""
 #: svn-production/tags/1.1.0/includes/teg-ta-core-functions.php:205
 #: svn-production/tags/1.1.1/includes/teg-ta-core-functions.php:190
 #: svn-production/tags/1.1.1/includes/teg-ta-core-functions.php:205
+#: svn-production/tags/1.1.2/includes/teg-ta-core-functions.php:190
+#: svn-production/tags/1.1.2/includes/teg-ta-core-functions.php:205
 #: svn-production/trunk/includes/teg-ta-core-functions.php:190
 #: svn-production/trunk/includes/teg-ta-core-functions.php:205
 msgid "Theme Default"
@@ -449,6 +508,8 @@ msgstr ""
 #: svn-production/tags/1.1.0/includes/teg-ta-core-functions.php:206
 #: svn-production/tags/1.1.1/includes/teg-ta-core-functions.php:191
 #: svn-production/tags/1.1.1/includes/teg-ta-core-functions.php:206
+#: svn-production/tags/1.1.2/includes/teg-ta-core-functions.php:191
+#: svn-production/tags/1.1.2/includes/teg-ta-core-functions.php:206
 #: svn-production/trunk/includes/teg-ta-core-functions.php:191
 #: svn-production/trunk/includes/teg-ta-core-functions.php:206
 msgid "Twitter Default"
@@ -456,6 +517,10 @@ msgstr ""
 
 #: includes/teg-ta-core-functions.php:192
 #: includes/teg-ta-core-functions.php:207
+#: svn-production/tags/1.1.2/includes/teg-ta-core-functions.php:192
+#: svn-production/tags/1.1.2/includes/teg-ta-core-functions.php:207
+#: svn-production/trunk/includes/teg-ta-core-functions.php:192
+#: svn-production/trunk/includes/teg-ta-core-functions.php:207
 msgid "Theme One"
 msgstr ""
 
@@ -463,11 +528,32 @@ msgstr ""
 #: svn-production/tags/1.0.0/includes/widgets/class-teg-ta-widget-twitter-feeds.php:28
 #: svn-production/tags/1.1.0/includes/widgets/class-teg-ta-widget-twitter-feeds.php:28
 #: svn-production/tags/1.1.1/includes/widgets/class-teg-ta-widget-twitter-feeds.php:28
+#: svn-production/tags/1.1.2/includes/widgets/class-teg-ta-widget-twitter-feeds.php:28
 #: svn-production/trunk/includes/widgets/class-teg-ta-widget-twitter-feeds.php:28
 msgid "Display twitter feeds."
 msgstr ""
 
+#: includes/widgets/class-teg-ta-widget-twitter-feeds.php:30
+#: includes/widgets/class-teg-ta-widget-twitter-feeds.php:34
+#: svn-production/tags/1.0.0/includes/widgets/class-teg-ta-widget-twitter-feeds.php:30
+#: svn-production/tags/1.0.0/includes/widgets/class-teg-ta-widget-twitter-feeds.php:34
+#: svn-production/tags/1.1.0/includes/admin/settings/class-teg-ta-settings-layouts.php:47
+#: svn-production/tags/1.1.0/includes/widgets/class-teg-ta-widget-twitter-feeds.php:30
+#: svn-production/tags/1.1.0/includes/widgets/class-teg-ta-widget-twitter-feeds.php:34
+#: svn-production/tags/1.1.1/includes/admin/settings/class-teg-ta-settings-layouts.php:47
+#: svn-production/tags/1.1.1/includes/widgets/class-teg-ta-widget-twitter-feeds.php:30
+#: svn-production/tags/1.1.1/includes/widgets/class-teg-ta-widget-twitter-feeds.php:34
+#: svn-production/tags/1.1.2/includes/admin/settings/class-teg-ta-settings-layouts.php:47
+#: svn-production/tags/1.1.2/includes/widgets/class-teg-ta-widget-twitter-feeds.php:30
+#: svn-production/tags/1.1.2/includes/widgets/class-teg-ta-widget-twitter-feeds.php:34
+#: svn-production/trunk/includes/admin/settings/class-teg-ta-settings-layouts.php:47
+#: svn-production/trunk/includes/widgets/class-teg-ta-widget-twitter-feeds.php:30
+#: svn-production/trunk/includes/widgets/class-teg-ta-widget-twitter-feeds.php:34
+msgid "Twitter Feeds"
+msgstr ""
+
 #: includes/widgets/class-teg-ta-widget-twitter-feeds.php:35
+#: includes/widgets/class-teg-ta-widget-twitter-timeline.php:33
 #: includes/widgets/class-teg-ta-widget-twitter-trends.php:33
 #: svn-production/tags/1.0.0/includes/widgets/class-teg-ta-widget-twitter-feeds.php:35
 #: svn-production/tags/1.0.0/includes/widgets/class-teg-ta-widget-twitter-trends.php:35
@@ -475,8 +561,10 @@ msgstr ""
 #: svn-production/tags/1.1.0/includes/widgets/class-teg-ta-widget-twitter-trends.php:35
 #: svn-production/tags/1.1.1/includes/widgets/class-teg-ta-widget-twitter-feeds.php:35
 #: svn-production/tags/1.1.1/includes/widgets/class-teg-ta-widget-twitter-trends.php:35
+#: svn-production/tags/1.1.2/includes/widgets/class-teg-ta-widget-twitter-feeds.php:35
+#: svn-production/tags/1.1.2/includes/widgets/class-teg-ta-widget-twitter-trends.php:33
 #: svn-production/trunk/includes/widgets/class-teg-ta-widget-twitter-feeds.php:35
-#: svn-production/trunk/includes/widgets/class-teg-ta-widget-twitter-trends.php:35
+#: svn-production/trunk/includes/widgets/class-teg-ta-widget-twitter-trends.php:33
 msgid "Title"
 msgstr ""
 
@@ -484,15 +572,25 @@ msgstr ""
 #: svn-production/tags/1.0.0/includes/widgets/class-teg-ta-widget-twitter-feeds.php:40
 #: svn-production/tags/1.1.0/includes/widgets/class-teg-ta-widget-twitter-feeds.php:40
 #: svn-production/tags/1.1.1/includes/widgets/class-teg-ta-widget-twitter-feeds.php:40
+#: svn-production/tags/1.1.2/includes/widgets/class-teg-ta-widget-twitter-feeds.php:40
 #: svn-production/trunk/includes/widgets/class-teg-ta-widget-twitter-feeds.php:40
 msgid "Number of tweets to show"
+msgstr ""
+
+#: includes/widgets/class-teg-ta-widget-twitter-timeline.php:26
+msgid "Display an official Twitter Embedded Timeline widget."
+msgstr ""
+
+#: includes/widgets/class-teg-ta-widget-twitter-timeline.php:38
+msgid "Twitter username(without @)"
 msgstr ""
 
 #: includes/widgets/class-teg-ta-widget-twitter-trends.php:26
 #: svn-production/tags/1.0.0/includes/widgets/class-teg-ta-widget-twitter-trends.php:28
 #: svn-production/tags/1.1.0/includes/widgets/class-teg-ta-widget-twitter-trends.php:28
 #: svn-production/tags/1.1.1/includes/widgets/class-teg-ta-widget-twitter-trends.php:28
-#: svn-production/trunk/includes/widgets/class-teg-ta-widget-twitter-trends.php:28
+#: svn-production/tags/1.1.2/includes/widgets/class-teg-ta-widget-twitter-trends.php:26
+#: svn-production/trunk/includes/widgets/class-teg-ta-widget-twitter-trends.php:26
 msgid "Display the user's TRENDS in the sidebar."
 msgstr ""
 
@@ -500,7 +598,8 @@ msgstr ""
 #: svn-production/tags/1.0.0/includes/widgets/class-teg-ta-widget-twitter-trends.php:40
 #: svn-production/tags/1.1.0/includes/widgets/class-teg-ta-widget-twitter-trends.php:40
 #: svn-production/tags/1.1.1/includes/widgets/class-teg-ta-widget-twitter-trends.php:40
-#: svn-production/trunk/includes/widgets/class-teg-ta-widget-twitter-trends.php:40
+#: svn-production/tags/1.1.2/includes/widgets/class-teg-ta-widget-twitter-trends.php:38
+#: svn-production/trunk/includes/widgets/class-teg-ta-widget-twitter-trends.php:38
 msgid "Number of trends to show"
 msgstr ""
 
@@ -508,7 +607,8 @@ msgstr ""
 #: svn-production/tags/1.0.0/includes/widgets/class-teg-ta-widget-twitter-trends.php:44
 #: svn-production/tags/1.1.0/includes/widgets/class-teg-ta-widget-twitter-trends.php:44
 #: svn-production/tags/1.1.1/includes/widgets/class-teg-ta-widget-twitter-trends.php:44
-#: svn-production/trunk/includes/widgets/class-teg-ta-widget-twitter-trends.php:44
+#: svn-production/tags/1.1.2/includes/widgets/class-teg-ta-widget-twitter-trends.php:47
+#: svn-production/trunk/includes/widgets/class-teg-ta-widget-twitter-trends.php:47
 msgid "Trends WOEID"
 msgstr ""
 
@@ -518,6 +618,8 @@ msgstr ""
 #: svn-production/tags/1.1.0/teg-twitter-api.php:90
 #: svn-production/tags/1.1.1/teg-twitter-api.php:81
 #: svn-production/tags/1.1.1/teg-twitter-api.php:90
+#: svn-production/tags/1.1.2/teg-twitter-api.php:81
+#: svn-production/tags/1.1.2/teg-twitter-api.php:90
 #: svn-production/trunk/teg-twitter-api.php:81
 #: svn-production/trunk/teg-twitter-api.php:90 teg-twitter-api.php:81
 #: teg-twitter-api.php:90
@@ -526,13 +628,11 @@ msgstr ""
 
 #: svn-production/tags/1.1.0/includes/teg-ta-core-functions.php:192
 #: svn-production/tags/1.1.1/includes/teg-ta-core-functions.php:192
-#: svn-production/trunk/includes/teg-ta-core-functions.php:192
 msgid "Twitter Feeds Theme"
 msgstr ""
 
 #: svn-production/tags/1.1.0/includes/teg-ta-core-functions.php:207
 #: svn-production/tags/1.1.1/includes/teg-ta-core-functions.php:207
-#: svn-production/trunk/includes/teg-ta-core-functions.php:207
 msgid "Twitter Trends Theme"
 msgstr ""
 
@@ -540,6 +640,8 @@ msgstr ""
 #: svn-production/tags/1.1.0/templates/widgets/content-widget-twitter-feeds.php:53
 #: svn-production/tags/1.1.1/templates/shortcodes/content-shortcode-twitter-feeds.php:56
 #: svn-production/tags/1.1.1/templates/widgets/content-widget-twitter-feeds.php:53
+#: svn-production/tags/1.1.2/templates/shortcodes/content-shortcode-twitter-feeds.php:56
+#: svn-production/tags/1.1.2/templates/widgets/content-widget-twitter-feeds.php:53
 #: svn-production/trunk/templates/shortcodes/content-shortcode-twitter-feeds.php:56
 #: svn-production/trunk/templates/widgets/content-widget-twitter-feeds.php:53
 #: templates/shortcodes/content-shortcode-twitter-feeds.php:56
@@ -551,6 +653,8 @@ msgstr ""
 #: svn-production/tags/1.1.0/templates/widgets/content-widget-twitter-feeds.php:56
 #: svn-production/tags/1.1.1/templates/shortcodes/content-shortcode-twitter-feeds.php:59
 #: svn-production/tags/1.1.1/templates/widgets/content-widget-twitter-feeds.php:56
+#: svn-production/tags/1.1.2/templates/shortcodes/content-shortcode-twitter-feeds.php:59
+#: svn-production/tags/1.1.2/templates/widgets/content-widget-twitter-feeds.php:56
 #: svn-production/trunk/templates/shortcodes/content-shortcode-twitter-feeds.php:59
 #: svn-production/trunk/templates/widgets/content-widget-twitter-feeds.php:56
 #: templates/shortcodes/content-shortcode-twitter-feeds.php:59
@@ -558,10 +662,14 @@ msgstr ""
 msgid "Share"
 msgstr ""
 
+#: svn-production/tags/1.1.2/templates/shortcodes/content-shortcode-twitter-trends.php:50
+#: svn-production/trunk/templates/shortcodes/content-shortcode-twitter-trends.php:50
 #: templates/shortcodes/content-shortcode-twitter-trends.php:50
 msgid "Trends"
 msgstr ""
 
+#: svn-production/tags/1.1.2/templates/widgets/content-widget-twitter-trends.php:47
+#: svn-production/trunk/templates/widgets/content-widget-twitter-trends.php:47
 #: templates/widgets/content-widget-twitter-trends.php:47
 msgid "Tweets"
 msgstr ""
