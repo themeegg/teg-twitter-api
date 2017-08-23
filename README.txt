@@ -4,7 +4,7 @@ Donate link: http://themeegg.com
 Tags: Twitter, API, Shortcode, Widgets, Settings, Post to twitter, Twitter Plugin
 Requires at least: 3.0.1
 Tested up to: 4.8.0
-Stable tag: 1.1.2
+Stable tag: 1.2.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -50,6 +50,7 @@ content/plugins/directory
 1. Twitter Tweets shortcode and widget
 2. Twitter Trends shortcode and widget
 3. Also tweet your wordpress post to twitter
+4. Official twitter timeline widgets and shortcode
 
 == Screenshots ==
 
@@ -66,7 +67,12 @@ Please visit our official twitter api master page(http://doc.themeegg.com/plugin
 
 == Changelog ==
 
-= 1.1.2 - 05/08/2017 -
+= 1.2.0 - 24/08/2017 =
+* Official twitter timiline widget and shortcode added.
+* Admin setting page design cleanup
+* Added new shortcode (<code>[twitter_timeline username="theme_egg" title="ThemeEgg Official Timeline"]</code>) for timeline.
+
+= 1.1.2 - 05/08/2017 =
 * New template added
 
 = 1.1.1 =
