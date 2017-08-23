@@ -51,7 +51,7 @@ class TEG_TA_Admin_Settings {
 
 			$settings[]= include_once( dirname( __FILE__ ) . '/settings/class-teg-ta-settings-general.php' );
 
-			$settings[] = include_once( dirname( __FILE__ ) . '/settings/class-teg-ta-settings-api.php' );
+			//$settings[] = include_once( dirname( __FILE__ ) . '/settings/class-teg-ta-settings-api.php' );
 
 			$settings[] = include_once( dirname( __FILE__ ) . '/settings/class-teg-ta-settings-layouts.php' );
 

@@ -40,7 +40,7 @@ if (!class_exists('TET_TA_Settings_Layouts', false)) :
          *
          * @return array
          */
-        public function get_sections()
+       /* public function get_sections()
         {
 
             $sections = array(
@@ -51,7 +51,7 @@ if (!class_exists('TET_TA_Settings_Layouts', false)) :
             );
 
             return apply_filters('teg_twitter_api_get_sections_' . $this->id, $sections);
-        }
+        }*/
 
         /**
          * Output the settings.
@@ -85,36 +85,6 @@ if (!class_exists('TET_TA_Settings_Layouts', false)) :
          */
         public function get_settings($current_section = '')
         {
-            if ('trends' == $current_section) {
-
-                $settings = apply_filters('teg_twitter_layout_settings', array(
-
-                    array(
-                        'title' => __('Trends Layout', 'teg-twitter-api'),
-                        'type' => 'title',
-                        'desc' => '',
-                        'id' => 'teg_ta_twitter_trend_shortcode_layout_setting_options',
-                    ),
-                    array(
-                        'title' => __('Templates', 'teg-twitter-api'),
-                        'desc' => __('Layout tempaltes .', 'teg-twitter-api'),
-                        'id' => 'teg_ta_twitter_trend_shortcode_layout',
-                        'default' => 'teg-trend-tmpl1',
-                        'type' => 'select',
-                        'class' => 'teg-select',
-                        'css' => 'min-width: 350px;',
-                        'desc_tip' => true,
-                        'autoload' => false,
-                        'options' => teg_ta_twitter_trend_templates(),
-                    ), array(
-                        'type' => 'sectionend',
-                        'id' => 'teg_twitter_layout_settings',
-                    ),
-
-
-                ));
-
-            } else {
                 $settings = apply_filters('teg_twitter_api_general_settings', array(
                     array(
                         'title' => __('Twitter Timeline Layout', 'teg-twitter-api'),
@@ -138,9 +108,31 @@ if (!class_exists('TET_TA_Settings_Layouts', false)) :
                         'type' => 'sectionend',
                         'id' => 'product_rating_options',
                     ),
+	                array(
+		                'title' => __('Trends Layout', 'teg-twitter-api'),
+		                'type' => 'title',
+		                'desc' => '',
+		                'id' => 'teg_ta_twitter_trend_shortcode_layout_setting_options',
+	                ),
+	                array(
+		                'title' => __('Templates', 'teg-twitter-api'),
+		                'desc' => __('Layout tempaltes .', 'teg-twitter-api'),
+		                'id' => 'teg_ta_twitter_trend_shortcode_layout',
+		                'default' => 'teg-trend-tmpl1',
+		                'type' => 'select',
+		                'class' => 'teg-select',
+		                'css' => 'min-width: 350px;',
+		                'desc_tip' => true,
+		                'autoload' => false,
+		                'options' => teg_ta_twitter_trend_templates(),
+	                ), array(
+		                'type' => 'sectionend',
+		                'id' => 'teg_twitter_layout_settings',
+	                )
+
 
                 ));
-            }
+
 
             return apply_filters('teg_twitter_api_get_settings_' . $this->id, $settings, $current_section);
         }
