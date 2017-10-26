@@ -3,7 +3,7 @@
  * Plugin Name: Twitter API Master
  * Plugin URI: https://themeegg.com/plugins/teg-twitter-api
  * Description: This plugin for Twitter Widgets Shortcodes and Many more.
- * Version: 1.2.0
+ * Version: 1.2.1
  * Author: ThemeEgg
  * Author URI: https://themeegg.com
  * Requires at least: 3.0.1
@@ -26,7 +26,7 @@ if (!class_exists('TEG_Twitter_Api')) :
      * Main TEG_Twitter_Api Class.
      *
      * @class TEG_Twitter_Api
-     * @version    3.1.0
+     * @version    1.2.1
      */
     final class TEG_Twitter_Api
     {
@@ -36,7 +36,7 @@ if (!class_exists('TEG_Twitter_Api')) :
          *
          * @var string
          */
-        public $version = '1.2.0';
+        public $version = '1.2.1';
 
         /**
          * Query instance.
