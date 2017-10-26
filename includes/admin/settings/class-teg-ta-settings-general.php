@@ -157,10 +157,10 @@ if ( ! class_exists( 'TEG_TA_Settings_General', false ) ) :
 		 */
 		public function save() {
 
-			// $settings = $this->get_settings();
+			$settings = $this->get_settings();
 
 
-			//TEG_TA_Admin_Settings::save_fields($settings);
+			TEG_TA_Admin_Settings::save_fields($settings);
 		}
 	}
 
