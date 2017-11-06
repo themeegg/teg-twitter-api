@@ -3,8 +3,8 @@ Contributors: ThemeEgg
 Donate link: http://themeegg.com
 Tags: Twitter, API, Shortcode, Widgets, Settings, Post to twitter, Twitter Plugin
 Requires at least: 3.0.1
-Tested up to: 4.8.0
-Stable tag: 1.2.1
+Tested up to: 4.8.3
+Stable tag: 1.2.2
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -67,6 +67,10 @@ Please visit our official twitter api master page(http://doc.themeegg.com/plugin
 
 == Changelog ==
 
+
+
+= 1.2.2 - 06/11/2017 =
+* Fix - Default template design issue fixed
 
 = 1.2.1 - 26/10/2017 =
 * Fix - General setting save issue
