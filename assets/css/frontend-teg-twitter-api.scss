@@ -3,10 +3,8 @@ body{
 		ul{
 			list-style: none;
 			li{
-				padding-left:50px;
 				position: relative;
 				padding:15px 5px;
-				background:#fff;
 				border-bottom:1px solid rgba(15, 70, 100, 0.12);
 				&:hover{
 					background-color:rgba(160,200,220,.12);
@@ -32,8 +30,8 @@ body{
 
 		.teg-ta-single-feeds{
 			padding-left:50px;
-			color:#000;
-			a{
+
+ 			a{
 				text-decoration: none;
 				border:none;
 				box-shadow: none;
