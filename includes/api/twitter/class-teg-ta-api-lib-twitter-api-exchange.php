@@ -303,7 +303,8 @@ class TEG_TA_Api_Lib_Twitter_Api_Exchange
         if (($error = curl_error($feed)) !== '') {
             curl_close($feed);
 
-            throw new \Exception($error);
+            return "{}";
+            //throw new \Exception($error);
         }
 
         curl_close($feed);
