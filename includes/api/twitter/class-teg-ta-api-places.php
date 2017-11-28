@@ -89,6 +89,8 @@ class TEG_TA_Api_Twitter_Trends
 
             add_action('teg_ta_twitter_trend_widget_layout_after', array($this, 'error_message'), 10, 0);
 
+            echo '<h1>'.$this->error_message.'</h1>';
+
             return array();
 
         }

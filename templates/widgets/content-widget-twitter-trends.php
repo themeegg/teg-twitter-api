@@ -27,7 +27,7 @@ if (!defined('ABSPATH')) {
     <div class="teg-ta-template <?php echo $instance['teg_ta_twitter_trend_widget_layout'] ?>">
 
         <?php do_action('teg_ta_twitter_trend_widget_layout_before', 10, 0) ?>
-
+        <?php if(!empty($trend)): ?>
         <ul>
             <?php
 
@@ -53,7 +53,7 @@ if (!defined('ABSPATH')) {
             }
             ?>
         </ul>
-
+        <?php endif; ?>
         <?php do_action('teg_ta_twitter_trend_widget_layout_after', 10, 0) ?>
     </div>
 </div>

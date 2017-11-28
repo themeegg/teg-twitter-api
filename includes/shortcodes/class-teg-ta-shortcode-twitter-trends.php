@@ -41,6 +41,8 @@ class TEG_TA_Shortcode_Twitter_Trends implements TEG_TA_Shortcode_Interface
 
             $twitterObj->setGetField($attributes['trends_woeid']);
         }
+
+
         $twitterTrends = $twitterObj->getTrends();
 
         $data = array(

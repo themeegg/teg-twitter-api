@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @version  1.0
  * @extends  TEG_TA_Widget
  */
-class TEG_TA_Widget_Twitter_Trends extends TEG_TA_Widget {
+class TEG_TA_Widget_Twitter_Trends extends TEG_TA_Widget{
 
 	/**
 	 * Constructor.
@@ -41,7 +41,7 @@ class TEG_TA_Widget_Twitter_Trends extends TEG_TA_Widget {
 				'step' => 1
 
 			),
-			'trends_WOEID' => array(
+			'trends_woeid' => array(
 				'type'  => 'number',
 				'std'   => 1,
 				'label' => __( 'Trends WOEID', 'teg-twitter-api' ),
@@ -80,9 +80,9 @@ class TEG_TA_Widget_Twitter_Trends extends TEG_TA_Widget {
 
 		$twitterObj = new TEG_TA_Api_Twitter_Trends();
 
-		if ( is_numeric( $instance['trends_WOEID'] ) ) {
+		if ( is_numeric( $instance['trends_woeid'] ) ) {
 
-			$twitterObj->setGetField( $instance['trends_WOEID'] );
+			$twitterObj->setGetField( $instance['trends_woeid'] );
 		}
 
 		$twitterTrends = (array) $twitterObj->getTrends();
