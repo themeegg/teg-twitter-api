@@ -71,7 +71,6 @@ class TEG_TA_Api_Twitter_Trends
 
         $twitter = new TEG_TA_Api_Lib_Twitter_Api_Exchange($twitterSettings->getTwitterSettings());
 
-
         $trends = $twitter->setGetfield($this->getfield)->buildOauth($this->url, $this->requestMethod)->performRequest();
 
         $trends_array = json_decode($trends, true);
@@ -89,6 +88,8 @@ class TEG_TA_Api_Twitter_Trends
             add_action('teg_ta_twitter_trend_shortcode_layout_after', array($this, 'error_message'), 10, 0);
 
             add_action('teg_ta_twitter_trend_widget_layout_after', array($this, 'error_message'), 10, 0);
+
+            echo '<h1>'.$this->error_message.'</h1>';
 
             return array();
 

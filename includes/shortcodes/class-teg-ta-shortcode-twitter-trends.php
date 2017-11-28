@@ -29,7 +29,7 @@ class TEG_TA_Shortcode_Twitter_Trends implements TEG_TA_Shortcode_Interface
         $defaultAttr = array(
             'count' => 5,
             'title' => __('Twitter Trends', 'teg-twitter-api'),
-            'trends_WOEID' => 1
+            'trends_woeid' => 1
         );
 
         $attributes = wp_parse_args($atts, $defaultAttr);
@@ -37,12 +37,11 @@ class TEG_TA_Shortcode_Twitter_Trends implements TEG_TA_Shortcode_Interface
 
         $twitterObj = new TEG_TA_Api_Twitter_Trends();
 
-        if (is_numeric($attributes['trends_WOEID'])) {
+        if (is_numeric($attributes['trends_woeid'])) {
 
-            $twitterObj->setGetField($attributes['trends_WOEID']);
+            $twitterObj->setGetField($attributes['trends_woeid']);
         }
         $twitterTrends = $twitterObj->getTrends();
-
 
         $data = array(
 
@@ -50,7 +49,8 @@ class TEG_TA_Shortcode_Twitter_Trends implements TEG_TA_Shortcode_Interface
 
             'number_of_trends' => $attributes['count'],
 
-            'title' => $attributes['title']
+            'title' => $attributes['title'],
+
         );
 
         teg_ta_get_template('shortcodes/content-shortcode-twitter-trends.php', $data);

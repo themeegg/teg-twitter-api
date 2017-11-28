@@ -37,17 +37,17 @@ class TEG_TA_Widget_Twitter_Trends extends TEG_TA_Widget {
 				'std'   => 5,
 				'label' => __( 'Number of trends to show', 'teg-twitter-api' ),
 				'min'   => 0,
-				'max'   => 1000000,
+				'max'   => 100,
 				'step' => 1
 
 			),
-			'trends_WOEID'                       => array(
+			'trends_WOEID' => array(
 				'type'  => 'number',
 				'std'   => 1,
 				'label' => __( 'Trends WOEID', 'teg-twitter-api' ),
 				'min'   => 0,
-				'max'   => 1000000,
-				'step' => 1
+				'max'   => 9999999999,
+				'step' => 1,
 			),
 			'teg_ta_twitter_trend_widget_layout' => array(
 				'label'   => __( 'Templates', 'teg-twitter-api' ),
@@ -84,6 +84,7 @@ class TEG_TA_Widget_Twitter_Trends extends TEG_TA_Widget {
 
 			$twitterObj->setGetField( $instance['trends_WOEID'] );
 		}
+
 		$twitterTrends = (array) $twitterObj->getTrends();
 
 
