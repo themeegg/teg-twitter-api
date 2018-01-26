@@ -60,4 +60,6 @@ if (!defined('ABSPATH')) {
         <?php do_action('teg_ta_twitter_trend_shortcode_layout_after', 10, 0) ?>
 
     </div>
+    <div style="clear:both"></div>
+
 </div>

@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @version  1.0
  * @extends  TEG_TA_Widget
  */
-class TEG_TA_Widget_Twitter_Trends extends TEG_TA_Widget{
+class TEG_TA_Widget_Twitter_Trends extends TEG_TA_Widget {
 
 	/**
 	 * Constructor.
@@ -38,16 +38,16 @@ class TEG_TA_Widget_Twitter_Trends extends TEG_TA_Widget{
 				'label' => __( 'Number of trends to show', 'teg-twitter-api' ),
 				'min'   => 0,
 				'max'   => 100,
-				'step' => 1
+				'step'  => 1
 
 			),
-			'trends_woeid' => array(
+			'trends_woeid'                       => array(
 				'type'  => 'number',
 				'std'   => 1,
 				'label' => __( 'Trends WOEID', 'teg-twitter-api' ),
 				'min'   => 0,
 				'max'   => 9999999999,
-				'step' => 1,
+				'step'  => 1,
 			),
 			'teg_ta_twitter_trend_widget_layout' => array(
 				'label'   => __( 'Templates', 'teg-twitter-api' ),

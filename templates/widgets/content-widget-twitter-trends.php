@@ -17,43 +17,44 @@
  */
 
 // Exit if accessed directly
-if (!defined('ABSPATH')) {
-    exit;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
 }
-
 ?>
 
 <div class="teg-ta-trends-widget">
     <div class="teg-ta-template <?php echo $instance['teg_ta_twitter_trend_widget_layout'] ?>">
 
-        <?php do_action('teg_ta_twitter_trend_widget_layout_before', 10, 0) ?>
-        <?php if(!empty($trend)): ?>
-        <ul>
-            <?php
+		<?php do_action( 'teg_ta_twitter_trend_widget_layout_before', 10, 0 ) ?>
+		<?php if ( ! empty( $trends ) ): ?>
+            <ul>
+				<?php
 
-            foreach ($trends as $trend_index => $trend) {
+				foreach ( $trends as $trend_index => $trend ) {
 
-                if ($trend_index >= $number_of_trends) {
-                    break;
-                }
+					if ( $trend_index >= $number_of_trends ) {
+						break;
+					}
 
-                ?>
+					?>
 
-                <li>
-                    <a target="_blank" href="<?php echo $trend['url']; ?>">
-                        <b><?php echo esc_attr($trend['name']); ?></b>
-                    </a>
-                    <?php if ($trend['tweet_volume']): ?>
-                        <span><?php echo esc_attr($trend['tweet_volume']); echo __('Tweets', 'teg-twitter-api'); ?></span>
-                    <?php endif; ?>
-                </li>
+                    <li>
+                        <a target="_blank" href="<?php echo $trend['url']; ?>">
+                            <b><?php echo esc_attr( $trend['name'] ); ?></b>
+                        </a>
+						<?php if ( $trend['tweet_volume'] ): ?>
+                            <span><?php echo esc_attr( $trend['tweet_volume'] );
+								echo __( ' Tweets', 'teg-twitter-api' ); ?></span>
+						<?php endif; ?>
+                    </li>
 
-                <?php
+					<?php
 
-            }
-            ?>
-        </ul>
-        <?php endif; ?>
-        <?php do_action('teg_ta_twitter_trend_widget_layout_after', 10, 0) ?>
+				}
+				?>
+            </ul>
+		<?php endif; ?>
+		<?php do_action( 'teg_ta_twitter_trend_widget_layout_after', 10, 0 ) ?>
     </div>
+    <div style="clear:both"></div>
 </div>
