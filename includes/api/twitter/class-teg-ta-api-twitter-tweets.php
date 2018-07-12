@@ -45,7 +45,6 @@ class TEG_TA_Api_Twitter_Tweets
 
         $tweets = json_decode($twitter->setGetfield($this->getField($count))->buildOauth($this->url, $this->requestMethod)->performRequest(), true);
 
-
         if (isset($tweets['errors'])) {
 
             $this->error_message = __('Please check your necessary twitter auth keys.', 'teg-twitter-api');

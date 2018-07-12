@@ -28,7 +28,7 @@ class TEG_TA_Shortcode_Twitter_Single_Tweet implements TEG_TA_Shortcode_Interfac
 
         $defaultAttr = array(
             'count' => 5,
-            'title' => __('Twitter Tweets', 'teg-twitter-api'),
+            'title' => __('Twitter Tweet', 'teg-twitter-api'),
         );
 
         $attributes = wp_parse_args($atts, $defaultAttr);
@@ -41,13 +41,11 @@ class TEG_TA_Shortcode_Twitter_Single_Tweet implements TEG_TA_Shortcode_Interfac
         if (gettype($twitter_feed_array) !== 'array') {
 
             $twitter_feed_array = array();
-        }else{
-            $twitter_feed_array = $twitter_feed_array[$attributes['count']];
         }
 
         $data = array(
 
-            'twitter_feeds_array' => $twitter_feed_array,
+            'twitter_feeds_array' => end($twitter_feed_array),
 
             'twitter_username' => get_option('teg_twitter_api_twitter_username'),
 
