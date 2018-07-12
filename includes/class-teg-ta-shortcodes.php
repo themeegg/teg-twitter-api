@@ -20,10 +20,10 @@ class TEG_TA_Shortcodes {
 	 */
 	public static function init() {
 		$shortcodes = array(
-
 			'twitter_feeds'    => __CLASS__ . '::twitter_feeds',
 			'twitter_trends'   => __CLASS__ . '::twitter_trends',
 			'twitter_timeline' => __CLASS__ . '::twitter_timeline',
+			'twitter_single_tweet'    => __CLASS__ . '::twitter_single_tweet',
 
 		);
 
@@ -71,6 +71,18 @@ class TEG_TA_Shortcodes {
 	public static function twitter_feeds( $atts ) {
 		return self::shortcode_wrapper( array( 'TEG_TA_Shortcode_Twitter_Feeds', 'output' ), $atts );
 	}
+
+	/**
+	 * Twitter single tweet shortcodes
+	 *
+	 * @param mixed $atts
+	 *
+	 * @return string
+	 */
+	public static function twitter_single_tweet( $atts ) {
+		return self::shortcode_wrapper( array( 'TEG_TA_Shortcode_Twitter_Single_Tweet', 'output' ), $atts );
+	}
+
 
 	/**
 	 * Twitter trends shortcodes

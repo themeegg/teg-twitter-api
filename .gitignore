@@ -7,3 +7,5 @@ svn-production
 .phpintel
 npm-debug.log
 .DS_Store
+
+\.idea/
